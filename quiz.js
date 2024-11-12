@@ -1,6 +1,6 @@
 // User data and session management with password expiration date (30 days from registration)
 const users = [
-    { username: "user123", password: "pass123", registrationDate: new Date("2024-10-01") },
+    { username: "user123", password: "pass123", registrationDate: new Date("2024-12-01") },
     { username: "200710093", password: "PADONU1", registrationDate: new Date("2025-04-01") },
     { username: "190710050", password: "cypher1234", registrationDate: new Date("2024-12-01") },
 ];
