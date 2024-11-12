@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANATOMY Quiz - Project X</title>
+<nav>
+        <a href="index.html">HOME</a>
+        <a href="TAPP.html">RESTART QUIZ</a>
+        <a href="basic_medical_science_quiz.html">SELECT QUIZ</a>
+    </nav>
+    <link rel="stylesheet" href="anatomymb.css">
+</head>
+<body>
+    <header>ANATOMY TAPP Quiz - Project X</header>
+
+    <div class="container">
+        <div id="quizContainer"></div>
+ <!-- Timer Input Section -->
+    <div id="timerSetup">
+        <label for="timerInput">Set Timer (minutes):</label>
+        <input type="number" id="timerInput" min="1" placeholder="Enter minutes">
+        <button id="startQuizButton">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quizContainer" style="display: none;"></div>
+    <div id="timerDisplay" style="display: none;">Time Remaining: <span id="timer"></span></div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons" id="nav-buttons">
+            <button class="btn" id="prevButton" style="display: none;">Previous</button>
+            <button class="btn" id="nextButton">Next</button>
+            <button class="btn" id="submitButton" style="display: none;">Submit</button>
+        </div>
+
+        <!-- Page Indicator -->
+        <div class="pagination" id="pageIndicator">Page 1</div>
+
+        <!-- Go to Page -->
+        <div class="goto-page" id="goto-page">
+            <label for="pageInput">Go to page: </label>
+            <input type="number" id="pageInput" min="1" max="25" />
+            <button class="btn" id="goButton">Go</button>
+        </div>
+
+        <!-- Result Table for Incorrect Answers -->
+        <div id="resultTable" style="display: none;">
+            <h2>Your Score: <span id="score"></span> / 50</h2>
+            <h3>Review Incorrect Answers:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Your Answer</th>
+                        <th>Correct Answer</th>
+                    </tr>
+                </thead>
+                <tbody id="incorrectAnswersTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="anatomymb.js"></script>
+</body>
+</html>
