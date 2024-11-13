@@ -81,6 +81,443 @@ const questionBank = [
         { question: "Which artery supplies blood to the gluteal region?", options: ["Inferior gluteal artery", "Superior gluteal artery", "Femoral artery", "Obturator artery"], answer: "Superior gluteal artery" },
         { question: "Which muscle extends the fingers?", options: ["Flexor digitorum superficialis", "Extensor digitorum", "Flexor pollicis longus", "Abductor digiti minimi"], answer: "Extensor digitorum" },
         { question: "Which muscle is responsible for elbow flexion?", options: ["Biceps brachii", "Triceps brachii", "Brachialis", "Anconeus"], answer: "Biceps brachii" },
+      
+    { 
+        "question": "Which bone is found in the upper arm?", 
+        "options": ["Humerus", "Femur", "Radius", "Tibia"], 
+        "answer": "Humerus" 
+    },
+    { 
+        "question": "What is the primary action of the biceps brachii muscle?", 
+        "options": ["Flexion of the forearm", "Extension of the forearm", "Rotation of the shoulder", "Abduction of the arm"], 
+        "answer": "Flexion of the forearm" 
+    },
+    { 
+        "question": "Which nerve might be injured in a patient presenting with difficulty in extending the wrist, following a mid-shaft humeral fracture?", 
+        "options": ["Radial nerve", "Ulnar nerve", "Median nerve", "Axillary nerve"], 
+        "answer": "Radial nerve" 
+    },
+    { 
+        "question": "A patient reports numbness over the lateral part of their forearm after a deep cut near the elbow. Which nerve is likely affected?", 
+        "options": ["Musculocutaneous nerve", "Median nerve", "Ulnar nerve", "Radial nerve"], 
+        "answer": "Musculocutaneous nerve" 
+    },
+    { 
+        "question": "A construction worker presents with weakened hand grip and numbness in the pinky finger. Which nerve is most likely affected?", 
+        "options": ["Ulnar nerve", "Radial nerve", "Median nerve", "Axillary nerve"], 
+        "answer": "Ulnar nerve" 
+    },
+    { 
+        "question": "In a posterior hip dislocation, which structure is most at risk of injury?", 
+        "options": ["Sciatic nerve", "Femoral artery", "Obturator nerve", "Popliteal artery"], 
+        "answer": "Sciatic nerve" 
+    },
+    { 
+        "question": "Which muscle group is most likely to atrophy in carpal tunnel syndrome?", 
+        "options": ["Thenar muscles", "Hypothenar muscles", "Forearm extensors", "Brachialis"], 
+        "answer": "Thenar muscles" 
+    },
+    { 
+        "question": "A patient suffers a laceration on the medial side of the wrist and has difficulty with finger abduction. Which nerve is likely damaged?", 
+        "options": ["Ulnar nerve", "Median nerve", "Radial nerve", "Axillary nerve"], 
+        "answer": "Ulnar nerve" 
+    },
+    { 
+        "question": "A 35-year-old runner presents with pain at the anterior knee, especially when climbing stairs. Which structure is most likely involved?", 
+        "options": ["Patellar tendon", "Anterior cruciate ligament", "Medial meniscus", "Lateral collateral ligament"], 
+        "answer": "Patellar tendon" 
+    },
+    { 
+        "question": "A soccer player complains of swelling and bruising along the outside of their ankle. Which ligament is most likely injured?", 
+        "options": ["Anterior talofibular ligament", "Deltoid ligament", "Calcaneofibular ligament", "Posterior talofibular ligament"], 
+        "answer": "Anterior talofibular ligament" 
+    },
+    { 
+        "question": "A patient with wrist drop is unable to extend the wrist or fingers. Which nerve is likely injured?", 
+        "options": ["Radial nerve", "Median nerve", "Ulnar nerve", "Musculocutaneous nerve"], 
+        "answer": "Radial nerve" 
+    },
+    { 
+        "question": "During a knee examination, you find a positive Lachman's test. Which structure is likely damaged?", 
+        "options": ["Anterior cruciate ligament", "Posterior cruciate ligament", "Medial meniscus", "Lateral meniscus"], 
+        "answer": "Anterior cruciate ligament" 
+    },
+    { 
+        "question": "A patient presents with pain on the lateral side of the hip and difficulty lying on the affected side. Which structure is most likely involved?", 
+        "options": ["Greater trochanteric bursa", "Gluteus medius tendon", "Piriformis muscle", "Iliotibial band"], 
+        "answer": "Greater trochanteric bursa" 
+    },
+    { 
+        "question": "A positive Froment's sign indicates weakness in which muscle?", 
+        "options": ["Adductor pollicis", "Flexor carpi ulnaris", "Brachioradialis", "Pronator teres"], 
+        "answer": "Adductor pollicis" 
+    },
+    { 
+        "question": "A 40-year-old patient with chronic plantar fasciitis is advised to stretch which structure?", 
+        "options": ["Plantar fascia", "Achilles tendon", "Tibialis anterior", "Peroneus longus"], 
+        "answer": "Plantar fascia" 
+    },
+    { 
+        "question": "Injury to the long thoracic nerve results in which characteristic sign?", 
+        "options": ["Winged scapula", "Claw hand", "Foot drop", "Wrist drop"], 
+        "answer": "Winged scapula" 
+    },
+    { 
+        "question": "Which muscle is commonly affected in lateral epicondylitis (tennis elbow)?", 
+        "options": ["Extensor carpi radialis brevis", "Flexor carpi ulnaris", "Biceps brachii", "Pronator teres"], 
+        "answer": "Extensor carpi radialis brevis" 
+    },
+    { 
+        "question": "A patient presents with a fracture of the fibular neck. Which nerve is most at risk?", 
+        "options": ["Common peroneal nerve", "Tibial nerve", "Sciatic nerve", "Saphenous nerve"], 
+        "answer": "Common peroneal nerve" 
+    },
+    { 
+        "question": "In a radial nerve injury, which thumb movement is typically affected?", 
+        "options": ["Extension", "Adduction", "Abduction", "Opposition"], 
+        "answer": "Extension" 
+    },
+    { 
+        "question": "Which test is used to assess the integrity of the Achilles tendon?", 
+        "options": ["Thompson test", "Phalen's test", "McMurray's test", "Finkelstein's test"], 
+        "answer": "Thompson test" 
+    },
+    { 
+        "question": "A cyclist presents with numbness in the medial hand after prolonged riding. Which nerve is likely compressed?", 
+        "options": ["Ulnar nerve", "Radial nerve", "Median nerve", "Musculocutaneous nerve"], 
+        "answer": "Ulnar nerve" 
+    },
+    { 
+        "question": "Which bone is found in the upper arm?", 
+        "options": ["Humerus", "Femur", "Radius", "Tibia"], 
+        "answer": "Humerus" 
+    },
+    { 
+        "question": "What is the primary action of the biceps brachii muscle?", 
+        "options": ["Flexion of the forearm", "Extension of the forearm", "Rotation of the shoulder", "Abduction of the arm"], 
+        "answer": "Flexion of the forearm" 
+    },
+    { 
+        "question": "Which nerve supplies the deltoid muscle?", 
+        "options": ["Radial nerve", "Median nerve", "Axillary nerve", "Ulnar nerve"], 
+        "answer": "Axillary nerve" 
+    },
+    { 
+        "question": "What is the main blood supply to the lower limb?", 
+        "options": ["Axillary artery", "Femoral artery", "Subclavian artery", "Radial artery"], 
+        "answer": "Femoral artery" 
+    },
+    { 
+        "question": "Which muscle is involved in the extension of the knee?", 
+        "options": ["Quadriceps femoris", "Biceps femoris", "Gastrocnemius", "Sartorius"], 
+        "answer": "Quadriceps femoris" 
+    },
+    { 
+        "question": "A fracture of the humeral shaft may injure which nerve?", 
+        "options": ["Radial nerve", "Ulnar nerve", "Median nerve", "Axillary nerve"], 
+        "answer": "Radial nerve" 
+    },
+    { 
+        "question": "Which muscle's weakness is associated with a positive Trendelenburg sign?", 
+        "options": ["Gluteus medius", "Quadriceps femoris", "Gastrocnemius", "Sartorius"], 
+        "answer": "Gluteus medius" 
+    },
+    { 
+        "question": "A positive Tinel sign over the carpal tunnel indicates compression of which nerve?", 
+        "options": ["Median nerve", "Ulnar nerve", "Radial nerve", "Axillary nerve"], 
+        "answer": "Median nerve" 
+    },
+    { 
+        "question": "What type of joint is the knee?", 
+        "options": ["Hinge joint", "Ball-and-socket joint", "Pivot joint", "Saddle joint"], 
+        "answer": "Hinge joint" 
+    },
+    { 
+        "question": "Damage to which nerve causes foot drop?", 
+        "options": ["Common peroneal nerve", "Tibial nerve", "Sciatic nerve", "Femoral nerve"], 
+        "answer": "Common peroneal nerve" 
+    },
+    { 
+        "question": "Which tendon is inflamed in lateral epicondylitis (tennis elbow)?", 
+        "options": ["Extensor carpi radialis brevis", "Biceps brachii", "Flexor carpi ulnaris", "Palmaris longus"], 
+        "answer": "Extensor carpi radialis brevis" 
+    },
+    { 
+        "question": "A patient with an anterior dislocation of the shoulder is at risk of injuring which nerve?", 
+        "options": ["Axillary nerve", "Radial nerve", "Median nerve", "Ulnar nerve"], 
+        "answer": "Axillary nerve" 
+    },
+    { 
+        "question": "What is the typical deformity in a Colles' fracture?", 
+        "options": ["Dorsal displacement of the distal radius", "Volar displacement of the distal radius", "Distal humerus fracture", "Dislocation of the elbow"], 
+        "answer": "Dorsal displacement of the distal radius" 
+    },
+    { 
+        "question": "Which muscle is responsible for initiating abduction of the arm?", 
+        "options": ["Supraspinatus", "Deltoid", "Infraspinatus", "Teres minor"], 
+        "answer": "Supraspinatus" 
+    },
+    { 
+        "question": "An injury to the ulnar nerve at the elbow leads to which hand deformity?", 
+        "options": ["Claw hand", "Wrist drop", "Ape hand", "Dupuytren's contracture"], 
+        "answer": "Claw hand" 
+    },
+    { 
+        "question": "Which artery is commonly injured in a supracondylar fracture of the humerus?", 
+        "options": ["Brachial artery", "Radial artery", "Ulnar artery", "Axillary artery"], 
+        "answer": "Brachial artery" 
+    },
+    { 
+        "question": "Which of the following muscles is located in the posterior compartment of the forearm?", 
+        "options": ["Extensor carpi ulnaris", "Flexor carpi radialis", "Pronator teres", "Palmaris longus"], 
+        "answer": "Extensor carpi ulnaris" 
+    },
+    { 
+        "question": "Which ligament is most commonly injured in an ankle sprain?", 
+        "options": ["Anterior talofibular ligament", "Deltoid ligament", "Calcaneofibular ligament", "Posterior talofibular ligament"], 
+        "answer": "Anterior talofibular ligament" 
+    },
+    { 
+        "question": "Which nerve is compressed in cubital tunnel syndrome?", 
+        "options": ["Ulnar nerve", "Median nerve", "Radial nerve", "Musculocutaneous nerve"], 
+        "answer": "Ulnar nerve" 
+    },
+    { 
+        "question": "Which muscle group is primarily responsible for dorsiflexion of the ankle?", 
+        "options": ["Anterior tibial muscles", "Posterior tibial muscles", "Lateral leg muscles", "Plantar flexors"], 
+        "answer": "Anterior tibial muscles" 
+    },
+    { 
+        "question": "Damage to which nerve would affect sensation in the lateral forearm?", 
+        "options": ["Musculocutaneous nerve", "Radial nerve", "Median nerve", "Ulnar nerve"], 
+        "answer": "Musculocutaneous nerve" 
+    },
+    { 
+        "question": "Which bony landmark is palpated to check for a hip fracture?", 
+        "options": ["Greater trochanter", "Lesser trochanter", "Ischial tuberosity", "Iliac crest"], 
+        "answer": "Greater trochanter" 
+    },
+    { 
+        "question": "Which nerve innervates the quadriceps femoris muscle?", 
+        "options": ["Femoral nerve", "Sciatic nerve", "Obturator nerve", "Tibial nerve"], 
+        "answer": "Femoral nerve" 
+    },
+    { 
+        "question": "A radial head fracture may lead to limited movement in which joint?", 
+        "options": ["Elbow", "Shoulder", "Wrist", "Hip"], 
+        "answer": "Elbow" 
+    },
+    { 
+        "question": "Which structure is compressed in thoracic outlet syndrome?", 
+        "options": ["Brachial plexus", "Femoral artery", "Ulnar nerve", "Sciatic nerve"], 
+        "answer": "Brachial plexus" 
+    },
+    { 
+        "question": "Damage to the sciatic nerve affects which major action?", 
+        "options": ["Hip extension", "Elbow flexion", "Shoulder abduction", "Ankle plantar flexion"], 
+        "answer": "Hip extension" 
+    },
+    { 
+        "question": "Which muscle is commonly injured in a groin strain?", 
+        "options": ["Adductor longus", "Biceps femoris", "Quadriceps femoris", "Rectus femoris"], 
+        "answer": "Adductor longus" 
+    },
+    { 
+        "question": "A supracondylar fracture of the humerus can damage which nerve, leading to a 'hand of benediction' deformity?", 
+        "options": ["Median nerve", "Ulnar nerve", "Radial nerve", "Axillary nerve"], 
+        "answer": "Median nerve" 
+    },
+    { 
+        "question": "A fracture at the neck of the fibula may injure which nerve?", 
+        "options": ["Common peroneal nerve", "Tibial nerve", "Sural nerve", "Sciatic nerve"], 
+        "answer": "Common peroneal nerve" 
+    },
+    { 
+        "question": "Which movement is restricted in a frozen shoulder (adhesive capsulitis)?", 
+        "options": ["Shoulder abduction", "Elbow extension", "Wrist flexion", "Forearm supination"], 
+        "answer": "Shoulder abduction" 
+    },
+
+    { 
+        "question": "Which bone is found in the upper arm?", 
+        "options": ["Humerus", "Femur", "Radius", "Tibia"], 
+        "answer": "Humerus" 
+    },
+    { 
+        "question": "What is the primary action of the biceps brachii muscle?", 
+        "options": ["Flexion of the forearm", "Extension of the forearm", "Rotation of the shoulder", "Abduction of the arm"], 
+        "answer": "Flexion of the forearm" 
+    },
+    { 
+        "question": "Which nerve supplies the deltoid muscle?", 
+        "options": ["Radial nerve", "Median nerve", "Axillary nerve", "Ulnar nerve"], 
+        "answer": "Axillary nerve" 
+    },
+    { 
+        "question": "What is the main blood supply to the lower limb?", 
+        "options": ["Axillary artery", "Femoral artery", "Subclavian artery", "Radial artery"], 
+        "answer": "Femoral artery" 
+    },
+    { 
+        "question": "Which muscle is involved in the extension of the knee?", 
+        "options": ["Quadriceps femoris", "Biceps femoris", "Gastrocnemius", "Sartorius"], 
+        "answer": "Quadriceps femoris" 
+    },
+    { 
+        "question": "Which bone forms the knee joint along with the femur and tibia?", 
+        "options": ["Patella", "Fibula", "Scapula", "Clavicle"], 
+        "answer": "Patella" 
+    },
+    { 
+        "question": "Which ligament is commonly injured in a knee sprain?", 
+        "options": ["Anterior cruciate ligament", "Medial collateral ligament", "Lateral collateral ligament", "Posterior cruciate ligament"], 
+        "answer": "Anterior cruciate ligament" 
+    },
+    { 
+        "question": "The sciatic nerve divides into which two main branches at the knee?", 
+        "options": ["Tibial and fibular nerves", "Femoral and saphenous nerves", "Radial and ulnar nerves", "Axillary and musculocutaneous nerves"], 
+        "answer": "Tibial and fibular nerves" 
+    },
+    { 
+        "question": "What is the function of the rotator cuff muscles in the shoulder?", 
+        "options": ["Stabilize the shoulder joint", "Flex the elbow", "Extend the wrist", "Rotate the hip joint"], 
+        "answer": "Stabilize the shoulder joint" 
+    },
+    { 
+        "question": "Which muscle is primarily responsible for plantar flexion at the ankle?", 
+        "options": ["Gastrocnemius", "Tibialis anterior", "Soleus", "Peroneus longus"], 
+        "answer": "Gastrocnemius" 
+    },
+    { 
+        "question": "The femoral nerve innervates which group of muscles?", 
+        "options": ["Quadriceps", "Hamstrings", "Calf muscles", "Forearm flexors"], 
+        "answer": "Quadriceps" 
+    },
+    { 
+        "question": "Which structure is located at the medial aspect of the elbow?", 
+        "options": ["Ulnar nerve", "Radial nerve", "Median nerve", "Brachial artery"], 
+        "answer": "Ulnar nerve" 
+    },
+    { 
+        "question": "Which artery supplies the posterior compartment of the thigh?", 
+        "options": ["Profunda femoris artery", "Femoral artery", "Popliteal artery", "Anterior tibial artery"], 
+        "answer": "Profunda femoris artery" 
+    },
+    { 
+        "question": "Which bone is commonly referred to as the collarbone?", 
+        "options": ["Clavicle", "Scapula", "Sternum", "Humerus"], 
+        "answer": "Clavicle" 
+    },
+    { 
+        "question": "Which muscle abducts the arm at the shoulder?", 
+        "options": ["Deltoid", "Pectoralis major", "Latissimus dorsi", "Biceps brachii"], 
+        "answer": "Deltoid" 
+    },
+    { 
+        "question": "What is the largest nerve in the human body?", 
+        "options": ["Sciatic nerve", "Femoral nerve", "Radial nerve", "Median nerve"], 
+        "answer": "Sciatic nerve" 
+    },
+    { 
+        "question": "The triceps brachii is located in which part of the upper limb?", 
+        "options": ["Posterior arm", "Anterior arm", "Forearm", "Shoulder"], 
+        "answer": "Posterior arm" 
+    },
+    { 
+        "question": "Which of these muscles is NOT found in the upper limb?", 
+        "options": ["Gluteus maximus", "Biceps brachii", "Deltoid", "Triceps brachii"], 
+        "answer": "Gluteus maximus" 
+    },
+    { 
+        "question": "The main action of the gluteus maximus is to:", 
+        "options": ["Extend the hip", "Flex the knee", "Abduct the thigh", "Rotate the leg"], 
+        "answer": "Extend the hip" 
+    },
+    { 
+        "question": "The hamstrings are located in which region?", 
+        "options": ["Posterior thigh", "Anterior thigh", "Medial thigh", "Lateral thigh"], 
+        "answer": "Posterior thigh" 
+    },
+    { 
+        "question": "Which joint is classified as a hinge joint?", 
+        "options": ["Elbow", "Shoulder", "Hip", "Wrist"], 
+        "answer": "Elbow" 
+    },
+    { 
+        "question": "Which bone is located on the lateral side of the forearm?", 
+        "options": ["Radius", "Ulna", "Fibula", "Tibia"], 
+        "answer": "Radius" 
+    },
+    { 
+        "question": "The Achilles tendon attaches to which bone?", 
+        "options": ["Calcaneus", "Femur", "Tibia", "Fibula"], 
+        "answer": "Calcaneus" 
+    },
+    { 
+        "question": "Which structure runs through the carpal tunnel?", 
+        "options": ["Median nerve", "Ulnar nerve", "Radial artery", "Brachial artery"], 
+        "answer": "Median nerve" 
+    },
+    { 
+        "question": "Which of these muscles is NOT a part of the quadriceps group?", 
+        "options": ["Biceps femoris", "Rectus femoris", "Vastus lateralis", "Vastus medialis"], 
+        "answer": "Biceps femoris" 
+    },
+    { 
+        "question": "Which nerve is commonly compressed in carpal tunnel syndrome?", 
+        "options": ["Median nerve", "Radial nerve", "Ulnar nerve", "Sciatic nerve"], 
+        "answer": "Median nerve" 
+    },
+  { 
+        "question": "Which bone is found in the upper arm?", 
+        "options": ["Humerus", "Femur", "Radius", "Tibia"], 
+        "answer": "Humerus" 
+    },
+    { 
+        "question": "What is the primary action of the biceps brachii muscle?", 
+        "options": ["Flexion of the forearm", "Extension of the forearm", "Rotation of the shoulder", "Abduction of the arm"], 
+        "answer": "Flexion of the forearm" 
+    },
+    { 
+        "question": "Which nerve supplies the deltoid muscle?", 
+        "options": ["Radial nerve", "Median nerve", "Axillary nerve", "Ulnar nerve"], 
+        "answer": "Axillary nerve" 
+    },
+    { 
+        "question": "What is the main blood supply to the lower limb?", 
+        "options": ["Axillary artery", "Femoral artery", "Subclavian artery", "Radial artery"], 
+        "answer": "Femoral artery" 
+    },
+    { 
+        "question": "Which muscle is involved in the extension of the knee?", 
+        "options": ["Quadriceps femoris", "Biceps femoris", "Gastrocnemius", "Sartorius"], 
+        "answer": "Quadriceps femoris" 
+    },
+    { 
+        "question": "Which bone forms the knee joint along with the femur and tibia?", 
+        "options": ["Patella", "Fibula", "Scapula", "Clavicle"], 
+        "answer": "Patella" 
+    },
+    { 
+        "question": "Which ligament is commonly injured in a knee sprain?", 
+        "options": ["Anterior cruciate ligament", "Medial collateral ligament", "Lateral collateral ligament", "Posterior cruciate ligament"], 
+        "answer": "Anterior cruciate ligament" 
+    },
+    { 
+        "question": "The sciatic nerve divides into which two main branches at the knee?", 
+        "options": ["Tibial and fibular nerves", "Femoral and saphenous nerves", "Radial and ulnar nerves", "Axillary and musculocutaneous nerves"], 
+        "answer": "Tibial and fibular nerves" 
+    },
+    { 
+        "question": "What is the function of the rotator cuff muscles in the shoulder?", 
+        "options": ["Stabilize the shoulder joint", "Flex the elbow", "Extend the wrist", "Rotate the hip joint"], 
+        "answer": "Stabilize the shoulder joint" 
+    },
+    { 
+        "question": "Which muscle is primarily responsible for plantar flexion at the ankle?", 
+        "options": ["Gastrocnemius", "Tibialis anterior", "Soleus", "Peroneus longus"], 
+        "answer": "Gastrocnemius" 
+    },
     // Add more questions here
 ];
 
