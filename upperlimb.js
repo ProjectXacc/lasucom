@@ -682,8 +682,3 @@ window.onload = function() {
         window.location.href = "/index.html";  // Adjust path as needed
     }
 };
-
-// Set a flag when visiting index.html
-if (window.location.pathname === "/index.html") {
-    sessionStorage.setItem('visitedIndex', 'true');
-}
