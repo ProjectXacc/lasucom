@@ -671,3 +671,19 @@ document.getElementById('goButton').addEventListener('click', () => {
         alert(`Please enter a page number between 1 and ${maxPage + 1}.`);
     }
 });
+window.onload = function() {
+    // Check if the sessionStorage has the flag indicating the user visited index.html
+    if (!sessionStorage.getItem('visitedIndex')) {
+        // If the user hasn't visited index.html, clear localStorage and sessionStorage
+        localStorage.clear();
+        sessionStorage.clear();
+
+        // Redirect to index.html
+        window.location.href = "/index.html";  // Adjust path as needed
+    }
+};
+
+// Set a flag when visiting index.html
+if (window.location.pathname === "/index.html") {
+    sessionStorage.setItem('visitedIndex', 'true');
+}
