@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHYSIOLOGY Quiz - Project X</title>
-<nav>
+    <nav>
         <a href="index.html">HOME</a>
         <a href="P3.html">RESTART QUIZ</a>
         <a href="basic_medical_science_quiz.html">SELECT QUIZ</a>
@@ -12,33 +12,40 @@
     <link rel="stylesheet" href="anatomymb.css">
 </head>
 <body>
-    <header>PHYSIOLOGY THIRD BLOCK Quiz - Project X</header>
+    <header>THIRD BLOCK PHYSIOLOGY  Quiz - Project X</header>
 
     <div class="container">
-        <div id="quizContainer"></div>
- <!-- Timer Input Section -->
-    <div id="timerSetup">
-        <label for="timerInput">Set Timer (minutes):</label>
-        <input type="number" id="timerInput" min="1" placeholder="Enter minutes">
-        <button id="startQuizButton">Start Quiz</button>
-    </div>
+        <!-- Password Input Section -->
+        <div id="passwordSection">
+            <label for="passwordInput">Enter Password to Start Quiz:</label>
+            <input type="password" id="passwordInput" placeholder="Enter password">
+            <button id="verifyPasswordButton">Verify Password</button>
+            <p id="passwordMessage"></p>
+        </div>
 
-    <!-- Quiz Section -->
-    <div id="quizContainer" style="display: none;"></div>
-    <div id="timerDisplay" style="display: none;">Time Remaining: <span id="timer"></span></div>
+        <!-- Timer Input Section (Initially Hidden) -->
+        <div id="timerSetup" style="display: none;">
+            <label for="timerInput">Set Timer (minutes):</label>
+            <input type="number" id="timerInput" min="1" placeholder="Enter minutes">
+            <button id="startQuizButton">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section (Initially Hidden) -->
+        <div id="quizContainer" style="display: none;"></div>
+        <div id="timerDisplay" style="display: none;">Time Remaining: <span id="timer"></span></div>
 
         <!-- Navigation Buttons -->
-        <div class="nav-buttons" id="nav-buttons">
+        <div class="nav-buttons" id="nav-buttons" style="display: none;">
             <button class="btn" id="prevButton" style="display: none;">Previous</button>
             <button class="btn" id="nextButton">Next</button>
             <button class="btn" id="submitButton" style="display: none;">Submit</button>
         </div>
 
         <!-- Page Indicator -->
-        <div class="pagination" id="pageIndicator">Page 1</div>
+        <div class="pagination" id="pageIndicator" style="display: none;">Page 1</div>
 
         <!-- Go to Page -->
-        <div class="goto-page" id="goto-page">
+        <div class="goto-page" id="goto-page" style="display: none;">
             <label for="pageInput">Go to page: </label>
             <input type="number" id="pageInput" min="1" max="25" />
             <button class="btn" id="goButton">Go</button>
@@ -61,6 +68,10 @@
         </div>
     </div>
 
-    <script src="anatomymb.js"></script>
+    <script>
+
+    </script>
+
+    <script src="P3.js"></script>
 </body>
 </html>
