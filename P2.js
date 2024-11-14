@@ -196,3 +196,76 @@ document.getElementById('goButton').addEventListener('click', () => {
         alert(`Please enter a page number between 1 and ${maxPage + 1}.`);
     }
 });
+// Password configuration with manually set expiration dates
+const passwords = {
+    "pin": new Date("2024-12-01T23:59:59").getTime(), // Custom expiration date and time
+ "PADONU1": new Date("2024-12-01T23:59:59").getTime(), // Custom expiration date and time
+    "car": new Date("2024-12-15T23:59:59").getTime()  // Custom expiration date and time
+};
+
+// Save the passwords in localStorage
+localStorage.setItem("quizPasswords", JSON.stringify(passwords));
+
+const passwordInput = document.getElementById("passwordInput");
+const verifyPasswordButton = document.getElementById("verifyPasswordButton");
+const passwordMessage = document.getElementById("passwordMessage");
+const timerSetup = document.getElementById("timerSetup");
+const quizContainer = document.getElementById("quizContainer");
+const navButtons = document.getElementById("nav-buttons");
+const pageIndicator = document.getElementById("pageIndicator");
+const gotoPage = document.getElementById("goto-page");
+
+// Checks if a password has expired by comparing the current time to the stored expiration timestamp
+function isPasswordExpired(timestamp) {
+    return Date.now() > timestamp;
+}
+
+// Removes expired passwords from the password list
+function removeExpiredPasswords() {
+    const savedPasswords = JSON.parse(localStorage.getItem("quizPasswords")) || {};
+    for (let pwd in savedPasswords) {
+        if (isPasswordExpired(savedPasswords[pwd])) {
+            delete savedPasswords[pwd];
+        }
+    }
+    localStorage.setItem("quizPasswords", JSON.stringify(savedPasswords));
+}
+
+// Verifies if the entered password is valid and not expired
+function verifyPassword(inputPassword) {
+    const savedPasswords = JSON.parse(localStorage.getItem("quizPasswords")) || {};
+    if (savedPasswords[inputPassword] && !isPasswordExpired(savedPasswords[inputPassword])) {
+        passwordMessage.textContent = "Password verified! Starting quiz.";
+        showQuizElements();
+    } else {
+        passwordMessage.textContent = "Invalid or expired password. Please try again.";
+    }
+}
+
+// Event listener for password verification
+verifyPasswordButton.addEventListener("click", () => {
+    verifyPassword(passwordInput.value);
+});
+
+// Shows quiz elements after successful password verification
+function showQuizElements() {
+    document.getElementById("passwordSection").style.display = "none";
+    timerSetup.style.display = "block";
+    quizContainer.style.display = "block";
+    navButtons.style.display = "block";
+    pageIndicator.style.display = "block";
+    gotoPage.style.display = "block";
+}
+
+// Remove expired passwords on page load
+window.onload = function() {
+    removeExpiredPasswords();
+    document.getElementById("passwordSection").style.display = "block";
+    timerSetup.style.display = "none";
+    quizContainer.style.display = "none";
+    navButtons.style.display = "none";
+    pageIndicator.style.display = "none";
+    gotoPage.style.display = "none";
+    passwordInput.value = ""; // Clear the password input
+    passwordMessage.textContent = ""; // Clear previous messages
+};
