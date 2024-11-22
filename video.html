@@ -5,22 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <style>
-        /* Full-screen centered styling */
+        /* Reset and general styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body, html {
             height: 100%;
-            margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f0f0f0;
+            background-color: #f8f9fa;
             font-family: Arial, sans-serif;
-            color: #333;
-            font-size: 3rem;
+            color: #343a40;
+        }
+
+        /* Navigation bar styling */
+        nav {
+            width: 100%;
+            background-color: #0056b3;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d1ecf1;
+        }
+
+        /* Main content styling */
+        .content {
+            margin-top: 80px; /* To prevent overlap with the navbar */
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .content span {
+            color: #007bff;
         }
     </style>
 </head>
 <body>
-    <!-- Centered "Coming Soon" text -->
-    <div>Coming Soon</div>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="content">
+        <span>Coming Soon</span>
+    </div>
 </body>
 </html>
