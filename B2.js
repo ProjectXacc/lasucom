@@ -265,3 +265,83 @@ window.onload = function() {
     passwordInput.value = ""; // Clear the password input
     passwordMessage.textContent = ""; // Clear previous messages
 };
+
+document.getElementById('submitButton').addEventListener('click', () => 
+{
+    // Show the modal when "Submit" is clicked
+    document.getElementById('submitModal').style.display = 'flex';
+});
+
+document.getElementById('confirmSubmit').addEventListener('click', () => {
+    // Handle quiz submission
+    clearInterval(timer);
+    calculateScore();
+    document.getElementById('quizContainer').style.display = 'none';
+    document.getElementById('nav-buttons').style.display = 'none';
+    document.getElementById('goto-page').style.display = 'none';
+    document.getElementById('submitModal').style.display = 'none'; // Hide the modal
+});
+
+document.getElementById('cancelSubmit').addEventListener('click', () => {
+    // Close the modal without submitting
+    document.getElementById('submitModal').style.display = 'none';
+});
+// Function to display the submit modal
+document.getElementById('submitButton').addEventListener('click', () => {
+    document.getElementById('submissionContent').innerHTML = `
+        <p>Are you sure you want to submit your quiz?</p>
+        <button id="confirmSubmit" class="button">Yes, Submit</button>
+        <button id="cancelSubmit" class="button cancel">Cancel</button>
+    `;
+    document.getElementById('submitModal').style.display = 'flex';
+
+    // Confirm submit button
+    document.getElementById('confirmSubmit').addEventListener('click', () => {
+        // Calculate the score and display results in the modal
+        clearInterval(timer);
+        calculateScore();
+        showSubmissionResults();
+    });
+
+    // Cancel button
+    document.getElementById('cancelSubmit').addEventListener('click', () => {
+        document.getElementById('submitModal').style.display = 'none';
+    });
+});
+
+// Function to display submission results in the modal
+function showSubmissionResults() {
+    document.getElementById('submissionContent').innerHTML = `
+        <h3>Your Score: ${totalScore}/${shuffledQuestions.length}</h3>
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Your Answer</th>
+                    <th>Correct Answer</th>
+                </tr>
+            </thead>
+            <tbody id="incorrectAnswersTable"></tbody>
+        </table>
+        <button class="button" id="closeModal">Close</button>
+    `;
+
+    // Add incorrect answers to the table
+    const incorrectAnswersTable = document.getElementById('incorrectAnswersTable');
+    shuffledQuestions.forEach((q, index) => {
+        if (selectedAnswers[index] !== q.answer) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${q.question}</td>
+                <td style="color: red;">${selectedAnswers[index] || 'No Answer'}</td>
+                <td style="color: green;">${q.answer}</td>
+            `;
+            incorrectAnswersTable.appendChild(row);
+        }
+    });
+
+    // Close modal button
+    document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('submitModal').style.display = 'none';
+    });
+}
