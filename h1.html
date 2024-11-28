@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMATOLOGY Quiz - Project X</title>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="h1.html">RESTART QUIZ</a>
+        <a href="select.html">SELECT QUIZ</a>
+    </nav>
+    <link rel="stylesheet" href="c1.css">
+</head>
+<body>
+    <header>HEMATOLOGY FIRST BLOCK Quiz - Project X</header>
+
+    <div class="container">
+        <!-- Password Input Section -->
+        <div id="passwordSection">
+            <label for="passwordInput">Enter Password to Start Quiz:</label>
+            <input type="password" id="passwordInput" placeholder="Enter password">
+            <button id="verifyPasswordButton">Verify Password</button>
+            <p id="passwordMessage"></p>
+        </div>
+
+        <!-- Timer Input Section (Initially Hidden) -->
+        <div id="timerSetup" style="display: none;">
+            <label for="timerInput">Set Timer (minutes):</label>
+            <input type="number" id="timerInput" min="1" placeholder="Enter minutes">
+            <button id="startQuizButton">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section (Initially Hidden) -->
+        <div id="quizContainer" style="display: none;"></div>
+        <div id="timerDisplay" style="display: none;">Time Remaining: <span id="timer"></span></div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons" id="nav-buttons" style="display: none;">
+            <button class="btn" id="prevButton" style="display: none;">Previous</button>
+            <button class="btn" id="nextButton">Next</button>
+            <button class="btn" id="submitButton" style="display: none;">Submit</button>
+        </div>
+
+<div id="submitModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2>Quiz Submission</h2>
+        <div id="submissionContent">
+            <p>Are you sure you want to submit your quiz?</p>
+            <button id="confirmSubmit" class="button">Yes, Submit</button>
+            <button id="cancelSubmit" class="button cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Page Indicator -->
+        <div class="pagination" id="pageIndicator" style="display: none;">Page 1</div>
+
+        <!-- Go to Page -->
+        <div class="goto-page" id="goto-page" style="display: none;">
+            <label for="pageInput">Go to page: </label>
+            <input type="number" id="pageInput" min="1" max="25" />
+            <button class="btn" id="goButton">Go</button>
+        </div>
+
+        <!-- Result Table for Incorrect Answers -->
+        <div id="resultTable" style="display: none;">
+            <h2>Your Score: <span id="score"></span> / 50</h2>
+            <h3>Review Incorrect Answers:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Your Answer</th>
+                        <th>Correct Answer</th>
+                    </tr>
+                </thead>
+                <tbody id="incorrectAnswersTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+
+    <script src="h1.js"></script>
+</body>
+</html>
