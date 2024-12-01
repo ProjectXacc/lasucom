@@ -9,7 +9,469 @@ const questionBank = [
         { question: "What structure connects the femur to the pelvis?", options: ["Acetabulum", "Tendon", "Ligament", "Cartilage"], answer: "Acetabulum" },
         { question: "Which muscle flexes the hip joint?", options: ["Iliopsoas", "Gluteus Maximus", "Rectus Femoris", "Sartorius"], answer: "Iliopsoas" },
         { question: "What is the function of the rotator cuff?", options: ["Stabilizes the shoulder joint", "Allows hip rotation", "Supports the knee joint", "Facilitates wrist movement"], answer: "Stabilizes the shoulder joint" },
-        { question: "Which artery supplies blood to the arm?", options: ["Brachial artery", "Radial artery", "Ulnar artery", "Subclavian artery"], answer: "Brachial artery" },
+    
+  {
+    question: "A patient presents with difficulty swallowing and a hoarse voice following thyroid surgery. Which nerve is most likely injured?",
+    options: [
+      "External branch of superior laryngeal nerve",
+      "Recurrent laryngeal nerve",
+      "Glossopharyngeal nerve",
+      "Hypoglossal nerve"
+    ],
+    correctAnswer: "Recurrent laryngeal nerve"
+  },
+  {
+    question: "The danger area of the face communicates with the cavernous sinus through which venous structure?",
+    options: [
+      "Angular vein",
+      "Pterygoid venous plexus",
+      "Deep facial vein",
+      "Superior ophthalmic vein"
+    ],
+    correctAnswer: "Superior ophthalmic vein"
+  },
+  {
+    question: "Which muscle of the pharynx is not innervated by the vagus nerve?",
+    options: [
+      "Superior constrictor",
+      "Middle constrictor",
+      "Stylopharyngeus",
+      "Inferior constrictor"
+    ],
+    correctAnswer: "Stylopharyngeus"
+  },
+  {
+    question: "A tumor at the jugular foramen is most likely to affect which cranial nerve first?",
+    options: [
+      "Glossopharyngeal nerve (CN IX)",
+      "Vagus nerve (CN X)",
+      "Accessory nerve (CN XI)",
+      "Hypoglossal nerve (CN XII)"
+    ],
+    correctAnswer: "Glossopharyngeal nerve (CN IX)"
+  },
+  {
+    question: "Which structure is most vulnerable during a submandibular gland excision?",
+    options: [
+      "Lingual nerve",
+      "Hypoglossal nerve",
+      "Marginal mandibular branch of the facial nerve",
+      "Inferior alveolar nerve"
+    ],
+    correctAnswer: "Marginal mandibular branch of the facial nerve"
+  },
+  {
+    question: "A patient is unable to close the eye on one side. Which nerve is most likely affected?",
+    options: [
+      "Facial nerve (CN VII)",
+      "Oculomotor nerve (CN III)",
+      "Abducens nerve (CN VI)",
+      "Trigeminal nerve (CN V)"
+    ],
+    correctAnswer: "Facial nerve (CN VII)"
+  },
+  {
+    question: "Which nerve provides sensory innervation to the cornea?",
+    options: [
+      "Ophthalmic division of the trigeminal nerve",
+      "Maxillary division of the trigeminal nerve",
+      "Facial nerve",
+      "Optic nerve"
+    ],
+    correctAnswer: "Ophthalmic division of the trigeminal nerve"
+  },
+  {
+    question: "A lesion in the cavernous sinus is most likely to affect which cranial nerve first?",
+    options: [
+      "Abducens nerve (CN VI)",
+      "Oculomotor nerve (CN III)",
+      "Trochlear nerve (CN IV)",
+      "Optic nerve (CN II)"
+    ],
+    correctAnswer: "Abducens nerve (CN VI)"
+  },
+  {
+    question: "Which structure is responsible for the pupillary light reflex?",
+    options: [
+      "Oculomotor nerve (CN III)",
+      "Optic nerve (CN II)",
+      "Facial nerve (CN VII)",
+      "Trochlear nerve (CN IV)"
+    ],
+    correctAnswer: "Oculomotor nerve (CN III)"
+  },
+  {
+    question: "Which muscle of mastication is primarily responsible for opening the jaw?",
+    options: [
+      "Lateral pterygoid",
+      "Medial pterygoid",
+      "Temporalis",
+      "Masseter"
+    ],
+    correctAnswer: "Lateral pterygoid"
+  },
+  {
+    question: "A patient presents with loss of sensation over the cheek and upper lip. Which nerve is most likely affected?",
+    options: [
+      "Maxillary division of the trigeminal nerve",
+      "Mandibular division of the trigeminal nerve",
+      "Ophthalmic division of the trigeminal nerve",
+      "Facial nerve"
+    ],
+    correctAnswer: "Maxillary division of the trigeminal nerve"
+  },
+  {
+    question: "Which artery is at greatest risk of injury in a pterion fracture?",
+    options: [
+      "Middle meningeal artery",
+      "Anterior cerebral artery",
+      "Posterior cerebral artery",
+      "Internal carotid artery"
+    ],
+    correctAnswer: "Middle meningeal artery"
+  },
+  {
+    question: "A lesion of the hypoglossal nerve results in deviation of the tongue toward which side?",
+    options: [
+      "The affected side",
+      "The unaffected side",
+      "It does not deviate",
+      "Depends on the location of the lesion"
+    ],
+    correctAnswer: "The affected side"
+  },
+  {
+    question: "Which lymph nodes are the first to receive lymph from the tip of the tongue?",
+    options: [
+      "Submental nodes",
+      "Submandibular nodes",
+      "Deep cervical nodes",
+      "Pretracheal nodes"
+    ],
+    correctAnswer: "Submental nodes"
+  },
+  {
+    question: "Which sinus is most commonly involved in sinusitis?",
+    options: [
+      "Maxillary sinus",
+      "Frontal sinus",
+      "Sphenoidal sinus",
+      "Ethmoidal sinus"
+    ],
+    correctAnswer: "Maxillary sinus"
+  },
+  {
+    question: "The cribriform plate transmits which cranial nerve?",
+    options: [
+      "Olfactory nerve (CN I)",
+      "Optic nerve (CN II)",
+      "Oculomotor nerve (CN III)",
+      "Facial nerve (CN VII)"
+    ],
+    correctAnswer: "Olfactory nerve (CN I)"
+  },
+  {
+    question: "Which nerve passes through the foramen rotundum?",
+    options: [
+      "Maxillary division of the trigeminal nerve",
+      "Mandibular division of the trigeminal nerve",
+      "Ophthalmic division of the trigeminal nerve",
+      "Facial nerve"
+    ],
+    correctAnswer: "Maxillary division of the trigeminal nerve"
+  },
+  {
+    question: "What is the chief blood supply of the visual cortex?",
+    options: [
+      "Posterior cerebral artery",
+      "Middle cerebral artery",
+      "Anterior cerebral artery",
+      "Basilar artery"
+    ],
+    correctAnswer: "Posterior cerebral artery"
+  },
+  {
+    question: "Which muscle is supplied by the external branch of the superior laryngeal nerve?",
+    options: [
+      "Cricothyroid",
+      "Posterior cricoarytenoid",
+      "Lateral cricoarytenoid",
+      "Thyroarytenoid"
+    ],
+    correctAnswer: "Cricothyroid"
+  },
+  {
+    question: "Which cranial nerve is most commonly affected in raised intracranial pressure?",
+    options: [
+      "Abducens nerve (CN VI)",
+      "Oculomotor nerve (CN III)",
+      "Trochlear nerve (CN IV)",
+      "Optic nerve (CN II)"
+    ],
+    correctAnswer: "Abducens nerve (CN VI)"
+  },
+  {
+    question: "The stylopharyngeus muscle is supplied by which cranial nerve?",
+    options: [
+      "Glossopharyngeal nerve (CN IX)",
+      "Vagus nerve (CN X)",
+      "Hypoglossal nerve (CN XII)",
+      "Accessory nerve (CN XI)"
+    ],
+    correctAnswer: "Glossopharyngeal nerve (CN IX)"
+  },
+  {
+    question: "A lesion at the internal acoustic meatus would affect which cranial nerves?",
+    options: [
+      "Facial nerve (CN VII) and Vestibulocochlear nerve (CN VIII)",
+      "Glossopharyngeal nerve (CN IX) and Vagus nerve (CN X)",
+      "Trigeminal nerve (CN V) and Facial nerve (CN VII)",
+      "Oculomotor nerve (CN III) and Trochlear nerve (CN IV)"
+    ],
+    correctAnswer: "Facial nerve (CN VII) and Vestibulocochlear nerve (CN VIII)"
+  },
+  {
+    question: "Which cranial nerve passes through the hypoglossal canal?",
+    options: [
+      "Hypoglossal nerve (CN XII)",
+      "Glossopharyngeal nerve (CN IX)",
+      "Accessory nerve (CN XI)",
+      "Vagus nerve (CN X)"
+    ],
+    correctAnswer: "Hypoglossal nerve (CN XII)"
+  },
+  {
+    question: "What structure is located in the cavernous sinus?",
+    options: [
+      "Internal carotid artery",
+      "Optic nerve",
+      "Superior sagittal sinus",
+      "Sigmoid sinus"
+    ],
+    correctAnswer: "Internal carotid artery"
+  },
+  {
+    question: "A patient has anosmia and a cerebrospinal fluid (CSF) leak. Which structure is most likely damaged?",
+    options: [
+      "Cribriform plate",
+      "Sella turcica",
+      "Middle cranial fossa",
+      "Ethmoidal sinus"
+    ],
+    correctAnswer: "Cribriform plate"
+  },
+  {
+    question: "Which cranial nerve provides parasympathetic innervation to the parotid gland?",
+    options: [
+      "Glossopharyngeal nerve (CN IX)",
+      "Facial nerve (CN VII)",
+      "Trigeminal nerve (CN V)",
+      "Vagus nerve (CN X)"
+    ],
+    correctAnswer: "Glossopharyngeal nerve (CN IX)"
+  },
+  {
+    question: "Which artery is most commonly affected in an epidural hematoma?",
+    options: [
+      "Middle meningeal artery",
+      "Anterior cerebral artery",
+      "Basilar artery",
+      "Posterior cerebral artery"
+    ],
+    correctAnswer: "Middle meningeal artery"
+  },
+  {
+    question: "Which nerve is responsible for motor innervation to the muscles of facial expression?",
+    options: [
+      "Facial nerve (CN VII)",
+      "Trigeminal nerve (CN V)",
+      "Accessory nerve (CN XI)",
+      "Hypoglossal nerve (CN XII)"
+    ],
+    correctAnswer: "Facial nerve (CN VII)"
+  },
+  {
+    question: "A lesion of the trochlear nerve results in weakness of which movement?",
+    options: [
+      "Depression of the eye when adducted",
+      "Abduction of the eye",
+      "Elevation of the eye",
+      "Convergence of the eye"
+    ],
+    correctAnswer: "Depression of the eye when adducted"
+  },
+  {
+    question: "The retropharyngeal space is clinically significant because:",
+    options: [
+      "Infections can spread to the mediastinum",
+      "It contains the pharyngeal tonsils",
+      "It provides venous drainage of the pharynx",
+      "It contains the vagus nerve"
+    ],
+    correctAnswer: "Infections can spread to the mediastinum"
+  },
+  {
+    question: "The spinal accessory nerve (CN XI) supplies which of the following muscles?",
+    options: [
+      "Sternocleidomastoid and trapezius",
+      "Levator scapulae and trapezius",
+      "Sternocleidomastoid and scalene",
+      "Trapezius and latissimus dorsi"
+    ],
+    correctAnswer: "Sternocleidomastoid and trapezius"
+  },
+  {
+    question: "The carotid body detects changes in which of the following?",
+    options: [
+      "Oxygen levels",
+      "Carbon dioxide levels",
+      "Blood pressure",
+      "Heart rate"
+    ],
+    correctAnswer: "Oxygen levels"
+  },
+  {
+    question: "Which nerve supplies the cricothyroid muscle?",
+    options: [
+      "External branch of the superior laryngeal nerve",
+      "Recurrent laryngeal nerve",
+      "Internal branch of the superior laryngeal nerve",
+      "Hypoglossal nerve"
+    ],
+    correctAnswer: "External branch of the superior laryngeal nerve"
+  },
+  {
+    question: "The inferior alveolar nerve is a branch of which cranial nerve?",
+    options: [
+      "Mandibular division of the trigeminal nerve",
+      "Maxillary division of the trigeminal nerve",
+      "Ophthalmic division of the trigeminal nerve",
+      "Facial nerve"
+    ],
+    correctAnswer: "Mandibular division of the trigeminal nerve"
+  },
+  {
+    question: "The structure passing through the foramen spinosum is:",
+    options: [
+      "Middle meningeal artery",
+      "Internal carotid artery",
+      "Ophthalmic artery",
+      "Vertebral artery"
+    ],
+    correctAnswer: "Middle meningeal artery"
+  },
+  {
+    question: "Which of the following muscles is involved in opening the auditory tube during swallowing?",
+    options: [
+      "Tensor veli palatini",
+      "Levator veli palatini",
+      "Palatoglossus",
+      "Salpingopharyngeus"
+    ],
+    correctAnswer: "Tensor veli palatini"
+  },
+  {
+    question: "Damage to the abducens nerve results in:",
+    options: [
+      "Inability to abduct the eye",
+      "Inability to elevate the eye",
+      "Inability to constrict the pupil",
+      "Inability to depress the eye"
+    ],
+    correctAnswer: "Inability to abduct the eye"
+  },
+  {
+    question: "Which structure is found in the posterior triangle of the neck?",
+    options: [
+      "Accessory nerve (CN XI)",
+      "Hypoglossal nerve (CN XII)",
+      "Facial artery",
+      "External carotid artery"
+    ],
+    correctAnswer: "Accessory nerve (CN XI)"
+  },
+  {
+    question: "Which cranial nerve is responsible for taste sensation from the anterior two-thirds of the tongue?",
+    options: [
+      "Facial nerve (CN VII)",
+      "Glossopharyngeal nerve (CN IX)",
+      "Trigeminal nerve (CN V)",
+      "Hypoglossal nerve (CN XII)"
+    ],
+    correctAnswer: "Facial nerve (CN VII)"
+  },
+  {
+    question: "Which cranial nerve exits the skull through the stylomastoid foramen?",
+    options: [
+      "Facial nerve (CN VII)",
+      "Glossopharyngeal nerve (CN IX)",
+      "Vagus nerve (CN X)",
+      "Accessory nerve (CN XI)"
+    ],
+    correctAnswer: "Facial nerve (CN VII)"
+  },
+  {
+    question: "The optic chiasm is located directly above which structure?",
+    options: [
+      "Pituitary gland",
+      "Hypothalamus",
+      "Third ventricle",
+      "Internal carotid artery"
+    ],
+    correctAnswer: "Pituitary gland"
+  },
+  {
+    question: "Which nerve innervates the posterior belly of the digastric muscle?",
+    options: [
+      "Facial nerve (CN VII)",
+      "Trigeminal nerve (CN V)",
+      "Hypoglossal nerve (CN XII)",
+      "Glossopharyngeal nerve (CN IX)"
+    ],
+    correctAnswer: "Facial nerve (CN VII)"
+  },
+  {
+    question: "The ligament of Berry is associated with which gland?",
+    options: [
+      "Thyroid gland",
+      "Parotid gland",
+      "Submandibular gland",
+      "Adrenal gland"
+    ],
+    correctAnswer: "Thyroid gland"
+  },
+  {
+    question: "Which structure forms the medial wall of the middle ear cavity?",
+    options: [
+      "Promontory",
+      "Tympanic membrane",
+      "Malleus",
+      "External acoustic meatus"
+    ],
+    correctAnswer: "Promontory"
+  },
+  {
+    question: "Which cranial nerve is tested by the gag reflex?",
+    options: [
+      "Glossopharyngeal nerve (CN IX)",
+      "Vagus nerve (CN X)",
+      "Facial nerve (CN VII)",
+      "Trigeminal nerve (CN V)"
+    ],
+    correctAnswer: "Glossopharyngeal nerve (CN IX)"
+  },
+  {
+    question: "The platysma muscle is supplied by which nerve?",
+    options: [
+      "Facial nerve (CN VII)",
+      "Accessory nerve (CN XI)",
+      "Hypoglossal nerve (CN XII)",
+      "Mandibular nerve (CN V3)"
+    ],
+    correctAnswer: "Facial nerve (CN VII)"
+  },
+
+            { question: "Which artery supplies blood to the arm?", options: ["Brachial artery", "Radial artery", "Ulnar artery", "Subclavian artery"], answer: "Brachial artery" },
         { question: "What bone forms the base of the spine?", options: ["Sacrum", "Coccyx", "Lumbar", "Thoracic"], answer: "Sacrum" },
         { question: "The hip joint is classified as which type of joint?", options: ["Ball and socket", "Hinge", "Pivot", "Saddle"], answer: "Ball and socket" },
         { question: "Which muscle is responsible for extension of the knee?", options: ["Biceps femoris", "Rectus femoris", "Sartorius", "Semitendinosus"], answer: "Rectus femoris" },
