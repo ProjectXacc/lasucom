@@ -856,8 +856,10 @@ document.getElementById('goButton').addEventListener('click', () => {
 });
 // Password configuration with manually set expiration dates
 const passwords = {
-    "pin": new Date("2024-12-01T23:59:59").getTime(), // Custom expiration date and time
+    "OGUNLEYE": new Date("2025-12-01T23:59:59").getTime(), // Custom expiration date and time
  "PADONU1": new Date("2024-12-01T23:59:59").getTime(), // Custom expiration date and time
+  "OGUNLEYE": new Date("2025-12-01T23:59:59").getTime(), // Custom expiration date and time
+  "OGUNLEYE": new Date("2025-12-01T23:59:59").getTime(), // Custom expiration date and time
     "car": new Date("2024-12-15T23:59:59").getTime()  // Custom expiration date and time
 };
 
