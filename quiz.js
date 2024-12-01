@@ -5,6 +5,11 @@ const users = [
     { username: "190710050", password: "cypher1234", registrationDate: new Date("2024-12-01") },
     { username: "2107100064", password: "mightdeletelater", registrationDate: new Date("2024-12-07") },
 { username: "220710083", password: "455205", registrationDate: new Date("2025-01-30") },
+{ username: "190710067", password: "OGUNLEYE", registrationDate: new Date("2025-01-30") },
+{ username: "220710083", password: "455205", registrationDate: new Date("2025-01-30") },
+{ username: "220710083", password: "455205", registrationDate: new Date("2025-01-30") },
+
+
 ];
 
 // Get user IP address (simulate for local testing)
