@@ -293,7 +293,7 @@ const passwords = {
  "PADONU1": new Date("2024-12-01T23:59:59").getTime(), // Custom expiration date and time
  "mightdeletelater": new Date("2024-12-07T23:59:59").getTime(), // Custom expiration date and time
  "12345678": new Date("2024-12-07T23:59:59").getTime(), // Custom expiration date and time
-    "car": new Date("2024-12-15T23:59:59").getTime()  // Custom expiration date and time
+    "222": new Date("2024-12-15T23:59:59").getTime()  // Custom expiration date and time
 };
 
 // Save the passwords in localStorage
