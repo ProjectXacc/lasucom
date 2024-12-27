@@ -2,6 +2,431 @@
 const questionBank = [
       { "question": "Which cranial nerve controls the movement of the tongue?", options: ["Hypoglossal", "Facial", "Vagus", "Accessory"], answer: "Hypoglossal" },
                 { "question": "The occipital lobe is primarily responsible for which function?", options: ["Vision", "Hearing", "Balance", "Taste"], answer: "Vision" },
+                  {
+    "question": "Which of the following is NOT part of the carotid triangle?",
+    "options": ["Hypoglossal nerve", "Common carotid artery", "Thyrohyoid muscle", "Internal jugular vein"],
+    "answer": "Thyrohyoid muscle"
+  },
+  {
+    "question": "Which of these structures does NOT pierce the parotid gland?",
+    "options": ["Facial nerve", "Retromandibular vein", "External carotid artery", "Lingual nerve"],
+    "answer": "Lingual nerve"
+  },
+  {
+    "question": "Which of these is NOT true about the cavernous sinus?",
+    "options": ["It contains the internal carotid artery", "It is drained by the superior ophthalmic vein", "The maxillary nerve passes through it", "It communicates with the pterygoid venous plexus"],
+    "answer": "The maxillary nerve passes through it"
+  },
+  {
+    "question": "Which muscle is NOT supplied by the hypoglossal nerve?",
+    "options": ["Styloglossus", "Hyoglossus", "Genioglossus", "Palatoglossus"],
+    "answer": "Palatoglossus"
+  },
+  {
+    "question": "Which of these arteries is NOT a branch of the external carotid artery?",
+    "options": ["Facial artery", "Lingual artery", "Superior thyroid artery", "Vertebral artery"],
+    "answer": "Vertebral artery"
+  },
+  {
+    "question": "Which cranial nerve does NOT pass through the jugular foramen?",
+    "options": ["Glossopharyngeal nerve", "Vagus nerve", "Accessory nerve", "Hypoglossal nerve"],
+    "answer": "Hypoglossal nerve"
+  },
+  {
+    "question": "Which of the following is NOT a content of the submandibular triangle?",
+    "options": ["Submandibular gland", "Facial artery", "Hypoglossal nerve", "Parotid duct"],
+    "answer": "Parotid duct"
+  },
+  {
+    "question": "Which of these bones is NOT involved in forming the orbit?",
+    "options": ["Frontal bone", "Maxilla", "Ethmoid bone", "Mandible"],
+    "answer": "Mandible"
+  },
+  {
+    "question": "Which of the following is  NOT true about the scalp?",
+    "options": ["It is richly vascularized", "It has five layers", "The loose connective tissue layer facilitates infection spread", "The occipital belly of occipitofrontalis is innervated by the facial nerve"],
+    "answer": "The occipital belly of occipitofrontalis is innervated by the facial nerve"
+  },
+  {
+    "question": "Which of these is NOT a content of the posterior triangle of the neck?",
+    "options": ["Spinal accessory nerve", "External jugular vein", "Subclavian artery", "Inferior thyroid artery"],
+    "answer": "Inferior thyroid artery"
+  },
+  {
+    "question": "Which of the following is NOT true about the Circle of Willis?",
+    "options": ["It provides collateral circulation", "It includes the basilar artery", "It surrounds the optic chiasm", "It is completed by the anterior and posterior communicating arteries"],
+    "answer": "It includes the basilar artery"
+  },
+  {
+    "question": "Which structure is NOT part of the pharyngeal plexus?",
+    "options": ["Glossopharyngeal nerve", "Vagus nerve", "Sympathetic fibers", "Hypoglossal nerve"],
+    "answer": "Hypoglossal nerve"
+  },
+  {
+    "question": "Which of the following is NOT related to the middle ear cavity?",
+    "options": ["Facial nerve", "Chorda tympani", "Tensor tympani muscle", "Inferior alveolar nerve"],
+    "answer": "Inferior alveolar nerve"
+  },
+  {
+    "question": "Which muscle is NOT involved in mastication?",
+    "options": ["Masseter", "Temporalis", "Buccinator", "Medial pterygoid"],
+    "answer": "Buccinator"
+  },
+  {
+    "question": "Which of these is NOT a feature of Bell's palsy?",
+    "options": ["Inability to close the eye", "Loss of corneal reflex", "Deviation of the uvula", "Drooping of the mouth"],
+    "answer": "Deviation of the uvula"
+  },
+  {
+    "question": "Which artery is NOT involved in the blood supply to the brain?",
+    "options": ["Anterior cerebral artery", "Middle cerebral artery", "Basilar artery", "Facial artery"],
+    "answer": "Facial artery"
+  },
+  {
+    "question": "Which nerve is  NOT a branch of the mandibular nerve (V3)?",
+    "options": ["Auriculotemporal nerve", "Lingual nerve", "Inferior alveolar nerve", "Greater petrosal nerve"],
+    "answer": "Greater petrosal nerve"
+  },
+  {
+    "question": "Which of the following is NOT true about the optic chiasm?",
+    "options": ["It lies above the sella turcica", "It is where optic nerve fibers decussate", "Lesions here cause bitemporal hemianopia", "It is supplied by the posterior cerebral artery"],
+    "answer": "It is supplied by the posterior cerebral artery"
+  },
+  {
+    "question": "Which of the following is NOT a branch of the facial nerve?",
+    "options": ["Temporal branch", "Zygomatic branch", "Auricular branch", "Glossopharyngeal branch"],
+    "answer": "Glossopharyngeal branch"
+  },
+  {
+    "question": "Which of these is NOT a clinical feature of Horner’s syndrome?",
+    "options": ["Ptosis", "Miosis", "Anhidrosis", "Exophthalmos"],
+    "answer": "Exophthalmos"
+  },
+  {
+    "question": "Which of these structures does NOT pass through the foramen magnum?",
+    "options": ["Medulla oblongata", "Vertebral arteries", "Spinal accessory nerve", "Internal carotid artery"],
+    "answer": "Internal carotid artery"
+  },
+  {
+    "question": "Which muscle is NOT innervated by the ansa cervicalis?",
+    "options": ["Sternohyoid", "Omohyoid", "Sternothyroid", "Thyrohyoid"],
+    "answer": "Thyrohyoid"
+  },
+  {
+    "question": "Which of these is NOT a nucleus of the trigeminal nerve?",
+    "options": ["Mesencephalic nucleus", "Main sensory nucleus", "Spinal nucleus", "Edinger-Westphal nucleus"],
+    "answer": "Edinger-Westphal nucleus"
+  },
+  {
+    "question": "Which artery is NOT a branch of the subclavian artery?",
+    "options": ["Vertebral artery", "Internal thoracic artery", "Thyrocervical trunk", "Facial artery"],
+    "answer": "Facial artery"
+  },
+  {
+    "question": "Which of these is  NOT true about the hypoglossal nerve?",
+    "options": ["It supplies all intrinsic tongue muscles", "It supplies the genioglossus", "It passes through the hypoglossal canal", "It has sensory fibers"],
+    "answer": "It has sensory fibers"
+  },
+  {
+    "question": "Which of these is NOT a branch of the maxillary artery?",
+    "options": ["Middle meningeal artery", "Inferior alveolar artery", "Infraorbital artery", "Superior thyroid artery"],
+    "answer": "Superior thyroid artery"
+  },
+  {
+    "question": "Which cranial nerve is  NOT involved in taste sensation?",
+    "options": ["Facial nerve", "Glossopharyngeal nerve", "Vagus nerve", "Hypoglossal nerve"],
+    "answer": "Hypoglossal nerve"
+  },
+  {
+    "question": "Which of the following is NOT part of the orbit?",
+    "options": ["Superior orbital fissure", "Optic canal", "Foramen spinosum", "Inferior orbital fissure"],
+    "answer": "Foramen spinosum"
+  },
+  {
+    "question": "Which of these is NOT a branch of the cervical plexus?",
+    "options": ["Phrenic nerve", "Lesser occipital nerve", "Supraclavicular nerves", "Auriculotemporal nerve"],
+    "answer": "Auriculotemporal nerve"
+  },
+  {
+    "question": "Which of these structures does NOT pass through the superior orbital fissure?",
+    "options": ["Oculomotor nerve", "Trochlear nerve", "Optic nerve", "Abducens nerve"],
+    "answer": "Optic nerve"
+  },
+  {
+    "question": "Which of these is NOT true about cerebrospinal fluid (CSF)?",
+    "options": ["It is produced by the choroid plexus", "It is absorbed by arachnoid granulations", "It circulates in the subarachnoid space", "It directly nourishes neurons"],
+    "answer": "It directly nourishes neurons"
+  },
+  {
+    "question": "Which nerve is NOT involved in the corneal reflex?",
+    "options": ["Facial nerve", "Trigeminal nerve", "Optic nerve", "Oculomotor nerve"],
+    "answer": "Optic nerve"
+  },
+  {
+    "question": "Which of these is NOT a branch of the vagus nerve?",
+    "options": ["Auricular branch", "Pharyngeal branch", "Recurrent laryngeal nerve", "Hypoglossal nerve"],
+    "answer": "Hypoglossal nerve"
+  },
+  {
+    "question": "Which of the following is NOT true about the middle meningeal artery?",
+    "options": ["It is a branch of the maxillary artery", "It enters the skull through the foramen spinosum", "It supplies the meninges", "It is a branch of the vertebral artery"],
+    "answer": "It is a branch of the vertebral artery"
+  },
+  {
+    "question": "Which of these is NOT a feature of an epidural hematoma?",
+    "options": ["Biconvex shape on CT", "Middle meningeal artery rupture", "Venous bleeding", "Rapid onset of symptoms"],
+    "answer": "Venous bleeding"
+  },
+  {
+    "question": "Which cranial nerve does NOT pass through the internal acoustic meatus?",
+    "options": ["Facial nerve", "Vestibulocochlear nerve", "Glossopharyngeal nerve", "None of the above"],
+    "answer": "Glossopharyngeal nerve"
+  },
+  {
+    "question": "Which of these is NOT a content of the carotid sheath?",
+    "options": ["Common carotid artery", "Internal jugular vein", "Vagus nerve", "Phrenic nerve"],
+    "answer": "Phrenic nerve"
+  },
+  {
+    "question": "Which of the following is NOT part of the temporomandibular joint?",
+    "options": ["Articular disc", "Synovial membrane", "Sphenomandibular ligament", "Stylomandibular ligament"],
+    "answer": "Stylomandibular ligament"
+  },
+  {
+    "question": "Which of these is NOT a clinical feature of raised intracranial pressure?",
+    "options": ["Papilledema", "Headache", "Vomiting", "Hyperreflexia"],
+    "answer": "Hyperreflexia"
+  },
+  {
+    "question": "Which nerve is  NOT a content of the superior orbital fissure?",
+    "options": ["Oculomotor nerve", "Trochlear nerve", "Abducens nerve", "Optic nerve"],
+    "answer": "Optic nerve"
+  },
+  {
+    "question": "Which structure is NOT involved in the auditory pathway?",
+    "options": ["Cochlear nuclei", "Lateral lemniscus", "Superior olivary complex", "Dentate nucleus"],
+    "answer": "Dentate nucleus"
+  },
+  {
+    "question": "Which of these is  NOT a branch of the ophthalmic nerve (V1)?",
+    "options": ["Frontal nerve", "Lacrimal nerve", "Nasociliary nerve", "Inferior alveolar nerve"],
+    "answer": "Inferior alveolar nerve"
+  },
+  {
+    "question": "Which of the following is NOT a feature of the jugular foramen?",
+    "options": ["Passage of cranial nerve IX", "Passage of cranial nerve X", "Passage of cranial nerve XI", "Passage of cranial nerve VII"],
+    "answer": "Passage of cranial nerve VII"
+  },
+  {
+    "question": "Which of these is  NOT part of the diencephalon?",
+    "options": ["Thalamus", "Hypothalamus", "Epithalamus", "Midbrain"],
+    "answer": "Midbrain"
+  },
+  {
+    "question": "Which of these is NOT true about the facial nerve?",
+    "options": ["It innervates the stapedius muscle", "It carries taste sensation from the anterior two-thirds of the tongue", "It provides motor innervation to the parotid gland", "It exits the skull via the stylomastoid foramen"],
+    "answer": "It provides motor innervation to the parotid gland"
+  },
+  {
+    "question": "Which of the following is NOT NOT true regarding the sensory innervation of the tympanic membrane?",
+    "options": [
+      "The external surface is innervated by the auriculotemporal nerve.",
+      "The external surface is innervated by the vagus nerve.",
+      "The internal surface is innervated by the glossopharyngeal nerve.",
+      "The internal surface is innervated by the facial nerve."
+    ],
+    "answer": "The internal surface is innervated by the facial nerve."
+  },
+  {
+    "question": "A patient has a lesion in the nucleus ambiguus. Which of the following is the LEAST likely clinical finding?",
+    "options": [
+      "Dysphagia",
+      "Dysarthria",
+      "Ipsilateral deviation of the uvula",
+      "Loss of the gag reflex"
+    ],
+    "answer": "Ipsilateral deviation of the uvula"
+  },
+  {
+    "question": "A lesion of the left abducens nerve causes which of the following?",
+    "options": [
+      "Medial deviation of the left eye",
+      "Inability to adduct the right eye",
+      "Ptosis of the left eye",
+      "Loss of accommodation in the left eye"
+    ],
+    "answer": "Medial deviation of the left eye"
+  },
+  {
+    "question": "Which of the following is NOT NOT true about the venous drainage of the brain?",
+    "options": [
+      "The cavernous sinus drains into the superior petrosal sinus.",
+      "The superior sagittal sinus drains into the transverse sinus.",
+      "The sigmoid sinus exits the skull as the internal jugular vein.",
+      "The basilar venous plexus drains into the vertebral veins exclusively."
+    ],
+    "answer": "The basilar venous plexus drains into the vertebral veins exclusively."
+  },
+  {
+    "question": "Which of the following arteries is MOST likely to be involved in an epidural hematoma?",
+    "options": [
+      "Anterior cerebral artery",
+      "Middle meningeal artery",
+      "Posterior cerebral artery",
+      "Basilar artery"
+    ],
+    "answer": "Middle meningeal artery"
+  },
+  {
+    "question": "Which of these is NOT a branch of the thyrocervical trunk?",
+    "options": [
+      "Inferior thyroid artery",
+      "Suprascapular artery",
+      "Ascending cervical artery",
+      "Vertebral artery"
+    ],
+    "answer": "Vertebral artery"
+  },
+  {
+    "question": "Which of the following is NOT NOT true regarding the innervation of the pharyngeal constrictor muscles?",
+    "options": [
+      "The vagus nerve innervates all constrictors except the stylopharyngeus.",
+      "The superior constrictor muscle is innervated by the pharyngeal plexus.",
+      "The middle constrictor muscle is innervated by the glossopharyngeal nerve.",
+      "The inferior constrictor is partially innervated by the external laryngeal nerve."
+    ],
+    "answer": "The middle constrictor muscle is innervated by the glossopharyngeal nerve."
+  },
+  {
+    "question": "A tumor compressing the jugular foramen will most likely result in all EXCEPT:",
+    "options": [
+      "Loss of sensation over the posterior one-third of the tongue",
+      "Deviation of the uvula away from the lesion",
+      "Loss of parasympathetic innervation to the parotid gland",
+      "Ipsilateral tongue deviation"
+    ],
+    "answer": "Ipsilateral tongue deviation"
+  },
+  {
+    "question": "Which of these is NOT NOT true regarding the course of the hypoglossal nerve?",
+    "options": [
+      "It passes deep to the posterior belly of the digastric muscle.",
+      "It supplies motor innervation to the genioglossus muscle.",
+      "It courses superficial to the hyoglossus muscle.",
+      "It provides sensory innervation to the posterior tongue."
+    ],
+    "answer": "It provides sensory innervation to the posterior tongue."
+  },
+  {
+    "question": "Which of the following findings would MOST likely occur in a patient with damage to the facial colliculus?",
+    "options": [
+      "Ipsilateral facial paralysis",
+      "Contralateral loss of pain and temperature",
+      "Inability to abduct the eye",
+      "Loss of taste from the posterior one-third of the tongue"
+    ],
+    "answer": "Ipsilateral facial paralysis"
+  },
+  {
+    "question": "Which of the following is NOT NOT true about the parasympathetic innervation of the parotid gland?",
+    "options": [
+      "It is mediated by the glossopharyngeal nerve.",
+      "The otic ganglion is involved in this pathway.",
+      "The auriculotemporal nerve carries postganglionic fibers.",
+      "It is mediated directly by the facial nerve."
+    ],
+    "answer": "It is mediated directly by the facial nerve."
+  },
+  {
+    "question": "Damage to which of the following nerves will result in the inability to elevate the pharynx during swallowing?",
+    "options": [
+      "Glossopharyngeal nerve",
+      "Vagus nerve",
+      "Hypoglossal nerve",
+      "Facial nerve"
+    ],
+    "answer": "Glossopharyngeal nerve"
+  },
+  {
+    "question": "A patient presents with ptosis, miosis, and anhidrosis. Which of the following structures is MOST likely damaged?",
+    "options": [
+      "Cervical sympathetic chain",
+      "Superior cervical ganglion",
+      "Oculomotor nerve",
+      "Edinger-Westphal nucleus"
+    ],
+    "answer": "Superior cervical ganglion"
+  },
+  {
+    "question": "Which of the following is NOT NOT true about the blood supply to the larynx?",
+    "options": [
+      "The superior laryngeal artery is a branch of the superior thyroid artery.",
+      "The inferior laryngeal artery is a branch of the inferior thyroid artery.",
+      "Both arteries are branches of the external carotid artery.",
+      "They anastomose at the midline."
+    ],
+    "answer": "Both arteries are branches of the external carotid artery."
+  },
+  {
+    "question": "Which of the following is the LEAST likely result of a lesion to the vagus nerve?",
+    "options": [
+      "Hoarseness",
+      "Loss of gag reflex",
+      "Deviation of the tongue toward the side of the lesion",
+      "Dysphagia"
+    ],
+    "answer": "Deviation of the tongue toward the side of the lesion"
+  },
+  {
+    "question": "A patient with an internal carotid artery aneurysm in the cavernous sinus would MOST likely exhibit which symptom?",
+    "options": [
+      "Ptosis",
+      "Inability to abduct the eye",
+      "Loss of corneal reflex",
+      "Loss of vision"
+    ],
+    "answer": "Inability to abduct the eye"
+  },
+  {
+    "question": "Which of these is NOT NOT true about the course of the accessory nerve?",
+    "options": [
+      "It enters the skull through the foramen magnum.",
+      "It exits the skull through the jugular foramen.",
+      "It innervates the sternocleidomastoid and trapezius muscles.",
+      "It carries parasympathetic fibers to the thorax."
+    ],
+    "answer": "It carries parasympathetic fibers to the thorax."
+  },
+  {
+    "question": "Which of the following structures is LEAST likely to be affected by a tumor compressing the hypoglossal canal?",
+    "options": [
+      "Genioglossus muscle",
+      "Hyoglossus muscle",
+      "Palatoglossus muscle",
+      "Intrinsic muscles of the tongue"
+    ],
+    "answer": "Palatoglossus muscle"
+  },
+  {
+    "question": "Which of the following arteries does NOT NOT contribute to Kiesselbach's plexus?",
+    "options": [
+      "Sphenopalatine artery",
+      "Greater palatine artery",
+      "Superior labial artery",
+      "Posterior ethmoidal artery"
+    ],
+    "answer": "Posterior ethmoidal artery"
+  },
+  {
+    "question": "A patient with an aneurysm compressing the posterior cerebral artery would MOST likely exhibit which deficit?",
+    "options": [
+      "Contralateral homonymous hemianopia",
+      "Ipsilateral oculomotor nerve palsy",
+      "Loss of sensation in the contralateral face",
+      "Contralateral hemiparesis"
+    ],
+    "answer": "Contralateral homonymous hemianopia"
+  },
                 { "question": "Which cranial nerve is responsible for vision?", options: ["Optic nerve", "Oculomotor nerve", "Trigeminal nerve", "Facial nerve"], answer: "Optic nerve" },
         { "question": "What is the primary function of the facial nerve?", options: ["Facial expressions", "Vision", "Hearing", "Taste"], answer: "Facial expressions" },
         { "question": "The hyoid bone is located in which part of the body?", options: ["Neck", "Head", "Thorax", "Pelvis"], answer: "Neck" },
