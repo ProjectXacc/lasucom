@@ -46,6 +46,206 @@ const questionBank = [
         { "question": "What is the function of the immune system's phagocytes?", "options": ["To produce antibodies", "To engulf and destroy pathogens", "To activate T cells", "To produce cytokines"], "answer": "To engulf and destroy pathogens" },
         { "question": "Which enzyme is responsible for the degradation of proteins in the stomach?", "options": ["Amylase", "Pepsin", "Lipase", "Trypsin"], "answer": "Pepsin" },
         { "question": "What is the primary role of the blood-brain barrier?", "options": ["To allow nutrient exchange", "To protect the brain from pathogens", "To regulate neurotransmitter levels", "To store energy"], "answer": "To protect the brain from pathogens" },
+        {
+        question: "What are xenobiotics?",
+        options: [
+            "Naturally occurring compounds in the body",
+            "Foreign chemical substances not produced by the body",
+            "Essential nutrients required for metabolism",
+            "Endogenous enzymes"
+        ],
+        answer: "Foreign chemical substances not produced by the body"
+    },
+    {
+        question: "Which of the following is NOT an example of a xenobiotic?",
+        options: [
+            "Drugs",
+            "Pesticides",
+            "Hormones",
+            "Environmental pollutants"
+        ],
+        answer: "Hormones"
+    },
+    {
+        question: "Which organ is primarily responsible for xenobiotic metabolism?",
+        options: [
+            "Lungs",
+            "Kidneys",
+            "Liver",
+            "Stomach"
+        ],
+        answer: "Liver"
+    },
+    {
+        question: "Which phase of xenobiotic metabolism involves oxidation, reduction, and hydrolysis?",
+        options: [
+            "Phase I",
+            "Phase II",
+            "Phase III",
+            "Phase IV"
+        ],
+        answer: "Phase I"
+    },
+    {
+        question: "Which enzyme family is most important in Phase I metabolism of xenobiotics?",
+        options: [
+            "Cytochrome P450",
+            "Amylase",
+            "Pepsin",
+            "Lipase"
+        ],
+        answer: "Cytochrome P450"
+    },
+    {
+        question: "Which of the following reactions is common in Phase II xenobiotic metabolism?",
+        options: [
+            "Oxidation",
+            "Reduction",
+            "Glucuronidation",
+            "Hydrolysis"
+        ],
+        answer: "Glucuronidation"
+    },
+    {
+        question: "What is the main purpose of xenobiotic metabolism?",
+        options: [
+            "Increase toxicity",
+            "Convert compounds into more hydrophilic forms for excretion",
+            "Decrease drug effectiveness",
+            "Store chemicals in adipose tissue"
+        ],
+        answer: "Convert compounds into more hydrophilic forms for excretion"
+    },
+    {
+        question: "Which of the following factors affects xenobiotic metabolism?",
+        options: [
+            "Genetics",
+            "Age",
+            "Diet",
+            "All of the above"
+        ],
+        answer: "All of the above"
+    },
+    {
+        question: "Which of the following is a potential outcome of xenobiotic metabolism?",
+        options: [
+            "Detoxification",
+            "Bioactivation",
+            "Both detoxification and bioactivation",
+            "None of the above"
+        ],
+        answer: "Both detoxification and bioactivation"
+    },
+    {
+        question: "Which of these enzymes catalyzes the conjugation of xenobiotics with glutathione?",
+        options: [
+            "Cytochrome P450",
+            "UDP-glucuronosyltransferase",
+            "Glutathione S-transferase",
+            "N-acetyltransferase"
+        ],
+        answer: "Glutathione S-transferase"
+    },
+    {
+        question: "Which phase of xenobiotic metabolism makes molecules more water-soluble?",
+        options: [
+            "Phase I",
+            "Phase II",
+            "Phase III",
+            "Phase IV"
+        ],
+        answer: "Phase II"
+    },
+    {
+        question: "What is the primary site of excretion for xenobiotics?",
+        options: [
+            "Lungs",
+            "Kidneys",
+            "Skin",
+            "Stomach"
+        ],
+        answer: "Kidneys"
+    },
+    {
+        question: "Which of these processes is a major Phase I reaction?",
+        options: [
+            "Acetylation",
+            "Methylation",
+            "Oxidation",
+            "Glucuronidation"
+        ],
+        answer: "Oxidation"
+    },
+    {
+        question: "Which of the following is a major route of xenobiotic elimination?",
+        options: [
+            "Feces",
+            "Urine",
+            "Exhalation",
+            "All of the above"
+        ],
+        answer: "All of the above"
+    },
+    {
+        question: "Which of the following is a major role of cytochrome P450 enzymes?",
+        options: [
+            "Synthesizing hormones",
+            "Conjugating xenobiotics",
+            "Catalyzing oxidation reactions",
+            "Digesting food"
+        ],
+        answer: "Catalyzing oxidation reactions"
+    },
+    {
+        question: "Which enzyme is responsible for N-acetylation of xenobiotics?",
+        options: [
+            "N-acetyltransferase",
+            "Glutathione S-transferase",
+            "UDP-glucuronosyltransferase",
+            "Cytochrome P450"
+        ],
+        answer: "N-acetyltransferase"
+    },
+    {
+        question: "Which phase of metabolism involves conjugation with sulfate, glucuronic acid, or glutathione?",
+        options: [
+            "Phase I",
+            "Phase II",
+            "Phase III",
+            "Phase IV"
+        ],
+        answer: "Phase II"
+    },
+    {
+        question: "Which organelle is rich in cytochrome P450 enzymes?",
+        options: [
+            "Mitochondria",
+            "Endoplasmic reticulum",
+            "Golgi apparatus",
+            "Nucleus"
+        ],
+        answer: "Endoplasmic reticulum"
+    },
+    {
+        question: "Which factor can increase the metabolism of xenobiotics?",
+        options: [
+            "Enzyme induction",
+            "Enzyme inhibition",
+            "Liver failure",
+            "Kidney dysfunction"
+        ],
+        answer: "Enzyme induction"
+    },
+    {
+        question: "What happens when a xenobiotic undergoes bioactivation?",
+        options: [
+            "It becomes less toxic",
+            "It becomes more toxic",
+            "It is completely eliminated",
+            "It remains unchanged"
+        ],
+        answer: "It becomes more toxic"
+    },
 
     // Add more questions here
 ];
