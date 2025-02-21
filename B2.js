@@ -1,6 +1,206 @@
 // Question bank
 const questionBank = [
        { question: "Which molecule is the primary carrier of chemical energy in cells?", options: ["ATP", "DNA", "RNA", "GTP"], answer: "ATP" },
+    {
+        question: "What is the primary function of the HMP shunt?",
+        options: [
+            "ATP production",
+            "NADH production",
+            "NADPH and ribose-5-phosphate production",
+            "Glycogen synthesis"
+        ],
+        answer: "NADPH and ribose-5-phosphate production"
+    },
+    {
+        question: "Which enzyme is unique to the HMP shunt and absent in glycolysis?",
+        options: [
+            "Hexokinase",
+            "Glucose-6-phosphate dehydrogenase",
+            "Phosphofructokinase",
+            "Pyruvate kinase"
+        ],
+        answer: "Glucose-6-phosphate dehydrogenase"
+    },
+    {
+        question: "Deficiency of which enzyme in the HMP shunt leads to hemolytic anemia?",
+        options: [
+            "Transketolase",
+            "Glucose-6-phosphate dehydrogenase",
+            "6-Phosphogluconate dehydrogenase",
+            "Ribulose-5-phosphate isomerase"
+        ],
+        answer: "Glucose-6-phosphate dehydrogenase"
+    },
+    {
+        question: "Which of the following is a key product of the oxidative phase of the HMP shunt?",
+        options: [
+            "Fructose-6-phosphate",
+            "NADH",
+            "NADPH",
+            "ATP"
+        ],
+        answer: "NADPH"
+    },
+    {
+        question: "What is the role of NADPH produced in the HMP shunt?",
+        options: [
+            "Energy production",
+            "Antioxidant defense and biosynthetic reactions",
+            "Glycolysis regulation",
+            "DNA replication"
+        ],
+        answer: "Antioxidant defense and biosynthetic reactions"
+    },
+    {
+        question: "Which of the following tissues has the highest activity of the HMP shunt?",
+        options: [
+            "Skeletal muscle",
+            "Liver",
+            "Red blood cells",
+            "Brain"
+        ],
+        answer: "Red blood cells"
+    },
+    {
+        question: "What is the fate of ribose-5-phosphate produced in the HMP shunt?",
+        options: [
+            "It enters glycolysis",
+            "It is used for nucleotide synthesis",
+            "It is converted to pyruvate",
+            "It is used for glycogen synthesis"
+        ],
+        answer: "It is used for nucleotide synthesis"
+    },
+    {
+        question: "Which of the following is NOT a function of the HMP shunt?",
+        options: [
+            "Production of NADPH",
+            "Production of ribose-5-phosphate",
+            "Production of ATP",
+            "Antioxidant defense"
+        ],
+        answer: "Production of ATP"
+    },
+    {
+        question: "Which molecule is the starting point of the HMP shunt?",
+        options: [
+            "Glucose",
+            "Glucose-6-phosphate",
+            "Fructose-6-phosphate",
+            "Pyruvate"
+        ],
+        answer: "Glucose-6-phosphate"
+    },
+    {
+        question: "What is the net yield of NADPH per glucose molecule in the HMP shunt?",
+        options: [
+            "1",
+            "2",
+            "4",
+            "6"
+        ],
+        answer: "2"
+    },
+    {
+        question: "Which of the following conditions can trigger a crisis in G6PD deficiency?",
+        options: [
+            "High carbohydrate diet",
+            "Infection or oxidative stress",
+            "Excessive vitamin C intake",
+            "Low protein diet"
+        ],
+        answer: "Infection or oxidative stress"
+    },
+    {
+        question: "Which of the following is an intermediate in the non-oxidative phase of the HMP shunt?",
+        options: [
+            "Ribulose-5-phosphate",
+            "Glucose-6-phosphate",
+            "Fructose-6-phosphate",
+            "Pyruvate"
+        ],
+        answer: "Ribulose-5-phosphate"
+    },
+    {
+        question: "What is the primary regulatory enzyme of the HMP shunt?",
+        options: [
+            "Hexokinase",
+            "Glucose-6-phosphate dehydrogenase",
+            "Phosphofructokinase",
+            "Pyruvate kinase"
+        ],
+        answer: "Glucose-6-phosphate dehydrogenase"
+    },
+    {
+        question: "Which of the following vitamins is essential for the HMP shunt?",
+        options: [
+            "Vitamin B1 (Thiamine)",
+            "Vitamin B2 (Riboflavin)",
+            "Vitamin B3 (Niacin)",
+            "Vitamin B6 (Pyridoxine)"
+        ],
+        answer: "Vitamin B3 (Niacin)"
+    },
+    {
+        question: "What is the significance of the HMP shunt in red blood cells?",
+        options: [
+            "It produces ATP for energy",
+            "It generates NADPH to combat oxidative stress",
+            "It synthesizes glycogen",
+            "It produces lactate"
+        ],
+        answer: "It generates NADPH to combat oxidative stress"
+    },
+    {
+        question: "Which of the following is a byproduct of the oxidative phase of the HMP shunt?",
+        options: [
+            "CO2",
+            "O2",
+            "H2O",
+            "NH3"
+        ],
+        answer: "CO2"
+    },
+    {
+        question: "What happens to the HMP shunt activity in the presence of high NADPH levels?",
+        options: [
+            "It increases",
+            "It decreases",
+            "It remains unchanged",
+            "It stops completely"
+        ],
+        answer: "It decreases"
+    },
+    {
+        question: "Which of the following is a clinical manifestation of G6PD deficiency?",
+        options: [
+            "Jaundice",
+            "Hypertension",
+            "Hyperglycemia",
+            "Hypokalemia"
+        ],
+        answer: "Jaundice"
+    },
+    {
+        question: "What is the role of transketolase in the HMP shunt?",
+        options: [
+            "It converts glucose-6-phosphate to 6-phosphogluconate",
+            "It transfers 2-carbon units between sugars",
+            "It produces NADPH",
+            "It generates ATP"
+        ],
+        answer: "It transfers 2-carbon units between sugars"
+    },
+    {
+        question: "Which of the following is true about the non-oxidative phase of the HMP shunt?",
+        options: [
+            "It produces NADPH",
+            "It is irreversible",
+            "It generates ribose-5-phosphate",
+            "It requires oxygen"
+        ],
+        answer: "It generates ribose-5-phosphate"
+    },
         { "question": "Which type of metabolism involves the breakdown of organic molecules to release energy?", "options": ["Anabolism", "Catabolism", "Fermentation", "Photosynthesis"], "answer": "Catabolism" },
         { "question": "What is the primary energy currency of the cell?", "options": ["ATP", "NADH", "FADH2", "GTP"], "answer": "ATP" },
         { "question": "Which process do microorganisms use to generate energy in anaerobic conditions?", "options": ["Aerobic respiration", "Fermentation", "Krebs cycle", "Oxidative phosphorylation"], "answer": "Fermentation" },
