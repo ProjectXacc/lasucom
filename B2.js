@@ -203,6 +203,210 @@ const questionBank = [
     },
         { "question": "Which type of metabolism involves the breakdown of organic molecules to release energy?", "options": ["Anabolism", "Catabolism", "Fermentation", "Photosynthesis"], "answer": "Catabolism" },
         { "question": "What is the primary energy currency of the cell?", "options": ["ATP", "NADH", "FADH2", "GTP"], "answer": "ATP" },
+        
+          {
+        question: "Which enzyme bypasses hexokinase in gluconeogenesis?",
+        options: [
+            "Glucose-6-phosphatase",
+            "Fructose-1,6-bisphosphatase",
+            "Pyruvate carboxylase",
+            "Phosphoenolpyruvate carboxykinase"
+        ],
+        answer: "Glucose-6-phosphatase"
+    },
+    {
+        question: "Which organ is the primary site of gluconeogenesis?",
+        options: [
+            "Skeletal muscle",
+            "Liver",
+            "Brain",
+            "Red blood cells"
+        ],
+        answer: "Liver"
+    },
+    {
+        question: "Which enzyme catalyzes the first committed step of gluconeogenesis?",
+        options: [
+            "Pyruvate carboxylase",
+            "Glucose-6-phosphatase",
+            "Fructose-1,6-bisphosphatase",
+            "Phosphoenolpyruvate carboxykinase"
+        ],
+        answer: "Pyruvate carboxylase"
+    },
+    {
+        question: "Which molecule provides the carbon skeleton for gluconeogenesis?",
+        options: [
+            "Acetyl-CoA",
+            "Lactate",
+            "Fatty acids",
+            "Cholesterol"
+        ],
+        answer: "Lactate"
+    },
+    {
+        question: "Which enzyme is not involved in gluconeogenesis?",
+        options: [
+            "Glucose-6-phosphatase",
+            "Pyruvate kinase",
+            "Fructose-1,6-bisphosphatase",
+            "Pyruvate carboxylase"
+        ],
+        answer: "Pyruvate kinase"
+    },
+    {
+        question: "Which of the following is an allosteric activator of pyruvate carboxylase?",
+        options: [
+            "NADH",
+            "Acetyl-CoA",
+            "AMP",
+            "Glucose-6-phosphate"
+        ],
+        answer: "Acetyl-CoA"
+    },
+    {
+        question: "Which enzyme converts oxaloacetate to phosphoenolpyruvate in gluconeogenesis?",
+        options: [
+            "Pyruvate carboxylase",
+            "Phosphoenolpyruvate carboxykinase",
+            "Fructose-1,6-bisphosphatase",
+            "Glucose-6-phosphatase"
+        ],
+        answer: "Phosphoenolpyruvate carboxykinase"
+    },
+    {
+        question: "Which of the following is a major inhibitor of gluconeogenesis?",
+        options: [
+            "Glucagon",
+            "Cortisol",
+            "Insulin",
+            "Epinephrine"
+        ],
+        answer: "Insulin"
+    },
+    {
+        question: "Which of the following is NOT a gluconeogenic precursor?",
+        options: [
+            "Lactate",
+            "Glycerol",
+            "Glucogenic amino acids",
+            "Acetyl-CoA"
+        ],
+        answer: "Acetyl-CoA"
+    },
+    {
+        question: "Which of the following inhibits fructose-1,6-bisphosphatase?",
+        options: [
+            "AMP",
+            "Glucagon",
+            "Citrate",
+            "NADH"
+        ],
+        answer: "AMP"
+    },
+  
+    {
+        question: "Which enzyme catalyzes the first committed step of glycolysis?",
+        options: [
+            "Hexokinase",
+            "Glucokinase",
+            "Phosphofructokinase-1",
+            "Pyruvate kinase"
+        ],
+        answer: "Phosphofructokinase-1"
+    },
+    {
+        question: "Which enzyme is bypassed in glycolysis during anaerobic metabolism?",
+        options: [
+            "Pyruvate kinase",
+            "Hexokinase",
+            "Phosphoglycerate kinase",
+            "Glyceraldehyde-3-phosphate dehydrogenase"
+        ],
+        answer: "Pyruvate kinase"
+    },
+    {
+        question: "Which step of glycolysis produces the first ATP molecule?",
+        options: [
+            "Hexokinase reaction",
+            "Phosphofructokinase-1 reaction",
+            "Phosphoglycerate kinase reaction",
+            "Pyruvate kinase reaction"
+        ],
+        answer: "Phosphoglycerate kinase reaction"
+    },
+    {
+        question: "Which enzyme is responsible for substrate-level phosphorylation in glycolysis?",
+        options: [
+            "Pyruvate kinase",
+            "Phosphoglycerate kinase",
+            "Enolase",
+            "Aldolase"
+        ],
+        answer: "Pyruvate kinase"
+    },
+    {
+        question: "What is the net ATP gain from glycolysis per glucose molecule?",
+        options: [
+            "2",
+            "4",
+            "6",
+            "8"
+        ],
+        answer: "2"
+    },
+    {
+        question: "Which molecule is the final electron acceptor in anaerobic glycolysis?",
+        options: [
+            "Oxygen",
+            "Pyruvate",
+            "NADH",
+            "Lactate"
+        ],
+        answer: "Pyruvate"
+    },
+    {
+        question: "Which enzyme in glycolysis uses NAD+ as a cofactor?",
+        options: [
+            "Hexokinase",
+            "Glyceraldehyde-3-phosphate dehydrogenase",
+            "Phosphofructokinase-1",
+            "Pyruvate kinase"
+        ],
+        answer: "Glyceraldehyde-3-phosphate dehydrogenase"
+    },
+    {
+        question: "Which intermediate is formed when fructose-1,6-bisphosphate is split?",
+        options: [
+            "Dihydroxyacetone phosphate and glyceraldehyde-3-phosphate",
+            "Glucose-6-phosphate",
+            "Phosphoenolpyruvate",
+            "3-Phosphoglycerate"
+        ],
+        answer: "Dihydroxyacetone phosphate and glyceraldehyde-3-phosphate"
+    },
+    {
+        question: "Which enzyme converts glucose-6-phosphate to fructose-6-phosphate?",
+        options: [
+            "Hexokinase",
+            "Phosphoglucose isomerase",
+            "Phosphofructokinase-1",
+            "Aldolase"
+        ],
+        answer: "Phosphoglucose isomerase"
+    },
+    {
+        question: "Which of the following inhibits phosphofructokinase-1?",
+        options: [
+            "AMP",
+            "Fructose-2,6-bisphosphate",
+            "ATP",
+            "Insulin"
+        ],
+        answer: "ATP"
+    },
+
+        
         { "question": "Which process do microorganisms use to generate energy in anaerobic conditions?", "options": ["Aerobic respiration", "Fermentation", "Krebs cycle", "Oxidative phosphorylation"], "answer": "Fermentation" },
         { "question": "Which pathway is involved in glucose catabolism under aerobic conditions?", "options": ["Glycolysis", "Fermentation", "Krebs cycle", "Pentose phosphate pathway"], "answer": "Krebs cycle" },
         { "question": "What is the end product of fermentation of glucose by yeast?", "options": ["Ethanol", "Lactic acid", "Acetic acid", "Butyric acid"], "answer": "Ethanol" },
