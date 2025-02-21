@@ -39,7 +39,7 @@ const questionBank = [
         { "question": "Which of the following enzymes is involved in the breakdown of hydrogen peroxide?", "options": ["Catalase", "Lactate dehydrogenase", "Hexokinase", "Aldose reductase"], "answer": "Catalase" },
         { "question": "Which pathway is utilized by bacteria to ferment glucose to lactic acid?", "options": ["Pentose phosphate pathway", "Krebs cycle", "Lactic acid fermentation", "Glycolysis"], "answer": "Lactic acid fermentation" },
         { "question": "What is the fate of pyruvate under anaerobic conditions in yeast?", "options": ["Converted to acetyl-CoA", "Converted to ethanol", "Converted to lactic acid", "Remains unchanged"], "answer": "Converted to ethanol" },
-    // Add more questions here
+ // Add more questions here
 ];
 
 // Shuffle questions and initialize answers
@@ -192,5 +192,3 @@ document.getElementById('goButton').addEventListener('click', () => {
         alert(`Please enter a page number between 1 and ${maxPage + 1}.`);
     }
 });
-
-}
