@@ -8,6 +8,7 @@ const users = [
 { username: "190710067", password: "OGUNLEYE", registrationDate: new Date("2025-01-30") },
 { username: "210710057", password: "12345678", registrationDate: new Date("2025-02-26") },
 { username: "210710045", password: "4525", registrationDate: new Date("2025-03-06") },
+{ username: "22071005", password: "455205", registrationDate: new Date("2025-03-06") },
 
 
 ];
