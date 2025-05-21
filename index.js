@@ -32,7 +32,7 @@ buttons.forEach((button) => {
                 break;
             case 'Watch Video':
                 alert('Opening video lectures...');
-                window.location.href = 'video.html';
+                window.location.href = 'CMDA.html';
                 break;
             default:
                 alert('Action not recognized.');
