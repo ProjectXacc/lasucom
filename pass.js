@@ -4,7 +4,7 @@ const passwords = {
  "PADONU1": new Date("2026-12-01T23:59:59").getTime(), // Custom expiration date and time
  "4525": new Date("2025-03-06T23:59:59").getTime(), // Custom expiration date and time
  "12345678": new Date("2025-02-26T23:59:59").getTime(), // Custom expiration date and time
-    "222": new Date("2024-12-15T23:59:59").getTime()  // Custom expiration date and time
+    "LASUCOMCMDA": new Date("2029-12-15T23:59:59").getTime()  // Custom expiration date and time
 };
 
 // Save the passwords in localStorage
