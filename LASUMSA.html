@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LASUMSA MOCK Quiz - Project X</title>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="B1.html">RESTART QUIZ</a>
+        <a href="basic_medical_science_quiz.html">SELECT QUIZ</a>
+    </nav>
+    <link rel="stylesheet" href="anatomymb.css">
+</head>
+<body>
+    <header>LASUMSA PHYSIOLOGY MOCK - Project X</header>
+
+    <div class="container">
+        <!-- Password Input Section -->
+        <div id="passwordSection">
+            <label for="passwordInput">Enter Password to Start Quiz:</label>
+            <input type="password" id="passwordInput" placeholder="Enter password">
+            <button id="verifyPasswordButton">Verify Password</button>
+            <p id="passwordMessage"></p>
+        </div>
+
+        <!-- Timer Input Section (Initially Hidden) -->
+        <div id="timerSetup" style="display: none;">
+            <label for="timerInput">Set Timer (minutes):</label>
+            <input type="number" id="timerInput" min="1" placeholder="Enter minutes">
+            <button id="startQuizButton">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section (Initially Hidden) -->
+        <div id="quizContainer" style="display: none;"></div>
+        <div id="timerDisplay" style="display: none;">Time Remaining: <span id="timer"></span></div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons" id="nav-buttons" style="display: none;">
+            <button class="btn" id="prevButton" style="display: none;">Previous</button>
+            <button class="btn" id="nextButton">Next</button>
+            <button class="btn" id="submitButton" style="display: none;">Submit</button>
+        </div>
+
+<div id="submitModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2>Quiz Submission</h2>
+        <div id="submissionContent">
+            <p>Are you sure you want to submit your quiz?</p>
+            <button id="confirmSubmit" class="button">Yes, Submit</button>
+            <button id="cancelSubmit" class="button cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Page Indicator -->
+        <div class="pagination" id="pageIndicator" style="display: none;">Page 1</div>
+
+        <!-- Go to Page -->
+        <div class="goto-page" id="goto-page" style="display: none;">
+            <label for="pageInput">Go to page: </label>
+            <input type="number" id="pageInput" min="1" max="25" />
+            <button class="btn" id="goButton">Go</button>
+        </div>
+
+        <!-- Result Table for Incorrect Answers -->
+        <div id="resultTable" style="display: none;">
+            <h2>Your Score: <span id="score"></span> / 50</h2>
+            <h3>Review Incorrect Answers:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Your Answer</th>
+                        <th>Correct Answer</th>
+                    </tr>
+                </thead>
+                <tbody id="incorrectAnswersTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+
+    <script>
+	
+	// Question bank
+const questionBank = [
+       {
+question: "In the nucleus of a cell, the space between the nuclear envelopes is known as:",
+options: ["Perinuclear gap", "Nuclear matrix", "Perinuclear cistern", "Nucleoplasm"],
+answer: "Perinuclear cistern"
+},
+{
+question: "Which enzymes are in the inner mitochondrial membrane involved in oxidative phosphorylation?",
+options: [
+"Succinate dehydrogenase, ATP synthase, NADH dehydrogenase, Cytochrome c oxidase",
+"NADH dehydrogenase, Succinate dehydrogenase, Cytochrome c reductase, Cytochrome c oxidase",
+"Fumarase, Malate dehydrogenase, Citrate synthase, Aconitase",
+"Hexokinase, Phosphofructokinase, Pyruvate kinase, Lactate dehydrogenase"
+],
+answer: "NADH dehydrogenase, Succinate dehydrogenase, Cytochrome c reductase, Cytochrome c oxidase"
+},
+{
+question: "Cholesterol makes up how many percent of the lipid bilayer of cell membranes?",
+options: ["10%", "20%", "30%", "40%"],
+answer: "30%"
+},
+{
+question: "Which of the following is not a component of control system in homeostasis?",
+options: ["Receptor", "Effector", "Afferent and efferent pathways", "Endoplasmic reticulum"],
+answer: "Endoplasmic reticulum"
+},
+{
+question: "What are characteristics of negative feedback responses?",
+options: [
+"Amplify the stimulus",
+"Self-limiting, reduce the stimulus",
+"Self-limiting, reduce the stimulus, maintain stability",
+"No effect on homeostasis"
+],
+answer: "Self-limiting, reduce the stimulus, maintain stability"
+},
+{
+question: "Which of the following is an example of positive feedback?",
+options: ["Regulation of blood glucose", "Regulation of blood pressure", "Blood clotting cascade", "Thermoregulation"],
+answer: "Blood clotting cascade"
+},
+{
+question: "Which class of pumps can transport ions as well as small molecules?",
+options: ["Sodium-potassium pump", "ABC super family", "Calcium ATPase pump", "Proton pump"],
+answer: "ABC super family"
+},
+{
+question: "How many percent of total body weight is ECF?",
+options: ["10%", "15%", "20%", "30%"],
+answer: "20%"
+},
+{
+question: "Which is not a property of a marker used to measure fluid compartments?",
+options: ["Measurable", "Non-toxic", "Metabolized quickly by the body", "Should not affect water/fluid distribution"],
+answer: "Metabolized quickly by the body"
+},
+{
+question: "Marker used to measure plasma volume:",
+options: ["Inulin", "Evans blue, RISA (I¹²¹)", "D2O", "Sucrose"],
+answer: "Evans blue, RISA (I¹²¹)"
+},
+{
+question: "Marker used to measure ICF is?",
+options: ["Inulin", "None, it is measured by subtraction", "Mannitol", "Evans blue"],
+answer: "None, it is measured by subtraction"
+},
+{
+question: "Hormones involved in regulating urine production and fluid output:",
+options: ["Insulin, glucagon", "ADH, aldosterone, ANP", "Parathyroid hormone, calcitonin", "Gastrin, secretin"],
+answer: "ADH, aldosterone, ANP"
+},
+{
+question: "Function of ANP is to:",
+options: [
+"Increase renal excretion of sodium and water",
+"Decrease renal excretion of sodium and water",
+"Increase renal reabsorption of glucose",
+"Decrease renal excretion of potassium"
+],
+answer: "Increase renal excretion of sodium and water"
+},
+{
+question: "Amino acids in alpha and beta globin chains of hemoglobin:",
+options: ["100, 120", "126, 140", "141 in alpha, 146 in beta", "160, 170"],
+answer: "141 in alpha, 146 in beta"
+},
+{
+question: "PCV in males and females:",
+options: [
+"30-40% males, 25-35% females",
+"45-60% males, 40-50% females",
+"40-54% males, 36-47% females",
+"50-60% males, 40-55% females"
+],
+answer: "40-54% males, 36-47% females"
+},
+{
+question: "In which stage of erythropoiesis does nucleus degenerate?",
+options: ["Proerythroblast", "Basophilic erythroblast", "Polychromatic erythroblast", "Orthochromatic erythroblast (late normoblast)"],
+answer: "Orthochromatic erythroblast (late normoblast)"
+},
+{
+question: "Release of erythropoietin is mainly stimulated by:",
+options: ["High RBC count", "Hypoxia", "High blood pressure", "High glucose levels"],
+answer: "Hypoxia"
+},
+{
+question: "Inability of GIT to produce intrinsic factor results in:",
+options: ["Iron deficiency anemia", "Aplastic anemia", "Sickle cell anemia", "Pernicious anemia"],
+answer: "Pernicious anemia"
+},
+{
+question: "Most abundant leukocyte:",
+options: ["Basophils", "Eosinophils", "Lymphocytes", "Neutrophils"],
+answer: "Neutrophils"
+},
+{
+question: "Main plasma protein for oncotic pressure:",
+options: ["Fibrinogen", "Globulin", "Transferrin", "Albumin"],
+answer: "Albumin"
+},
+{
+question: "Sympathetic division of ANS is also called:",
+options: ["Craniosacral division", "Parasympathetic division", "Thoracolumbar division", "Vagal division"],
+answer: "Thoracolumbar division"
+},
+{
+question: "Role of peroxisomes in metabolism:",
+options: ["Protein synthesis", "Lipid synthesis", "Detoxification of hydrogen peroxide", "ATP production"],
+answer: "Detoxification of hydrogen peroxide"
+},
+{
+question: "Protein blocking myosin-binding sites on actin:",
+options: ["Myosin", "Troponin", "Tropomyosin", "Calmodulin"],
+answer: "Tropomyosin"
+},
+{
+question: "ATP hydrolysis during contraction provides energy for:",
+options: [
+"Calcium binding to troponin",
+"Detachment of myosin head from actin",
+"Activation of Ca²⁺ channels",
+"Synthesis of acetylcholine"
+],
+answer: "Detachment of myosin head from actin"
+},
+{
+question: "Clathrin-coated pits involved in:",
+options: ["Pinocytosis", "Phagocytosis", "Receptor-mediated endocytosis", "Exocytosis"],
+answer: "Receptor-mediated endocytosis"
+},
+{
+question: "Major source of Ca²⁺ for smooth muscle contraction:",
+options: ["Sarcoplasmic reticulum", "T-tubules", "Extracellular fluid", "Mitochondria"],
+answer: "Extracellular fluid"
+},
+{
+question: "Hormone inserting aquaporin-2 in collecting ducts:",
+options: ["Aldosterone", "ANP", "ADH", "Renin"],
+answer: "ADH"
+},
+{
+question: "Coagulation cascade intrinsic pathway initiated by:",
+options: ["Platelet factor 3", "Factor XII activation", "Factor VII activation", "Tissue factor release"],
+answer: "Factor XII activation"
+},
+{
+question: "Rheobase is:",
+options: [
+"Minimum voltage of infinite duration to elicit AP",
+"Maximum voltage to block conduction",
+"Time constant for depolarization",
+"Threshold at absolute refractory period"
+],
+answer: "Minimum voltage of infinite duration to elicit AP"
+},
+{
+question: "T-tubules in skeletal muscle function to:",
+options: [
+"Store calcium",
+"Conduct APs to sarcoplasmic reticulum",
+"Transport ATP",
+"Release acetylcholine"
+],
+answer: "Conduct APs to sarcoplasmic reticulum"
+},
+{
+question: "Molecule to measure ECF volume:",
+options: ["Inulin", "D₂O", "Evans blue", "Antipyrine"],
+answer: "Inulin"
+},
+{
+question: "Function of integrins:",
+options: ["Conduct impulses", "Connect cytoskeleton to ECM", "Form gap junctions", "Regulate Na⁺/K⁺ pump"],
+answer: "Connect cytoskeleton to ECM"
+},
+{
+question: "True about Na⁺/K⁺-ATPase pump:",
+options: [
+"2 Na⁺ out, 3 K⁺ in",
+"Secondary active transport",
+"Helps maintain resting membrane potential",
+"Allows passive diffusion"
+],
+answer: "Helps maintain resting membrane potential"
+},
+{
+question: "Pernicious anemia results from deficiency of:",
+options: ["Folic acid", "Iron", "Vitamin B12", "Vitamin C"],
+answer: "Vitamin B12"
+},
+{
+question: "Plasma protein for iron transport:",
+options: ["Albumin", "Transferrin", "Fibrinogen", "Haptoglobin"],
+answer: "Transferrin"
+},
+{
+question: "Functional unit of skeletal muscle:",
+options: ["Sarcolemma", "Myofibril", "Sarcomere", "Myosin filament"],
+answer: "Sarcomere"
+},
+{
+question: "Protein forming gap junctions:",
+options: ["Claudins", "Connexins", "Cadherins", "Integrins"],
+answer: "Connexins"
+},
+{
+question: "Enzyme for glucose → glucose-6-phosphate:",
+options: ["PFK", "Hexokinase", "Pyruvate kinase", "LDH"],
+answer: "Hexokinase"
+},
+{
+question: "Hormone stimulating Na⁺ reabsorption:",
+options: ["Aldosterone", "ANP", "Renin", "Vasopressin"],
+answer: "Aldosterone"
+},
+{
+question: "Best definition of homeostasis:",
+options: [
+"Constant external environment",
+"Dynamic steady internal environment",
+"Ability to reproduce",
+"Decreased response to stimuli"
+],
+answer: "Dynamic steady internal environment"
+},
+{
+question: "Neutrophils are:",
+options: ["Allergic mediators", "APCs", "Antibody producers", "First line via phagocytosis"],
+answer: "First line via phagocytosis"
+},
+{
+question: "Most body water is in:",
+options: ["Interstitial fluid", "Plasma", "Transcellular fluid", "Intracellular fluid"],
+answer: "Intracellular fluid"
+},
+{
+question: "First committed step in glycolysis:",
+options: ["Glucose → G6P", "F6P → F1,6BP", "3PG → 2PG", "Pyruvate formation"],
+answer: "F6P → F1,6BP"
+},
+{
+question: "Ventricular depolarization is due to:",
+options: ["Ca²⁺ inward", "K⁺ outward", "Na⁺ inward", "K⁺ inward"],
+answer: "Na⁺ inward"
+},
+{
+question: "ACh receptor types and locations:",
+options: [
+"Nicotinic on effectors",
+"Muscarinic on ganglia",
+"Nicotinic (ganglia), Muscarinic (effector)",
+"Alpha on heart"
+],
+answer: "Nicotinic (ganglia), Muscarinic (effector)"
+},
+{
+question: "β1 adrenergic receptors are mainly in:",
+options: ["Kidneys", "Lungs", "Heart", "Liver"],
+answer: "Heart"
+},
+{
+question: "Epinephrine synthesis steps:",
+options: [
+"Decarboxylation, hydroxylation, methylation, oxidation",
+"Hydroxylation, carboxylation, hydroxylation, methylation",
+"Hydroxylation, decarboxylation, hydroxylation, methylation",
+"Phosphorylation, methylation, hydroxylation, decarboxylation"
+],
+answer: "Hydroxylation, decarboxylation, hydroxylation, methylation"
+},
+{
+question: "Minimum voltage applied long enough to cause AP:",
+options: ["Chronaxie", "Threshold", "Rheobase", "Spike voltage"],
+answer: "Rheobase"
+},
+{
+question: "Chronaxie is defined as:",
+options: [
+"Time to reach AP at rheobase",
+"Time to reach AP at twice rheobase",
+"Max duration of action potential",
+"Latent period of muscle twitch"
+],
+answer: "Time to reach AP at twice rheobase"
+},
+{
+question: "Glucose transport in intestinal epithelium involves:",
+options: ["Passive transport", "Na⁺/K⁺ ATPase", "Simple diffusion", "Secondary active transport (SGLT1)"],
+answer: "Secondary active transport (SGLT1)"
+},
+
+    // Add more questions here
+];
+
+// Shuffle questions and initialize answers
+const shuffledQuestions = questionBank.sort(() => Math.random() - 0.5).slice(0, 50);
+const selectedAnswers = new Array(shuffledQuestions.length).fill(null); // Initialize answers to null
+let currentPage = 0;
+let totalScore = 0;
+let timer;
+
+// Function to display the questions
+function displayQuestions(page) {
+    const quizContainer = document.getElementById('quizContainer');
+    quizContainer.innerHTML = '';
+    const start = page * 2;
+    const end = start + 2;
+    const questionsForPage = shuffledQuestions.slice(start, end);
+
+    questionsForPage.forEach((q, index) => {
+        const questionIndex = start + index;
+        const questionDiv = document.createElement('div');
+        questionDiv.className = 'question';
+        questionDiv.innerHTML = `
+            <h3>${questionIndex + 1}. ${q.question}</h3>
+            <div class="options">
+                ${q.options.map((option) => `
+                    <label>
+                        <input type="radio" name="question${questionIndex}" value="${option}" ${selectedAnswers[questionIndex] === option ? 'checked' : ''}>
+                        ${option}
+                    </label><br>
+                `).join('')}
+            </div>
+        `;
+        quizContainer.appendChild(questionDiv);
+    });
+
+    quizContainer.querySelectorAll('input[type="radio"]').forEach((input) => {
+        input.addEventListener('change', (event) => {
+            const questionIndex = parseInt(event.target.name.replace('question', ''));
+            selectedAnswers[questionIndex] = event.target.value;
+        });
+    });
+
+    document.getElementById('pageIndicator').textContent = `Page ${page + 1} of ${Math.ceil(shuffledQuestions.length / 2)}`;
+    document.getElementById('prevButton').style.display = currentPage === 0 ? 'none' : 'inline-block';
+    document.getElementById('nextButton').style.display = (currentPage === Math.ceil(shuffledQuestions.length / 2) - 1) ? 'none' : 'inline-block';
+    document.getElementById('submitButton').style.display = (currentPage === Math.ceil(shuffledQuestions.length / 2) - 1) ? 'inline-block' : 'none';
+}
+
+// Function to calculate and display the score
+function calculateScore() {
+    totalScore = 0;
+    const incorrectAnswers = [];
+
+    shuffledQuestions.forEach((q, index) => {
+        const userAnswer = selectedAnswers[index];
+        if (userAnswer === q.answer) {
+            totalScore++;
+        } else {
+            incorrectAnswers.push({ question: q.question, userAnswer: userAnswer || 'No Answer', correctAnswer: q.answer });
+        }
+    });
+
+    document.getElementById('score').textContent = totalScore;
+    document.getElementById('resultTable').style.display = 'block';
+
+    const incorrectAnswersTable = document.getElementById('incorrectAnswersTable');
+    incorrectAnswersTable.innerHTML = '';
+    incorrectAnswers.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.question}</td>
+            <td style="color: red;">${item.userAnswer}</td>
+            <td style="color: green;">${item.correctAnswer}</td>
+        `;
+        incorrectAnswersTable.appendChild(row);
+    });
+}
+
+// Timer setup and countdown function
+function startTimer(duration) {
+    let timeRemaining = duration * 60;
+    const timerDisplay = document.getElementById('timer');
+    
+    timer = setInterval(() => {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        if (timeRemaining <= 0) {
+            clearInterval(timer);
+            calculateScore();
+            document.getElementById('quizContainer').style.display = 'none';
+            document.getElementById('nav-buttons').style.display = 'none';
+            document.getElementById('goto-page').style.display = 'none';
+            alert('Time is up! The quiz has been submitted.');
+        }
+
+        timeRemaining--;
+    }, 1000);
+}
+
+// Event listeners for navigation
+document.getElementById('nextButton').addEventListener('click', () => {
+    currentPage++;
+    displayQuestions(currentPage);
+});
+
+document.getElementById('prevButton').addEventListener('click', () => {
+    if (currentPage > 0) {
+        currentPage--;
+        displayQuestions(currentPage);
+    }
+});
+
+document.getElementById('submitButton').addEventListener('click', () => {
+    clearInterval(timer);
+    calculateScore();
+    document.getElementById('quizContainer').style.display = 'none';
+    document.getElementById('nav-buttons').style.display = 'none';
+    document.getElementById('goto-page').style.display = 'none';
+});
+
+// Start the quiz when the "Start Quiz" button is clicked
+document.getElementById('startQuizButton').addEventListener('click', () => {
+    const timerInput = document.getElementById('timerInput').value;
+    if (!timerInput || timerInput <= 0) {
+        alert('Please enter a valid timer duration.');
+        return;
+    }
+
+    document.getElementById('timerSetup').style.display = 'none';
+    document.getElementById('quizContainer').style.display = 'block';
+    document.getElementById('timerDisplay').style.display = 'block';
+    document.getElementById('nav-buttons').style.display = 'flex';
+
+    startTimer(timerInput);
+    displayQuestions(currentPage);
+});
+
+// "Go to" page functionality
+document.getElementById('goButton').addEventListener('click', () => {
+    const pageInput = document.getElementById('pageInput').value;
+    const pageIndex = parseInt(pageInput) - 1;
+    const maxPage = Math.ceil(shuffledQuestions.length / 2) - 1;
+
+    if (pageIndex >= 0 && pageIndex <= maxPage) {
+        currentPage = pageIndex;
+        displayQuestions(currentPage);
+    } else {
+        alert(`Please enter a page number between 1 and ${maxPage + 1}.`);
+    }
+});
+	
+	
+	</script>
+	
+     <script >
+	 
+	 
+	 // Password configuration with manually set expiration dates
+const passwords = {
+    "LASUMSAVP": new Date("2027-04-03T23:59:59").getTime(), // Custom expiration date and time
+
+};
+
+// Save the passwords in localStorage
+localStorage.setItem("quizPasswords", JSON.stringify(passwords));
+
+const passwordInput = document.getElementById("passwordInput");
+const verifyPasswordButton = document.getElementById("verifyPasswordButton");
+const passwordMessage = document.getElementById("passwordMessage");
+const timerSetup = document.getElementById("timerSetup");
+const quizContainer = document.getElementById("quizContainer");
+const navButtons = document.getElementById("nav-buttons");
+const pageIndicator = document.getElementById("pageIndicator");
+const gotoPage = document.getElementById("goto-page");
+
+// Checks if a password has expired by comparing the current time to the stored expiration timestamp
+function isPasswordExpired(timestamp) {
+    return Date.now() > timestamp;
+}
+
+// Removes expired passwords from the password list
+function removeExpiredPasswords() {
+    const savedPasswords = JSON.parse(localStorage.getItem("quizPasswords")) || {};
+    for (let pwd in savedPasswords) {
+        if (isPasswordExpired(savedPasswords[pwd])) {
+            delete savedPasswords[pwd];
+        }
+    }
+    localStorage.setItem("quizPasswords", JSON.stringify(savedPasswords));
+}
+
+// Verifies if the entered password is valid and not expired
+function verifyPassword(inputPassword) {
+    const savedPasswords = JSON.parse(localStorage.getItem("quizPasswords")) || {};
+    if (savedPasswords[inputPassword] && !isPasswordExpired(savedPasswords[inputPassword])) {
+        passwordMessage.textContent = "Password verified! Starting quiz.";
+        showQuizElements();
+    } else {
+        passwordMessage.textContent = "Invalid or expired password. Please try again.";
+    }
+}
+
+// Event listener for password verification
+verifyPasswordButton.addEventListener("click", () => {
+    verifyPassword(passwordInput.value);
+});
+
+// Shows quiz elements after successful password verification
+function showQuizElements() {
+    document.getElementById("passwordSection").style.display = "none";
+    timerSetup.style.display = "block";
+    quizContainer.style.display = "block";
+    navButtons.style.display = "block";
+    pageIndicator.style.display = "block";
+    gotoPage.style.display = "block";
+}
+
+// Remove expired passwords on page load
+window.onload = function() {
+    removeExpiredPasswords();
+    document.getElementById("passwordSection").style.display = "block";
+    timerSetup.style.display = "none";
+    quizContainer.style.display = "none";
+    navButtons.style.display = "none";
+    pageIndicator.style.display = "none";
+    gotoPage.style.display = "none";
+    passwordInput.value = ""; // Clear the password input
+    passwordMessage.textContent = ""; // Clear previous messages
+};
+
+document.getElementById('submitButton').addEventListener('click', () => 
+{
+    // Show the modal when "Submit" is clicked
+    document.getElementById('submitModal').style.display = 'flex';
+});
+
+document.getElementById('confirmSubmit').addEventListener('click', () => {
+    // Handle quiz submission
+    clearInterval(timer);
+    calculateScore();
+    document.getElementById('quizContainer').style.display = 'none';
+    document.getElementById('nav-buttons').style.display = 'none';
+    document.getElementById('goto-page').style.display = 'none';
+    document.getElementById('submitModal').style.display = 'none'; // Hide the modal
+});
+
+document.getElementById('cancelSubmit').addEventListener('click', () => {
+    // Close the modal without submitting
+    document.getElementById('submitModal').style.display = 'none';
+});
+// Function to display the submit modal
+document.getElementById('submitButton').addEventListener('click', () => {
+    document.getElementById('submissionContent').innerHTML = `
+        <p>Are you sure you want to submit your quiz?</p>
+        <button id="confirmSubmit" class="button">Yes, Submit</button>
+        <button id="cancelSubmit" class="button cancel">Cancel</button>
+    `;
+    document.getElementById('submitModal').style.display = 'flex';
+
+    // Confirm submit button
+    document.getElementById('confirmSubmit').addEventListener('click', () => {
+        // Calculate the score and display results in the modal
+        clearInterval(timer);
+        calculateScore();
+        showSubmissionResults();
+    });
+
+    // Cancel button
+    document.getElementById('cancelSubmit').addEventListener('click', () => {
+        document.getElementById('submitModal').style.display = 'none';
+    });
+});
+
+// Function to display submission results in the modal
+function showSubmissionResults() {
+    document.getElementById('submissionContent').innerHTML = `
+        <h3>Your Score: ${totalScore}/${shuffledQuestions.length}</h3>
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Your Answer</th>
+                    <th>Correct Answer</th>
+                </tr>
+            </thead>
+            <tbody id="incorrectAnswersTable"></tbody>
+        </table>
+        <button class="button" id="closeModal">Close</button>
+    `;
+
+    // Add incorrect answers to the table
+    const incorrectAnswersTable = document.getElementById('incorrectAnswersTable');
+    shuffledQuestions.forEach((q, index) => {
+        if (selectedAnswers[index] !== q.answer) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${q.question}</td>
+                <td style="color: red;">${selectedAnswers[index] || 'No Answer'}</td>
+                <td style="color: green;">${q.answer}</td>
+            `;
+            incorrectAnswersTable.appendChild(row);
+        }
+    });
+
+    // Close modal button
+    document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('submitModal').style.display = 'none';
+    });
+}
+	 
+	 </script>
+</body>
+</html>
