@@ -262,7 +262,7 @@
         try {
           await signInWithEmailAndPassword(auth, fakeEmail, password);
           alert("Login successful!");
-          window.location.href = "quiz_page.html"; // Redirect to quiz app
+          window.location.href = "quiz_page"; // Redirect to quiz app
         } catch (err) {
           errorBox.textContent = err.message;
         }
@@ -296,7 +296,7 @@
           await updateProfile(userCredential.user, { displayName: fullName });
 
           alert("Account created successfully!");
-          window.location.href = "quiz_page.html"; // Redirect to quiz app
+          window.location.href = "quiz_page"; // Redirect to quiz app
         } catch (err) {
           errorBox.textContent = err.message;
         }
