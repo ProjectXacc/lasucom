@@ -252,83 +252,103 @@ const questionBank = [
   },
    {
     question: "The first part of the duodenum is fully retroperitoneal.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "The second part of the duodenum is the most vulnerable to peptic ulceration.",
-    answer: true
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "True"
   },
   {
     question: "The third part of the duodenum is most susceptible to external trauma.",
-    answer: true
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "True"
   },
   {
     question: "The definitive kidney develops from the sacral region.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "Calyces of the kidney form from the metanephric blastema.",
-    answer: true
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "True"
   },
   {
     question: "The ureter develops from the mesonephric diverticulum.",
-    answer: true
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "True"
   },
   {
     question: "The anterior boundary of the superior mediastinum is longer than the posterior boundary.",
-    answer: true
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "True"
   },
   {
     question: "The mediastinum in a living person is rigid and immobile.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "The posterior mediastinum communicates with the pretracheal fascia.",
-    answer: true
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "True"
   },
   {
     question: "Esophageal varices in portal hypertension cause hemorrhoids.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "Liver cirrhosis is a post-hepatic cause of portal hypertension.",
-    answer: true
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "True"
   },
   {
     question: "The stomach is completely intraperitoneal.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "The cardiac orifice is always 1.5 cm to the right of the median plane at L1.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "The anal canal has six longitudinal columns (of Morgagni).",
-    answer: true
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "True"
   },
   {
     question: "The puborectalis muscle assists in micturition.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "Meckel’s diverticulum is a normal anatomical variant.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "In gastrochisis, intestines herniate into the umbilical cord.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "The exocrine pancreas secretes cholecystokinin (CCK).",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "The perineal membrane consists of a double layer of fascia.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
   {
     question: "The deep perineal pouch contains the scrotal nerves and vessels.",
-    answer: false
+    options: ["True", "False", "Maybe", "Sometimes"],
+    answer: "False"
   },
                
 
