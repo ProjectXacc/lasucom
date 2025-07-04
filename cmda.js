@@ -1,554 +1,334 @@
 // Question bank
 const questionBank = [
-                {
-    question: "What is the primary function of the red blood cell (RBC)?",
-    options: [
-      "Defend against infection",
-      "Transport O2 and CO2",
-      "Produce antibodies",
-      "Clot blood",
-      "Regulate blood pressure"
-    ],
-    answer: "Transport O2 and CO2"
+               {
+    question: "Which part of the duodenum is the widest and most fixed?",
+    options: ["First part", "Second part", "Third part", "Fourth part"],
+    answer: "Second part"
   },
   {
-    question: "Which of the following is NOT a general property of blood?",
-    options: [
-      "Opaque fluid",
-      "pH range of 7.35 to 7.45",
-      "Specific Gravity of 1.055 - 1.065",
-      "Viscosity of 4.5 - 5.5 times slower than water",
-      "Always flows smoothly without clotting on standing"
-    ],
-    answer: "Always flows smoothly without clotting on standing"
+    question: "The second part of the duodenum is most vulnerable to:",
+    options: ["External trauma", "Peptic ulceration", "Ischemic injury", "Iatrogenic damage"],
+    answer: "Peptic ulceration"
   },
   {
-    question: "Hemoglobin consists of a protein called GLOBIN and a pigment called HAEM, which contains what element?",
-    options: [
-      "Calcium",
-      "Sodium",
-      "Iron",
-      "Potassium",
-      "Zinc"
-    ],
-    answer: "Iron"
+    question: "The third part of the duodenum is most susceptible to injury from:",
+    options: ["Blunt abdominal trauma", "Gallstones", "Pancreatic tumors", "Hiatal hernia"],
+    answer: "Blunt abdominal trauma"
   },
   {
-    question: "What is the average lifespan of a red blood cell in circulation?",
-    options: [
-      "30 days",
-      "60 days",
-      "90 days",
-      "120 days",
-      "150 days"
-    ],
-    answer: "120 days"
+    question: "The first part of the duodenum is:",
+    options: ["Fully retroperitoneal", "Intraperitoneal", "Partially retroperitoneal", "Suspended by a mesentery"],
+    answer: "Intraperitoneal"
   },
   {
-    question: "Which of the following is a function of blood?",
-    options: [
-      "Transport of hormones and enzymes",
-      "Production of bile",
-      "Regulation of body temperature only through sweating",
-      "Synthesis of vitamin D",
-      "Breakdown of old red blood cells in the kidneys"
-    ],
-    answer: "Transport of hormones and enzymes"
+    question: "The definitive kidney develops from which embryonic region?",
+    options: ["Cervical", "Thoracic", "Lumbar", "Sacral"],
+    answer: "Lumbar"
   },
   {
-    question: "What cells does hemopoiesis (production of blood cells) in red bone marrow produce?",
-    options: [
-      "Only lymphocytes",
-      "Only red blood cells",
-      "Only white blood cells",
-      "Only platelets",
-      "All seven formed elements"
-    ],
-    answer: "All seven formed elements"
+    question: "Calyces of the kidney develop from the:",
+    options: ["Mesonephric duct", "Metanephric blastema", "Ureteric bud", "Pronephros"],
+    answer: "Metanephric blastema"
   },
   {
-    question: "Which type of anemia is caused by a deficiency of Vitamin B12 or folic acid?",
-    options: [
-      "Blood loss anemia",
-      "Aplastic anemia",
-      "Megaloblastic anemia",
-      "Pernicious anemia",
-      "Hemolytic anemia"
-    ],
-    answer: "Megaloblastic anemia"
+    question: "The ureter is derived from the:",
+    options: ["Pronephric tubules", "Mesonephric diverticulum", "Cloaca", "Metanephros"],
+    answer: "Mesonephric diverticulum"
   },
   {
-    question: "Pernicious anemia occurs when an abnormal atrophic gastric mucosa fails to produce normal gastric secretions, preventing parietal cells from secreting what factor essential for Vitamin B12 absorption?",
-    options: [
-      "Extrinsic factor",
-      "Intrinsic factor",
-      "Clotting factor",
-      "Hemopoietic factor",
-      "Agglutinin"
-    ],
-    answer: "Intrinsic factor"
+    question: "The anterior boundary of the superior mediastinum is:",
+    options: ["Shorter than the posterior boundary", "Longer than the posterior boundary", "Equal in length", "Nonexistent"],
+    answer: "Longer than the posterior boundary"
   },
   {
-    question: "In the ABO blood group system, individuals with Agglutinogen A on their RBCs have what blood group?",
-    options: [
-      "Blood Group B",
-      "Blood Group AB",
-      "Blood Group A",
-      "Blood Group O",
-      "Blood Group A1 and A2"
-    ],
-    answer: "Blood Group A"
+    question: "The mediastinum in a living person is:",
+    options: ["Rigid and immobile", "Mobile and compressible", "Fixed by fibrous tissue", "Filled with bone"],
+    answer: "Mobile and compressible"
   },
   {
-    question: "According to Landsteiner's Law, if an antigen (agglutinogen) is present in the RBC, the corresponding antibody (agglutinin) must be absent in what?",
-    options: [
-      "Cytoplasm",
-      "Nucleus",
-      "Serum",
-      "Interstitial fluid",
-      "Bone marrow"
-    ],
-    answer: "Serum"
+    question: "The posterior mediastinum communicates with the pretracheal fascia via the:",
+    options: ["Anterior superior mediastinum", "Middle mediastinum", "Inferior mediastinum", "Thoracic inlet"],
+    answer: "Anterior superior mediastinum"
   },
   {
-    question: "Which blood group is considered the universal recipient?",
-    options: [
-      "Blood Group A",
-      "Blood Group B",
-      "Blood Group AB",
-      "Blood Group O",
-      "Rhesus Positive"
-    ],
-    answer: "Blood Group AB"
+    question: "Esophageal varices result from obstruction in the:",
+    options: ["Splenic vein", "Portal vein", "Inferior vena cava", "Hepatic artery"],
+    answer: "Portal vein"
   },
   {
-    question: "Agglutination in blood transfusion can lead to the destruction of agglutinated cells by phagocytic WBCs, releasing hemoglobin into the plasma. What is this release of hemoglobin called?",
-    options: [
-      "Erythropoiesis",
-      "Leukopoiesis",
-      "Thrombopoiesis",
-      "Hemolysis",
-      "Hematocrit"
-    ],
-    answer: "Hemolysis"
+    question: "Post-hepatic portal hypertension is most commonly caused by:",
+    options: ["Portal vein thrombosis", "Liver cirrhosis", "Splenic vein occlusion", "Right heart failure"],
+    answer: "Liver cirrhosis"
   },
   {
-    question: "Individuals whose erythrocytes have the Rhesus agglutinogens or D-antigen are designated as:",
-    options: [
-      "Rh-negative",
-      "Rh-positive",
-      "ABO Group A",
-      "ABO Group B",
-      "Universal donors"
-    ],
-    answer: "Rh-positive"
+    question: "Portal hypertension leads to:",
+    options: ["Congestive splenomegaly", "Renal atrophy", "Pulmonary embolism", "Gallbladder necrosis"],
+    answer: "Congestive splenomegaly"
   },
   {
-    question: "Erythroblastosis fetalis arises during pregnancy when an Rh-positive fetus is carried by an Rh-negative mother. What does the Rh-negative mother make upon exposure to the Rh-positive (D-antigen) of the fetal cells?",
-    options: [
-      "Anti-A antibodies",
-      "Anti-B antibodies",
-      "Anti-Rh (Anti-D) antibodies",
-      "Anti-Kell antibodies",
-      "Antibodies against maternal blood"
-    ],
-    answer: "Anti-Rh (Anti-D) antibodies"
+    question: "The stomach is:",
+    options: ["Entirely retroperitoneal", "Mostly intraperitoneal", "Completely extraperitoneal", "Fused to the pancreas"],
+    answer: "Mostly intraperitoneal"
   },
   {
-    question: "Which of the following is a Granulocyte?",
-    options: [
-      "Lymphocyte",
-      "Monocyte",
-      "Neutrophil",
-      "Plasma cell",
-      "Erythrocyte"
-    ],
-    answer: "Neutrophil"
+    question: "The cardiac orifice is located approximately:",
+    options: ["1.5 cm left of the midline at T11", "1.5 cm right of the midline at L1", "At the xiphoid process", "Behind the liver"],
+    answer: "1.5 cm right of the midline at L1"
   },
   {
-    question: "Increased numbers of neutrophils are typically seen in which type of infection?",
-    options: [
-      "Viral infections",
-      "Fungal infections",
-      "Parasitic infections",
-      "Bacterial infections",
-      "All types of infections"
-    ],
-    answer: "Bacterial infections"
+    question: "During development, the stomach rotates in how many planes?",
+    options: ["1", "2", "3", "4"],
+    answer: "2"
   },
   {
-    question: "What is the liquid portion of blood called?",
-    options: [
-      "Serum",
-      "Hematocrit",
-      "Buffy coat",
-      "Formed elements",
-      "Plasma"
-    ],
-    answer: "Plasma"
+    question: "The anal columns (of Morgagni) number:",
+    options: ["4", "6", "8", "10"],
+    answer: "6"
   },
   {
-    question: "Serum is the remaining fluid when blood clots and the solids are removed. What protein is absent in serum compared to plasma?",
-    options: [
-      "Albumin",
-      "Globulin",
-      "Fibrinogen",
-      "Hemoglobin",
-      "Antibodies"
-    ],
-    answer: "Fibrinogen"
+    question: "In males, the anal canal is anatomically related to the:",
+    options: ["Base of the prostate", "Uterus", "Bladder dome", "Seminal vesicles"],
+    answer: "Base of the prostate"
   },
   {
-    question: "What percentage of total blood volume is represented by plasma?",
-    options: [
-      "1%",
-      "38% to 52%",
-      "45%",
-      "48% - 62%",
-      "8%"
-    ],
-    answer: "48% - 62%"
+    question: "The most consistent rectal fold is the:",
+    options: ["Upper fold", "Middle fold", "Lower fold", "Transverse fold"],
+    answer: "Upper fold"
   },
   {
-    question: "What are immunoglobulins (antibodies) produced by?",
-    options: [
-      "T-lymphocytes",
-      "Neutrophils",
-      "Plasma cells",
-      "Monocytes",
-      "Erythrocytes"
-    ],
-    answer: "Plasma cells"
+    question: "Which structure is found in the deep perineal pouch?",
+    options: ["Scrotal vein", "Cowper's glands", "Greater vestibular glands", "Artery to the bulb of the penis"],
+    answer: "Cowper's glands"
   },
   {
-    question: "The cell killing effects of innate and acquired immunity are mediated by plasma enzymes called the complement system. How many proteins approximately are involved in the complement system in normal human serum?",
-    options: [
-      "11",
-      "15",
-      "20",
-      "30",
-      "50"
-    ],
-    answer: "20"
+    question: "The pulmonary ligament is derived from which type of pleura?",
+    options: ["Mediastinal pleura", "Cervical pleura", "Visceral pleura", "Costal pleura"],
+    answer: "Mediastinal pleura"
   },
   {
-    question: "In cellular immunity, cytotoxic T cells attack and destroy cells by inserting proteins that form pores in the membrane of target cells and by initiating apoptosis. What are these pore-forming proteins called?",
-    options: [
-      "Immunoglobulins",
-      "Perforins",
-      "Complement proteins",
-      "Agglutinins",
-      "Histamines"
-    ],
-    answer: "Perforins"
+    question: "Which statement about uterine anatomy is INCORRECT?",
+    options: ["Retroversion always causes infertility", "It is normally anteverted", "It is normally anteflexed", "The cervix forms a 90° angle with the vagina"],
+    answer: "Retroversion always causes infertility"
   },
   {
-    question: "When an antigen first enters the body, it binds to appropriate B-lymphocytes, causing them to divide and form a clone of what type of cells that secrete immunoglobulins (antibodies)?",
-    options: [
-      "T-lymphocytes",
-      "Plasma cells",
-      "Memory cells",
-      "Neutrophils",
-      "Macrophages"
-    ],
-    answer: "Plasma cells"
+    question: "During truncal vagotomy, nerve resection is performed at the:",
+    options: ["Greater curvature of stomach", "Lower esophagus", "Lesser curvature", "Pyloric orifice"],
+    answer: "Lower esophagus"
   },
   {
-    question: "Acquired immunity can be divided into cellular and:",
-    options: [
-      "Active immunity",
-      "Passive immunity",
-      "Humoral immunity",
-      "Natural immunity",
-      "Artificial immunity"
-    ],
-    answer: "Humoral immunity"
+    question: "Which structure does NOT support the uterus?",
+    options: ["Round ligament", "Broad ligament", "Levator ani", "Transverse cervical ligament"],
+    answer: "Broad ligament"
   },
   {
-    question: "T-lymphocytes depend on which organ for maturation?",
-    options: [
-      "Bone marrow",
-      "Spleen",
-      "Lymph nodes",
-      "Thymus",
-      "Liver"
-    ],
-    answer: "Thymus"
+    question: "Which muscle is NOT part of the pelvic floor?",
+    options: ["Pyramidalis", "Pubococcygeus", "Iliococcygeus", "Ischiococcygeus"],
+    answer: "Pyramidalis"
   },
   {
-    question: "Antibodies (immunoglobulins) are primarily involved in which type of acquired immunity?",
-    options: [
-      "Cellular immunity",
-      "Innate immunity",
-      "Passive immunity",
-      "Humoral immunity",
-      "Cell-mediated immunity"
-    ],
-    answer: "Humoral immunity"
+    question: "Which embryonic structure contributes to the 5-chambered heart?",
+    options: ["Sinus venarum", "Primitive ventricle", "Bulbus cordis", "All of the above"],
+    answer: "All of the above"
   },
   {
-    question: "The bicarbonate buffer system, the most important ECF buffer system, consists of which weak acid and weak base?",
-    options: [
-      "HCl and NaOH",
-      "H2CO3 and HCO3−",
-      "NH3 and NH4+",
-      "H3PO4 and HPO42−",
-      "H2SO4 and SO42−"
-    ],
-    answer: "H2CO3 and HCO3−"
+    question: "Which vessel is NOT a branch of the celiac trunk?",
+    options: ["Gastroduodenal artery", "Cystic artery", "Left gastric artery", "Jejunal branches"],
+    answer: "Jejunal branches"
   },
   {
-    question: "Proteins in blood plasma behave as buffers because they possess which functional groups?",
-    options: [
-      "Phosphate (PO43−) groups",
-      "Sulfate (SO42−) groups",
-      "Amino (-NH2) and Carboxylic (-COOH) groups",
-      "Hydroxyl (OH) groups",
-      "Carbonyl (CO) groups"
-    ],
-    answer: "Amino (-NH2) and Carboxylic (-COOH) groups"
+    question: "The pleura covering the mediastinum is called:",
+    options: ["Pleural cavity", "Mediastinal pleura", "Visceral pleura", "Diaphragmatic pleura"],
+    answer: "Mediastinal pleura"
   },
   {
-    question: "How does the Histidine molecule in hemoglobin contribute to buffering?",
-    options: [
-      "It neutralizes bases only.",
-      "It neutralizes acids because it is basic and has H+ acceptor sites.",
-      "It forms strong acids.",
-      "It only buffers in the lungs.",
-      "It forms carbonic acid."
-    ],
-    answer: "It neutralizes acids because it is basic and has H+ acceptor sites."
+    question: "An atrial septal defect may result from:",
+    options: ["Large foramen ovale", "Over-resorption of septum primum", "Underdeveloped septum secundum", "All of the above"],
+    answer: "All of the above"
   },
   {
-    question: "The phosphate buffer system consists of which two ions?",
-    options: [
-      "Na+ and Cl−",
-      "K+ and Na+",
-      "HPO42− and H2PO4−",
-      "Ca2+ and PO43−",
-      "SO42− and HPO42−"
-    ],
-    answer: "HPO42− and H2PO4−"
+    question: "The inferior mediastinum is divided by the:",
+    options: ["Heart", "Pericardium", "Great vessels", "Trachea"],
+    answer: "Pericardium"
   },
   {
-    question: "The cell membrane is a thin, pliable, elastic structure about 7.5 to 10nm in thickness. It consists of a lipid bilayer between which are what molecules?",
-    options: [
-      "Carbohydrate molecules",
-      "Protein molecules",
-      "Nucleic acid molecules",
-      "Salt molecules",
-      "Cholesterol molecules"
-    ],
-    answer: "Protein molecules"
+    question: "Which statement about muscles is FALSE?",
+    options: ["Smooth muscle enables peristalsis", "Cilia are used for cellular movement", "Actin/myosin are the only contractile proteins", "The functional unit is the myocyte"],
+    answer: "Actin/myosin are the only contractile proteins"
   },
   {
-    question: "Which component makes up about 50% of the weight of the cell membrane?",
-    options: [
-      "Lipids",
-      "Proteins",
-      "Carbohydrates",
-      "Cholesterol",
-      "Water"
-    ],
-    answer: "Proteins"
+    question: "The 'policeman of the abdomen' does NOT:",
+    options: ["Store adipose tissue", "Shield abdominal organs", "Contain milky spots", "Extend into the thoracic cavity"],
+    answer: "Extend into the thoracic cavity"
   },
   {
-    question: "Which of the following is NOT listed as a function of membrane proteins?",
-    options: [
-      "Acts as receptors",
-      "Acts as channel proteins",
-      "Functions as adhesion molecules",
-      "Functions as cell identity markers",
-      "Synthesis of triglycerides"
-    ],
-    answer: "Synthesis of triglycerides"
+    question: "Which abdominal organ moves with respiration?",
+    options: ["Pancreas", "Duodenum", "Liver", "Kidneys"],
+    answer: "Liver"
   },
   {
-    question: "Lysosomes contain enzymes capable of killing the cell and are called the 'suicide bag'. These enzymes are primarily what type?",
-    options: [
-      "Kinases",
-      "Phosphatases",
-      "Hydrolases",
-      "Oxidoreductases",
-      "Ligases"
-    ],
-    answer: "Hydrolases"
+    question: "Deep gastric pits are characteristic of the:",
+    options: ["Pylorus", "Fundus", "Cardia", "Esophagus"],
+    answer: "Pylorus"
   },
   {
-    question: "What causes Lysosome Storage Diseases?",
-    options: [
-      "Accumulation of excess enzymes",
-      "Congenital absence of a lysosomal enzyme",
-      "Too many lysosomes in the cell",
-      "Damage to the lysosomal membrane",
-      "Overproduction of substrate for lysosomal enzymes"
-    ],
-    answer: "Congenital absence of a lysosomal enzyme"
+    question: "Which structure does NOT support the uterus?",
+    options: ["Uterosacral ligament", "Pubocervical ligament", "Broad ligament", "Levator ani"],
+    answer: "Broad ligament"
   },
   {
-    question: "What is one of the key functions of the nucleus?",
-    options: [
-      "Site of protein synthesis",
-      "Storage of calcium ions",
-      "Replication of DNA",
-      "Production of ATP",
-      "Detoxification of drugs"
-    ],
-    answer: "Replication of DNA"
+    question: "Which is NOT a part of the anal sphincter complex?",
+    options: ["Subcutaneous external sphincter", "Deep external sphincter", "Longitudinal muscle layer", "Internal oblique muscle"],
+    answer: "Internal oblique muscle"
   },
   {
-    question: "Which cellular process primarily occurs in the mitochondria ('powerhouse of the cell')?",
-    options: [
-      "Protein synthesis",
-      "DNA replication",
-      "ATP synthesis",
-      "Lipid synthesis",
-      "Carbohydrate synthesis"
-    ],
-    answer: "ATP synthesis"
+    question: "Abundant lymphoid tissue is found in the lamina propria of the:",
+    options: ["Ileum", "Duodenum", "Esophagus", "Appendix"],
+    answer: "Appendix"
   },
   {
-    question: "What type of proteins do ribosomes on the Rough Endoplasmic Reticulum (rER) primarily produce?",
-    options: [
-      "Cytosolic proteins",
-      "Nuclear proteins",
-      "Mitochondrial proteins",
-      "All transmembrane proteins, most secreted proteins, most proteins stored in Golgi apparatus, lysosomes and endosomes",
-      "Ribosomal proteins"
-    ],
-    answer: "All transmembrane proteins, most secreted proteins, most proteins stored in Golgi apparatus, lysosomes and endosomes"
+    question: "Which structure does NOT lie anterior to the stomach?",
+    options: ["Diaphragm", "Spleen", "Anterior abdominal wall", "Left liver lobe"],
+    answer: "Spleen"
   },
   {
-    question: "Which of the following is a carrier-mediated transport mechanism that does NOT require energy and is described as 'down hill'?",
-    options: [
-      "Diffusion",
-      "Osmosis",
-      "Facilitated Diffusion",
-      "Active Transport",
-      "Solvent Drag"
-    ],
-    answer: "Facilitated Diffusion"
+    question: "Which artery is NOT a branch of the superior mesenteric artery?",
+    options: ["Middle colic", "Right colic", "Ileocolic", "Superior rectal"],
+    answer: "Superior rectal"
   },
   {
-    question: "Which type of pump is also known as ATP-binding cassette and includes more than 100 different transport proteins in various organisms?",
-    options: [
-      "P-class pump",
-      "F-class pump",
-      "V-class ATPase",
-      "ABC Superfamily",
-      "Sodium-potassium pump"
-    ],
-    answer: "ABC Superfamily"
+    question: "Which is NOT part of Tetralogy of Fallot?",
+    options: ["Overriding aorta", "Left ventricular hypertrophy", "Ventricular septal defect", "Pulmonary stenosis"],
+    answer: "Left ventricular hypertrophy"
   },
   {
-    question: "Which of the following is a key characteristic of carrier-mediated transport mechanisms?",
-    options: [
-      "Always moves substances against their concentration gradient",
-      "Does not involve protein carriers",
-      "Can be inhibited by competitive or non-competitive inhibitors",
-      "Is not affected by temperature",
-      "Changes the chemical composition of the ligand being transported"
-    ],
-    answer: "Can be inhibited by competitive or non-competitive inhibitors"
+    question: "How many types of peritoneal folds exist?",
+    options: ["2", "3", "4", "5"],
+    answer: "4"
   },
   {
-    question: "Which feedback mechanism is described in the context of Homeostasis?",
-    options: [
-      "Positive feedback mechanism",
-      "Negative feedback mechanism",
-      "Feedforward mechanism",
-      "Allosteric feedback",
-      "Enzyme feedback"
-    ],
-    answer: "Negative feedback mechanism"
+    question: "Which statement about the pelvic diaphragm is TRUE?",
+    options: ["Contracts to increase intra-abdominal pressure", "Puborectalis assists urethral sphincter in micturition", "Ischiococcygeus is its largest component", "Iliococcygeus is called \"agitator caudae\" in tailed animals"],
+    answer: "Iliococcygeus is called \"agitator caudae\" in tailed animals"
   },
   {
-    question: "What is defined as the minimum stimulus strength (voltage) required to generate an Action Potential (AP) when applied for an infinite duration, representing the baseline excitability threshold?",
-    options: [
-      "Chronaxie",
-      "Rheobase",
-      "Refractory period",
-      "Threshold potential",
-      "Action potential amplitude"
-    ],
-    answer: "Rheobase"
+    question: "Carcinoma cells metastasize to supraclavicular nodes via the:",
+    options: ["Azygos vein", "Thoracic duct", "Descending aorta", "Inferior vena cava"],
+    answer: "Thoracic duct"
   },
   {
-    question: "In the context of the strength-duration curve, what is Chronaxie?",
-    options: [
-      "The minimum stimulus strength for an AP",
-      "The minimum stimulus duration for an AP at rheobase strength",
-      "The stimulus duration required to depolarize the tissue at twice the rheobase strength",
-      "The time it takes for an AP to propagate",
-      "The maximum stimulus strength the tissue can tolerate"
-    ],
-    answer: "The stimulus duration required to depolarize the tissue at twice the rheobase strength"
+    question: "Which is NOT a kidney covering?",
+    options: ["Fibrous capsule", "Pararenal fat", "Renal pelvis", "Renal fascia"],
+    answer: "Renal pelvis"
   },
   {
-    question: "Myasthenia gravis is an autoimmune neuromuscular disorder resulting from antibodies targeting what at the postsynaptic membrane?",
-    options: [
-      "Voltage-gated calcium channels",
-      "Acetylcholine receptors (AChRs)",
-      "Sodium channels",
-      "Potassium (K+) channels",
-      "Myelin sheath"
-    ],
-    answer: "Acetylcholine receptors (AChRs)"
+    question: "The pleural reflection at the mid-axillary line is at rib:",
+    options: ["5th", "8th", "10th", "12th"],
+    answer: "10th"
   },
   {
-    question: "A common symptomatic management for Myasthenia gravis involves drugs that enhance Acetylcholine (ACh) availability. What type of inhibitors are these drugs (e.g., pyridostigmine)?",
-    options: [
-      "Acetylcholine inhibitors",
-      "Acetylcholinesterase inhibitors",
-      "Adrenergic inhibitors",
-      "Muscarinic agonists",
-      "Nicotinic agonists"
-    ],
-    answer: "Acetylcholinesterase inhibitors"
+    question: "The definitive kidney:",
+    options: ["Develops from lateral plate mesoderm", "Forms from metanephros in the 5th week", "Uses mesonephric tubules", "Extends from cervical to sacral regions"],
+    answer: "Forms from metanephros in the 5th week"
   },
   {
-    question: "The Autonomic Nervous System (ANS) regulates what type of functions of the body?",
-    options: [
-      "Skeletal muscle movement",
-      "Reflex actions like blinking",
-      "Involuntary functions of the body",
-      "Conscious perception of stimuli",
-      "Speech and language"
-    ],
-    answer: "Involuntary functions of the body"
+    question: "According to Couinaud, liver segment IV is the:",
+    options: ["Caudate lobe", "Right lobe", "Quadrate lobe", "Left lobe"],
+    answer: "Quadrate lobe"
   },
   {
-    question: "Which division of the ANS generally promotes functions concerned with vegetative aspects of day-to-day living, such as digestion and absorption of food?",
-    options: [
-      "Sympathetic division",
-      "Parasympathetic division",
-      "Enteric division",
-      "Somatic nervous system",
-      "Central nervous system"
-    ],
-    answer: "Parasympathetic division"
+    question: "Which cell type is NOT found in tracheal mucosa?",
+    options: ["Kulchitsky cells", "Clara cells", "Microglia", "Brush cells"],
+    answer: "Microglia"
   },
   {
-    question: "In the ANS, which type of fibers are always cholinergic in the parasympathetic division?",
-    options: [
-      "Postganglionic fibers",
-      "Preganglionic fibers",
-      "Effector organ fibers",
-      "Sensory fibers",
-      "Adrenergic fibers"
-    ],
-    answer: "Preganglionic fibers"
+    question: "Plicae circulares are present in the:",
+    options: ["Small intestine", "Large intestine", "Stomach", "Esophagus"],
+    answer: "Small intestine"
   },
   {
-    question: "What is the primary source of fluid intake?",
-    options: [
-      "Food",
-      "Metabolism",
-      "Ingested liquids",
-      "Intravenous fluids",
-      "Absorption from the air"
-    ],
-    answer: "Ingested liquids"
+    question: "Which statement about the inguinal canal is FALSE?",
+    options: ["Contains the ilioinguinal nerve", "Falx inguinalis lies posterior to it", "Internal oblique forms part of its anterior wall", "Measures ~4 cm in length"],
+    answer: "Falx inguinalis lies posterior to it"
+  },
+   {
+    question: "The first part of the duodenum is fully retroperitoneal.",
+    answer: false
+  },
+  {
+    question: "The second part of the duodenum is the most vulnerable to peptic ulceration.",
+    answer: true
+  },
+  {
+    question: "The third part of the duodenum is most susceptible to external trauma.",
+    answer: true
+  },
+  {
+    question: "The definitive kidney develops from the sacral region.",
+    answer: false
+  },
+  {
+    question: "Calyces of the kidney form from the metanephric blastema.",
+    answer: true
+  },
+  {
+    question: "The ureter develops from the mesonephric diverticulum.",
+    answer: true
+  },
+  {
+    question: "The anterior boundary of the superior mediastinum is longer than the posterior boundary.",
+    answer: true
+  },
+  {
+    question: "The mediastinum in a living person is rigid and immobile.",
+    answer: false
+  },
+  {
+    question: "The posterior mediastinum communicates with the pretracheal fascia.",
+    answer: true
+  },
+  {
+    question: "Esophageal varices in portal hypertension cause hemorrhoids.",
+    answer: false
+  },
+  {
+    question: "Liver cirrhosis is a post-hepatic cause of portal hypertension.",
+    answer: true
+  },
+  {
+    question: "The stomach is completely intraperitoneal.",
+    answer: false
+  },
+  {
+    question: "The cardiac orifice is always 1.5 cm to the right of the median plane at L1.",
+    answer: false
+  },
+  {
+    question: "The anal canal has six longitudinal columns (of Morgagni).",
+    answer: true
+  },
+  {
+    question: "The puborectalis muscle assists in micturition.",
+    answer: false
+  },
+  {
+    question: "Meckel’s diverticulum is a normal anatomical variant.",
+    answer: false
+  },
+  {
+    question: "In gastrochisis, intestines herniate into the umbilical cord.",
+    answer: false
+  },
+  {
+    question: "The exocrine pancreas secretes cholecystokinin (CCK).",
+    answer: false
+  },
+  {
+    question: "The perineal membrane consists of a double layer of fascia.",
+    answer: false
+  },
+  {
+    question: "The deep perineal pouch contains the scrotal nerves and vessels.",
+    answer: false
   },
                
 
@@ -556,7 +336,7 @@ const questionBank = [
 ];
 
 // Shuffle questions and initialize answers
-const shuffledQuestions = questionBank.sort(() => Math.random() - 0.5).slice(0, 50);
+const shuffledQuestions = questionBank.sort(() => Math.random() - 0.5).slice(0, 70);
 const selectedAnswers = new Array(shuffledQuestions.length).fill(null); // Initialize answers to null
 let currentPage = 0;
 let totalScore = 0;
