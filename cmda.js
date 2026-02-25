@@ -1,355 +1,97 @@
 // Question bank
 const questionBank = [
-               {
-    question: "Which part of the duodenum is the widest and most fixed?",
-    options: ["First part", "Second part", "Third part", "Fourth part"],
-    answer: "Second part"
-  },
-  {
-    question: "The second part of the duodenum is most vulnerable to:",
-    options: ["External trauma", "Peptic ulceration", "Ischemic injury", "Iatrogenic damage"],
-    answer: "Peptic ulceration"
-  },
-  {
-    question: "The third part of the duodenum is most susceptible to injury from:",
-    options: ["Blunt abdominal trauma", "Gallstones", "Pancreatic tumors", "Hiatal hernia"],
-    answer: "Blunt abdominal trauma"
-  },
-  {
-    question: "The first part of the duodenum is:",
-    options: ["Fully retroperitoneal", "Intraperitoneal", "Partially retroperitoneal", "Suspended by a mesentery"],
-    answer: "Intraperitoneal"
-  },
-  {
-    question: "The definitive kidney develops from which embryonic region?",
-    options: ["Cervical", "Thoracic", "Lumbar", "Sacral"],
-    answer: "Lumbar"
-  },
-  {
-    question: "Calyces of the kidney develop from the:",
-    options: ["Mesonephric duct", "Metanephric blastema", "Ureteric bud", "Pronephros"],
-    answer: "Metanephric blastema"
-  },
-  {
-    question: "The ureter is derived from the:",
-    options: ["Pronephric tubules", "Mesonephric diverticulum", "Cloaca", "Metanephros"],
-    answer: "Mesonephric diverticulum"
-  },
-  {
-    question: "The anterior boundary of the superior mediastinum is:",
-    options: ["Shorter than the posterior boundary", "Longer than the posterior boundary", "Equal in length", "Nonexistent"],
-    answer: "Longer than the posterior boundary"
-  },
-  {
-    question: "The mediastinum in a living person is:",
-    options: ["Rigid and immobile", "Mobile and compressible", "Fixed by fibrous tissue", "Filled with bone"],
-    answer: "Mobile and compressible"
-  },
-  {
-    question: "The posterior mediastinum communicates with the pretracheal fascia via the:",
-    options: ["Anterior superior mediastinum", "Middle mediastinum", "Inferior mediastinum", "Thoracic inlet"],
-    answer: "Anterior superior mediastinum"
-  },
-  {
-    question: "Esophageal varices result from obstruction in the:",
-    options: ["Splenic vein", "Portal vein", "Inferior vena cava", "Hepatic artery"],
-    answer: "Portal vein"
-  },
-  {
-    question: "Post-hepatic portal hypertension is most commonly caused by:",
-    options: ["Portal vein thrombosis", "Liver cirrhosis", "Splenic vein occlusion", "Right heart failure"],
-    answer: "Liver cirrhosis"
-  },
-  {
-    question: "Portal hypertension leads to:",
-    options: ["Congestive splenomegaly", "Renal atrophy", "Pulmonary embolism", "Gallbladder necrosis"],
-    answer: "Congestive splenomegaly"
-  },
-  {
-    question: "The stomach is:",
-    options: ["Entirely retroperitoneal", "Mostly intraperitoneal", "Completely extraperitoneal", "Fused to the pancreas"],
-    answer: "Mostly intraperitoneal"
-  },
-  {
-    question: "The cardiac orifice is located approximately:",
-    options: ["1.5 cm left of the midline at T11", "1.5 cm right of the midline at L1", "At the xiphoid process", "Behind the liver"],
-    answer: "1.5 cm right of the midline at L1"
-  },
-  {
-    question: "During development, the stomach rotates in how many planes?",
-    options: ["1", "2", "3", "4"],
-    answer: "2"
-  },
-  {
-    question: "The anal columns (of Morgagni) number:",
-    options: ["4", "6", "8", "10"],
-    answer: "6"
-  },
-  {
-    question: "In males, the anal canal is anatomically related to the:",
-    options: ["Base of the prostate", "Uterus", "Bladder dome", "Seminal vesicles"],
-    answer: "Base of the prostate"
-  },
-  {
-    question: "The most consistent rectal fold is the:",
-    options: ["Upper fold", "Middle fold", "Lower fold", "Transverse fold"],
-    answer: "Upper fold"
-  },
-  {
-    question: "Which structure is found in the deep perineal pouch?",
-    options: ["Scrotal vein", "Cowper's glands", "Greater vestibular glands", "Artery to the bulb of the penis"],
-    answer: "Cowper's glands"
-  },
-  {
-    question: "The pulmonary ligament is derived from which type of pleura?",
-    options: ["Mediastinal pleura", "Cervical pleura", "Visceral pleura", "Costal pleura"],
-    answer: "Mediastinal pleura"
-  },
-  {
-    question: "Which statement about uterine anatomy is INCORRECT?",
-    options: ["Retroversion always causes infertility", "It is normally anteverted", "It is normally anteflexed", "The cervix forms a 90° angle with the vagina"],
-    answer: "Retroversion always causes infertility"
-  },
-  {
-    question: "During truncal vagotomy, nerve resection is performed at the:",
-    options: ["Greater curvature of stomach", "Lower esophagus", "Lesser curvature", "Pyloric orifice"],
-    answer: "Lower esophagus"
-  },
-  {
-    question: "Which structure does NOT support the uterus?",
-    options: ["Round ligament", "Broad ligament", "Levator ani", "Transverse cervical ligament"],
-    answer: "Broad ligament"
-  },
-  {
-    question: "Which muscle is NOT part of the pelvic floor?",
-    options: ["Pyramidalis", "Pubococcygeus", "Iliococcygeus", "Ischiococcygeus"],
-    answer: "Pyramidalis"
-  },
-  {
-    question: "Which embryonic structure contributes to the 5-chambered heart?",
-    options: ["Sinus venarum", "Primitive ventricle", "Bulbus cordis", "All of the above"],
-    answer: "All of the above"
-  },
-  {
-    question: "Which vessel is NOT a branch of the celiac trunk?",
-    options: ["Gastroduodenal artery", "Cystic artery", "Left gastric artery", "Jejunal branches"],
-    answer: "Jejunal branches"
-  },
-  {
-    question: "The pleura covering the mediastinum is called:",
-    options: ["Pleural cavity", "Mediastinal pleura", "Visceral pleura", "Diaphragmatic pleura"],
-    answer: "Mediastinal pleura"
-  },
-  {
-    question: "An atrial septal defect may result from:",
-    options: ["Large foramen ovale", "Over-resorption of septum primum", "Underdeveloped septum secundum", "All of the above"],
-    answer: "All of the above"
-  },
-  {
-    question: "The inferior mediastinum is divided by the:",
-    options: ["Heart", "Pericardium", "Great vessels", "Trachea"],
-    answer: "Pericardium"
-  },
-  {
-    question: "Which statement about muscles is FALSE?",
-    options: ["Smooth muscle enables peristalsis", "Cilia are used for cellular movement", "Actin/myosin are the only contractile proteins", "The functional unit is the myocyte"],
-    answer: "Actin/myosin are the only contractile proteins"
-  },
-  {
-    question: "The 'policeman of the abdomen' does NOT:",
-    options: ["Store adipose tissue", "Shield abdominal organs", "Contain milky spots", "Extend into the thoracic cavity"],
-    answer: "Extend into the thoracic cavity"
-  },
-  {
-    question: "Which abdominal organ moves with respiration?",
-    options: ["Pancreas", "Duodenum", "Liver", "Kidneys"],
-    answer: "Liver"
-  },
-  {
-    question: "Deep gastric pits are characteristic of the:",
-    options: ["Pylorus", "Fundus", "Cardia", "Esophagus"],
-    answer: "Pylorus"
-  },
-  {
-    question: "Which structure does NOT support the uterus?",
-    options: ["Uterosacral ligament", "Pubocervical ligament", "Broad ligament", "Levator ani"],
-    answer: "Broad ligament"
-  },
-  {
-    question: "Which is NOT a part of the anal sphincter complex?",
-    options: ["Subcutaneous external sphincter", "Deep external sphincter", "Longitudinal muscle layer", "Internal oblique muscle"],
-    answer: "Internal oblique muscle"
-  },
-  {
-    question: "Abundant lymphoid tissue is found in the lamina propria of the:",
-    options: ["Ileum", "Duodenum", "Esophagus", "Appendix"],
-    answer: "Appendix"
-  },
-  {
-    question: "Which structure does NOT lie anterior to the stomach?",
-    options: ["Diaphragm", "Spleen", "Anterior abdominal wall", "Left liver lobe"],
-    answer: "Spleen"
-  },
-  {
-    question: "Which artery is NOT a branch of the superior mesenteric artery?",
-    options: ["Middle colic", "Right colic", "Ileocolic", "Superior rectal"],
-    answer: "Superior rectal"
-  },
-  {
-    question: "Which is NOT part of Tetralogy of Fallot?",
-    options: ["Overriding aorta", "Left ventricular hypertrophy", "Ventricular septal defect", "Pulmonary stenosis"],
-    answer: "Left ventricular hypertrophy"
-  },
-  {
-    question: "How many types of peritoneal folds exist?",
-    options: ["2", "3", "4", "5"],
-    answer: "4"
-  },
-  {
-    question: "Which statement about the pelvic diaphragm is TRUE?",
-    options: ["Contracts to increase intra-abdominal pressure", "Puborectalis assists urethral sphincter in micturition", "Ischiococcygeus is its largest component", "Iliococcygeus is called \"agitator caudae\" in tailed animals"],
-    answer: "Iliococcygeus is called \"agitator caudae\" in tailed animals"
-  },
-  {
-    question: "Carcinoma cells metastasize to supraclavicular nodes via the:",
-    options: ["Azygos vein", "Thoracic duct", "Descending aorta", "Inferior vena cava"],
-    answer: "Thoracic duct"
-  },
-  {
-    question: "Which is NOT a kidney covering?",
-    options: ["Fibrous capsule", "Pararenal fat", "Renal pelvis", "Renal fascia"],
-    answer: "Renal pelvis"
-  },
-  {
-    question: "The pleural reflection at the mid-axillary line is at rib:",
-    options: ["5th", "8th", "10th", "12th"],
-    answer: "10th"
-  },
-  {
-    question: "The definitive kidney:",
-    options: ["Develops from lateral plate mesoderm", "Forms from metanephros in the 5th week", "Uses mesonephric tubules", "Extends from cervical to sacral regions"],
-    answer: "Forms from metanephros in the 5th week"
-  },
-  {
-    question: "According to Couinaud, liver segment IV is the:",
-    options: ["Caudate lobe", "Right lobe", "Quadrate lobe", "Left lobe"],
-    answer: "Quadrate lobe"
-  },
-  {
-    question: "Which cell type is NOT found in tracheal mucosa?",
-    options: ["Kulchitsky cells", "Clara cells", "Microglia", "Brush cells"],
-    answer: "Microglia"
-  },
-  {
-    question: "Plicae circulares are present in the:",
-    options: ["Small intestine", "Large intestine", "Stomach", "Esophagus"],
-    answer: "Small intestine"
-  },
-  {
-    question: "Which statement about the inguinal canal is FALSE?",
-    options: ["Contains the ilioinguinal nerve", "Falx inguinalis lies posterior to it", "Internal oblique forms part of its anterior wall", "Measures ~4 cm in length"],
-    answer: "Falx inguinalis lies posterior to it"
-  },
-   {
-    question: "The first part of the duodenum is fully retroperitoneal.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "The second part of the duodenum is the most vulnerable to peptic ulceration.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "True"
-  },
-  {
-    question: "The third part of the duodenum is most susceptible to external trauma.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "True"
-  },
-  {
-    question: "The definitive kidney develops from the sacral region.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "Calyces of the kidney form from the metanephric blastema.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "True"
-  },
-  {
-    question: "The ureter develops from the mesonephric diverticulum.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "True"
-  },
-  {
-    question: "The anterior boundary of the superior mediastinum is longer than the posterior boundary.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "True"
-  },
-  {
-    question: "The mediastinum in a living person is rigid and immobile.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "The posterior mediastinum communicates with the pretracheal fascia.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "True"
-  },
-  {
-    question: "Esophageal varices in portal hypertension cause hemorrhoids.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "Liver cirrhosis is a post-hepatic cause of portal hypertension.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "True"
-  },
-  {
-    question: "The stomach is completely intraperitoneal.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "The cardiac orifice is always 1.5 cm to the right of the median plane at L1.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "The anal canal has six longitudinal columns (of Morgagni).",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "True"
-  },
-  {
-    question: "The puborectalis muscle assists in micturition.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "Meckel’s diverticulum is a normal anatomical variant.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "In gastrochisis, intestines herniate into the umbilical cord.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "The exocrine pancreas secretes cholecystokinin (CCK).",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "The perineal membrane consists of a double layer of fascia.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
-  {
-    question: "The deep perineal pouch contains the scrotal nerves and vessels.",
-    options: ["True", "False", "Maybe", "Sometimes"],
-    answer: "False"
-  },
+               
+  { "question": "Which scientist is considered the \"Father of Modern Physiology\" for discovering the circulation of blood?", "options": ["Aristotle", "Galen", "William Harvey", "Claude Bernard"], "answer": "William Harvey" },
+  { "question": "Homeostasis is best defined as:", "options": ["The study of how normal organisms function.", "The maintenance of a relatively constant internal environment.", "The amplification of a response to a stimulus.", "The study of how normal functions become altered in disease."], "answer": "The maintenance of a relatively constant internal environment." },
+  { "question": "In historical medical beliefs, the \"Sanguine\" temperament was associated with which body fluid?", "options": ["Phlegm", "Yellow Bile", "Black Bile", "Blood"], "answer": "Blood" },
+  { "question": "Which organelle is responsible for energy (ATP) production through oxidative phosphorylation?", "options": ["Ribosomes", "Mitochondria", "Golgi Apparatus", "Lysosomes"], "answer": "Mitochondria" },
+  { "question": "The \"tails\" of the phospholipids in the cell membrane are:", "options": ["Hydrophilic (water-liking)", "Hydrophobic (water-hating)", "Made of proteins", "Selectively permeable"], "answer": "Hydrophobic (water-hating)" },
+  { "question": "Which of the following is an example of Positive Feedback mechanism?", "options": ["Temperature control", "Blood pressure regulation", "Oxytocin in childbirth", "pH balance"], "answer": "Oxytocin in childbirth" },
+  { "question": "Simple diffusion is a type of transport used for:", "options": ["Large polar molecules", "Small, non-polar molecules like O2 and CO2", "Moving ions against their concentration gradient", "Moving glucose via carrier proteins"], "answer": "Small, non-polar molecules like O2 and CO2" },
+  { "question": "When a blood cell is placed in a hypotonic solution, what happens?", "options": ["The cell shrinks.", "The cell remains undamaged.", "The cell swells and may burst (haemolysis).", "There is no movement of water."], "answer": "The cell swells and may burst (haemolysis)." },
+  { "question": "The Na+/K+ ATPase pump moves ions in which ratio?", "options": ["2 Na+ out, 3 K+ in", "3 Na+ in, 2 K+ out", "3 Na+ out, 2 K+ in", "2 Na+ in, 3 K+ out"], "answer": "3 Na+ out, 2 K+ in" },
+  { "question": "Secondary active transport is characterized by:", "options": ["The direct use of ATP.", "Using energy stored in ion gradients (usually Na+).", "Moving substances only from high to low concentration.", "Occurring only in the mitochondria."], "answer": "Using energy stored in ion gradients (usually Na+)." },
+
+  { "question": "Cell eating, where the membrane wraps around large particles like bacteria, is known as:", "options": ["Pinocytosis", "Exocytosis", "Phagocytosis", "Facilitated diffusion"], "answer": "Phagocytosis" },
+  { "question": "The resting membrane potential (RMP) of a typical neuron is approximately:", "options": ["+30 mV", "-55 mV", "-70 mV", "0 mV"], "answer": "-70 mV" },
+  { "question": "During the depolarization phase of an action potential:", "options": ["Voltage-gated K+ channels open.", "Voltage-gated Na+ channels open and Na+ rushes in.", "The Na+/K+ pump stops working.", "The membrane becomes more negative."], "answer": "Voltage-gated Na+ channels open and Na+ rushes in." },
+  { "question": "The All-or-None principle of action potentials states that:", "options": ["Every stimulus produces an action potential.", "An action potential occurs fully or not at all once threshold is reached.", "Larger stimuli produce larger action potentials.", "Action potentials can summate to reach higher peaks."], "answer": "An action potential occurs fully or not at all once threshold is reached." },
+  { "question": "Which part of the neuron is the decision point for firing an action potential?", "options": ["Dendrites", "Soma (Cell body)", "Axon hillock", "Synaptic terminal"], "answer": "Axon hillock" },
+  { "question": "A refractory period where the Na+ channels are inactivated and no new action potential can be generated is called the:", "options": ["Relative refractory period", "Hyperpolarization period", "Absolute refractory period", "Threshold period"], "answer": "Absolute refractory period" },
+  { "question": "Unlike action potentials, graded potentials:", "options": ["Do not decrease with distance.", "Decrease in amplitude as they spread (passive spread).", "Follow the all-or-none principle.", "Only occur in the axon."], "answer": "Decrease in amplitude as they spread (passive spread)." },
+  { "question": "Which transporter is an example of an antiport (exchanger)?", "options": ["Na+/glucose cotransporter (SGLT)", "Na+/Ca2+ exchanger (NCX)", "GLUT transporters", "Na+/K+ ATPase"], "answer": "Na+/Ca2+ exchanger (NCX)" },
+  { "question": "What happens during the hyperpolarization phase of an action potential?", "options": ["The membrane potential becomes more positive than RMP.", "Na+ channels stay open for a long time.", "K+ channels remain open briefly, making the membrane more negative than RMP.", "The cell reaches its peak voltage of +40 mV."], "answer": "K+ channels remain open briefly, making the membrane more negative than RMP." },
+  { "question": "Local anesthetics work by:", "options": ["Opening potassium channels.", "Blocking sodium channels.", "Increasing ATP production.", "Stimulating the Na+/K+ pump."], "answer": "Blocking sodium channels." },
+
+  { "question": "What is the typical color of venous blood?", "options": ["Bright red", "Opaque white", "Purplish", "Blue"], "answer": "Purplish" },
+  { "question": "Which of the following can be used to prevent blood from solidifying or clotting?", "options": ["Distilled water", "Oxalate or heparin", "Sodium chloride", "Glucose"], "answer": "Oxalate or heparin" },
+  { "question": "What is the specific gravity range of blood?", "options": ["0.850 - 0.900", "1.055 - 1.065", "7.350 - 7.450", "4.500 - 5.500"], "answer": "1.055 - 1.065" },
+  { "question": "Blood flows how many times more slowly than water due to its viscosity?", "options": ["1 to 2 times", "4.5 to 5.5 times", "8 to 10 times", "36 to 47 times"], "answer": "4.5 to 5.5 times" },
+  { "question": "The normal pH range of blood is:", "options": ["6.85 - 7.15", "7.35 - 7.45", "7.00 - 8.00", "1.05 - 1.06"], "answer": "7.35 - 7.45" },
+
+  { "question": "What percentage of total body weight does blood typically constitute?", "options": ["5%", "8%", "45%", "55%"], "answer": "8%" },
+  { "question": "The formation of \"Rouleaux\" in normal human blood is minimal because:", "options": ["Red blood cells lack a nucleus.", "Negative charges repel each other.", "Positive charges attract each other.", "Blood is too viscous."], "answer": "Negative charges repel each other." },
+  { "question": "What is the normal Packed Cell Volume (PCV) range for women?", "options": ["40-54%", "55-60%", "36-47%", "8-10%"], "answer": "36-47%" },
+  { "question": "Microscopically, what percentage of blood is composed of Formed Elements?", "options": ["55%", "1%", "45%", "99%"], "answer": "45%" },
+  { "question": "The Buffy Coat in a blood sample consists of:", "options": ["Red blood cells and plasma", "White blood cells and platelets", "Proteins and minerals", "Water and salts"], "answer": "White blood cells and platelets" },
+  { "question": "Which organ is NOT mentioned as a site where blood carries waste products for excretion?", "options": ["Kidney", "Skin", "Liver", "Pancreas"], "answer": "Pancreas" },
+  { "question": "The respiratory function of blood involves carrying oxygen from the:", "options": ["Tissues to the lungs", "Alveoli of lungs to tissues", "GIT to the liver", "Kidney to the skin"], "answer": "Alveoli of lungs to tissues" },
+  { "question": "Which of the following is a physical property of Red Blood Cells (RBCs)?", "options": ["Spherical shape", "Biconcave discs", "Multi-nucleated", "10.5µm diameter"], "answer": "Biconcave discs" },
+  { "question": "The average diameter of a Red Blood Cell is:", "options": ["2.0µm", "7.5µm", "86µm", "138µm"], "answer": "7.5µm" },
+  { "question": "The network of protein contained within an RBC is called the:", "options": ["Globin", "Stroma", "Agglutinogen", "Haem"], "answer": "Stroma" },
+  { "question": "What is the average lifespan of an RBC in circulation?", "options": ["30 days", "90 days", "120 days", "365 days"], "answer": "120 days" },
+  { "question": "The average RBC count in men is approximately:", "options": ["4.8 million/µL", "5.4 million/µL", "7.5 million/µL", "1.05 million/µL"], "answer": "5.4 million/µL" },
+  { "question": "Haemoglobin consists of a pigment called Haem which contains:", "options": ["Magnesium", "Iron", "Calcium", "Copper"], "answer": "Iron" },
+  { "question": "How many ferrous atoms in one haemoglobin molecule combine with oxygen?", "options": ["1", "2", "4", "8"], "answer": "4" },
+  { "question": "In the tissues, which part of haemoglobin combines with a molecule of CO2?", "options": ["The Iron atom", "The Haem portion", "The Globin portion", "The Stroma"], "answer": "The Globin portion" },
+
+  { "question": "The surface of the RBC contains which of the following that determines blood groups?", "options": ["Agglutinins", "Agglutinogens", "Stroma proteins", "Haem pigments"], "answer": "Agglutinogens" },
+  { "question": "In the lungs, Carbon Dioxide is:", "options": ["Combined with the Haem portion", "Released from the Globin portion", "Absorbed by the stroma", "Converted into oxygen"], "answer": "Released from the Globin portion" },
+  { "question": "Under what physiological conditions are stored important substances taken back from the blood?", "options": ["High blood pressure and stress", "Dehydration and starvation", "Exercise and sleep", "Digestion and growth"], "answer": "Dehydration and starvation" },
+  { "question": "According to Landsteiner:", "options": ["If an antigen is present, corresponding antibody must be present.", "One has an antibody against any agglutinogen one synthesizes.", "One has antibodies that attack one's agglutinogen.", "If an antigen is absent in the RBC, the corresponding antibody must be present in the serum."], "answer": "If an antigen is absent in the RBC, the corresponding antibody must be present in the serum." },
+  { "question": "Vitamin K dependent factors include the following except?", "options": ["Factor II", "Factor X", "Factor VIII", "Factor VII"], "answer": "Factor VIII" },
+
+  { "question": "Who were the scientists responsible for developing Recombinant DNA technology in the early 1970s?", "options": ["Jennifer Doudna and Emmanuelle Charpentier", "Stanley N. Cohen and Herbert W. Boyer", "Louis Pasteur and Robert Koch", "Cohen and Doudna"], "answer": "Stanley N. Cohen and Herbert W. Boyer" },
+  { "question": "In the production of recombinant human insulin (Humulin), which organism is typically used as the host to express the protein?", "options": ["Saccharomyces cerevisiae", "Staphylococcus aureus", "Escherichia coli", "Bacillus thuringiensis"], "answer": "Escherichia coli" },
+  { "question": "Which component of recombinant DNA technology acts as the molecular glue to join DNA fragments together?", "options": ["Restriction enzymes", "Plasmids", "DNA Ligase", "Taq polymerase"], "answer": "DNA Ligase" },
+  { "question": "What is the primary characteristic of Pluripotency in embryonic stem cells?", "options": ["Differentiate into limited cell types", "Differentiate into all three germ layers", "Found only in adult bone marrow", "Cannot divide indefinitely"], "answer": "Differentiate into all three germ layers" },
+  { "question": "Which branch of biotechnology specifically involves bioremediation and waste treatment?", "options": ["Medical Biotechnology", "Agricultural Biotechnology", "Industrial Biotechnology", "Environmental Biotechnology"], "answer": "Environmental Biotechnology" },
+
+  { "question": "The CRISPR-Cas9 system was originally adapted from what natural source?", "options": ["Defense mechanism in bacteria", "Yeast fermentation method", "Pig and cow pancreas genes", "Gene in daffodils and maize"], "answer": "Defense mechanism in bacteria" },
+  { "question": "Bt Cotton is genetically modified to produce Cry proteins. What is the purpose of these proteins?", "options": ["Increase vitamin A", "Resistant to herbicides", "Toxic to insect pests", "Grow in high salinity"], "answer": "Toxic to insect pests" },
+  { "question": "Which Biosafety Level (BSL) is required for handling extreme risks like Ebola or Marburg viruses?", "options": ["BSL-1", "BSL-2", "BSL-3", "BSL-4"], "answer": "BSL-4" },
+  { "question": "What was the major scientific contribution of Louis Pasteur to biotechnology?", "options": ["Discovered EcoRI", "Proved fermentation caused by microorganisms", "Cloned insulin gene", "Developed PCR"], "answer": "Proved fermentation caused by microorganisms" },
+  { "question": "Induced Pluripotent Stem Cells (iPSCs) are created by:", "options": ["Extracting blastocyst cells", "Umbilical cord stem cells", "Introducing reprogramming factors into adult somatic cells", "Removing nucleus from egg"], "answer": "Introducing reprogramming factors into adult somatic cells" },
+
+  { "question": "How is pH mathematically defined?", "options": ["Positive log of OH-", "Negative log of H+", "Product of H+ and OH-", "Dissociation constant"], "answer": "Negative log of H+" },
+  { "question": "According to the dissociation constant for water (Kw), what is the value of pH + pOH?", "options": ["7", "10", "14", "10^-14"], "answer": "14" },
+  { "question": "Which of the following is true regarding the strength of an acid?", "options": ["Lower tendency to lose proton", "Greater tendency to lose proton", "High pKa values", "Only exist in buffers"], "answer": "Greater tendency to lose proton" },
+  { "question": "What are the two essential components of a buffer system?", "options": ["Strong acid and conjugate base", "Weak acid and conjugate base", "Weak base and indicator", "H+ and OH-"], "answer": "Weak acid and conjugate base" },
+  { "question": "Which buffer system operates specifically in the internal fluids of all cells?", "options": ["Carbonic acid-bicarbonate", "Protein buffer", "Phosphate buffer", "Haemoglobin buffer"], "answer": "Phosphate buffer" },
+
+  { "question": "In the phosphate buffer system, which ion acts as the hydrogen ion donor?", "options": ["Hydrogen phosphate ion", "Bicarbonate ion", "Dihydrogen phosphate ion", "Hydroxide ion"], "answer": "Dihydrogen phosphate ion" },
+  { "question": "What is the Henderson-Hasselbalch equation used for?", "options": ["Calculating blood gravity", "Understanding buffer action", "Measuring temperature", "Determining blood velocity"], "answer": "Understanding buffer action" },
+  { "question": "When an acid is half-neutralized at midpoint of titration, what is the relationship between pH and pKa?", "options": ["pH twice pKa", "pH = pKa", "pH = pKa + 1", "pH = pKa - 1"], "answer": "pH = pKa" },
+  { "question": "Which component of the pH meter consists of a glass electrode and reference electrode?", "options": ["Indicating unit", "KCl bridge", "Detecting unit", "Slope switch"], "answer": "Detecting unit" },
+  { "question": "How many buffers should be used to calibrate a pH meter before measurement?", "options": ["At least one", "At least two", "Exactly three", "None"], "answer": "At least two" },
+
+  { "question": "The term Autonomic is derived from Greek words meaning:", "options": ["Self-rule", "Brain-law", "Automatic-motion", "Self-law"], "answer": "Self-law" },
+  { "question": "Which division of the nervous system regulates involuntary organs like the heart?", "options": ["Somatic", "Central", "Autonomic", "Enteric only"], "answer": "Autonomic" },
+  { "question": "The peripheral motor portion of the ANS is composed of how many neurons?", "options": ["One", "Two", "Three", "Four"], "answer": "Two" },
+  { "question": "The cell bodies of preganglionic neurons in the ANS are primarily located in:", "options": ["Dorsal horn", "Ventral horn", "Intermediolateral column", "Paravertebral ganglia"], "answer": "Intermediolateral column" },
+  { "question": "The Sympathetic division is also known as the:", "options": ["Craniosacral", "Thoracolumbar", "Cervical", "Myenteric"], "answer": "Thoracolumbar" },
+
+  { "question": "In the sympathetic division, typical ratio of postganglionic to preganglionic axons is:", "options": ["1:1", "10:1", "100:1", "1000:1"], "answer": "100:1" },
+  { "question": "Which cranial nerves are associated with parasympathetic preganglionic neurons?", "options": ["CN I, II, III, IV", "CN III, VII, IX, X", "CN V, VII, X, XII", "CN III, V, VII, IX"], "answer": "CN III, VII, IX, X" },
+  { "question": "Which neurotransmitter is secreted by all preganglionic autonomic neurons?", "options": ["Norepinephrine", "Epinephrine", "Acetylcholine", "Dopamine"], "answer": "Acetylcholine" },
+  { "question": "Sympathetic postganglionic neurons producing vasodilation in skeletal muscle are termed:", "options": ["Noradrenergic", "Cholinergic", "Adrenergic", "C-fibers"], "answer": "Cholinergic" },
+  { "question": "At noradrenergic junctions, the receptors are collectively known as:", "options": ["Nicotinic", "Muscarinic", "Adrenoreceptors", "Cholinoceptors"], "answer": "Adrenoreceptors" },
+
+  { "question": "Stimulation of which receptor type found primarily in the heart causes increased rate and force?", "options": ["Alpha-1", "Beta-1", "Beta-2", "Muscarinic-2"], "answer": "Beta-1" },
+  { "question": "Which drug is used to selectively block muscarinic receptors before surgery?", "options": ["Salbutamol", "Hexamethonium", "Atropine", "Epinephrine"], "answer": "Atropine" },
+  { "question": "The fight or flight response is a function of the:", "options": ["Parasympathetic", "Sympathetic", "Enteric", "Somatic"], "answer": "Sympathetic" },
+  { "question": "Which brain region directly controls autonomic actions like cardiovascular activity?", "options": ["Hypothalamus", "Prefrontal cortex", "Medulla", "Spinal cord"], "answer": "Medulla" },
+  { "question": "The Enteric Nervous System contains which plexus between longitudinal and circular muscles?", "options": ["Submucosal plexus", "Paravertebral plexus", "Myenteric plexus", "Celiac plexus"], "answer": "Myenteric plexus" },
                
 
     // Add more questions here
