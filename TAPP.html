@@ -1,90 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANATOMY Quiz - Project X</title>
-    <nav>
-        <a href="index.html">HOME</a>
-        <a href="TAPP.html">RESTART QUIZ</a>
-        <a href="basic_medical_science_quiz.html">SELECT QUIZ</a>
-    </nav>
-    <link rel="stylesheet" href="anatomymb.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lobar vs Bronchopneumonia</title>
+<style>
+  :root {
+    --ink: #1a2230;
+    --sub: #5b6675;
+    --line: #dde2e8;
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --lobar: #2f6690;
+    --lobar-bg: #eaf2f8;
+    --broncho: #a8562f;
+    --broncho-bg: #fbf0e8;
+    --accent: #1a2230;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    background: var(--bg);
+    color: var(--ink);
+    padding: 18px 12px 40px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 {
+    font-size: 1.3rem;
+    margin: 4px 0 2px;
+    letter-spacing: 0.2px;
+  }
+  .sub {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.78rem;
+    color: var(--sub);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .legend {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+  }
+  .chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  .chip.lobar { background: var(--lobar-bg); color: var(--lobar); }
+  .chip.broncho { background: var(--broncho-bg); color: var(--broncho); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot.lobar { background: var(--lobar); }
+  .dot.broncho { background: var(--broncho); }
+
+  .filters {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  .filter-btn {
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--sub);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .filter-btn.active {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+
+  .row {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  .row-head {
+    padding: 12px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .row-head .label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .caret {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--sub);
+    transition: transform 0.2s ease;
+    font-size: 0.8rem;
+  }
+  .row.open .caret { transform: rotate(180deg); }
+
+  .row-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+    border-top: 1px solid transparent;
+  }
+  .row.open .row-body {
+    border-top: 1px solid var(--line);
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .col {
+    padding: 12px 12px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.83rem;
+    line-height: 1.45;
+  }
+  .col.lobar-col { background: var(--lobar-bg); border-right: 1px solid var(--line); }
+  .col.broncho-col { background: var(--broncho-bg); }
+  .col-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .col.lobar-col .col-tag { color: var(--lobar); }
+  .col.broncho-col .col-tag { color: var(--broncho); }
+
+  footer {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.7rem;
+    color: var(--sub);
+    margin-top: 18px;
+  }
+
+  @media (max-width: 420px) {
+    .split { grid-template-columns: 1fr; }
+    .col.lobar-col { border-right: none; border-bottom: 1px solid var(--line); }
+  }
+</style>
 </head>
 <body>
-    <header>TAPP ANATOMY  Quiz - Project X</header>
+<div class="wrap">
+  <h1>Lobar Pneumonia vs Bronchopneumonia</h1>
+  <div class="sub">Tap a row to expand · filter by category</div>
 
-    <div class="container">
-        <!-- Password Input Section -->
-        <div id="passwordSection">
-            <label for="passwordInput">Enter Password to Start Quiz:</label>
-            <input type="password" id="passwordInput" placeholder="Enter password">
-            <button id="verifyPasswordButton">Verify Password</button>
-            <p id="passwordMessage"></p>
-        </div>
+  <div class="legend">
+    <div class="chip lobar"><span class="dot lobar"></span>Lobar</div>
+    <div class="chip broncho"><span class="dot broncho"></span>Bronchopneumonia</div>
+  </div>
 
-        <!-- Timer Input Section (Initially Hidden) -->
-        <div id="timerSetup" style="display: none;">
-            <label for="timerInput">Set Timer (minutes):</label>
-            <input type="number" id="timerInput" min="1" placeholder="Enter minutes">
-            <button id="startQuizButton">Start Quiz</button>
-        </div>
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="basic">Overview</button>
+    <button class="filter-btn" data-cat="exam">Examination</button>
+    <button class="filter-btn" data-cat="ix">Investigations</button>
+    <button class="filter-btn" data-cat="comp">Complications</button>
+  </div>
 
-        <!-- Quiz Section (Initially Hidden) -->
-        <div id="quizContainer" style="display: none;"></div>
-        <div id="timerDisplay" style="display: none;">Time Remaining: <span id="timer"></span></div>
+  <div id="rows"></div>
 
-        <!-- Navigation Buttons -->
-        <div class="nav-buttons" id="nav-buttons" style="display: none;">
-            <button class="btn" id="prevButton" style="display: none;">Previous</button>
-            <button class="btn" id="nextButton">Next</button>
-            <button class="btn" id="submitButton" style="display: none;">Submit</button>
-        </div>
-
-<div id="submitModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <h2>Quiz Submission</h2>
-        <div id="submissionContent">
-            <p>Are you sure you want to submit your quiz?</p>
-            <button id="confirmSubmit" class="button">Yes, Submit</button>
-            <button id="cancelSubmit" class="button cancel">Cancel</button>
-        </div>
-    </div>
+  <footer>Tap any row to see the lobar / bronchopneumonia comparison side by side.</footer>
 </div>
 
+<script>
+const data = [
+  { cat: "basic", label: "Distribution",
+    lobar: "Entire lobe (or large part), usually unilateral",
+    broncho: "Patchy, centred on bronchi/bronchioles, often bilateral and multilobar" },
+  { cat: "basic", label: "Common organisms",
+    lobar: "Streptococcus pneumoniae, Klebsiella pneumoniae",
+    broncho: "Staphylococcus aureus, Haemophilus influenzae, Streptococcus pyogenes, mixed organisms" },
+  { cat: "basic", label: "Typical age group",
+    lobar: "Previously healthy older children/adults",
+    broncho: "Infants, young children, elderly, debilitated patients" },
+  { cat: "basic", label: "Onset",
+    lobar: "Acute, abrupt",
+    broncho: "Often follows a preceding viral URTI/bronchitis" },
 
-        <!-- Page Indicator -->
-        <div class="pagination" id="pageIndicator" style="display: none;">Page 1</div>
+  { cat: "exam", label: "Inspection",
+    lobar: "Reduced chest movement on affected side, tachypnoea, nasal flaring (children), possible cyanosis if severe",
+    broncho: "Tachypnoea, use of accessory muscles, patient often looks more unwell/toxic, may have preceding cough/coryza" },
+  { cat: "exam", label: "Palpation",
+    lobar: "Increased tactile vocal fremitus over the consolidated lobe; trachea central",
+    broncho: "Fremitus normal or only patchily increased; less localised findings" },
+  { cat: "exam", label: "Percussion",
+    lobar: "Dull to stony dull over the affected lobe",
+    broncho: "Normal or patchy dullness, less well localised" },
+  { cat: "exam", label: "Auscultation",
+    lobar: "Bronchial breath sounds, coarse crepitations, whispering pectoriloquy, increased vocal resonance over consolidation",
+    broncho: "Scattered crepitations/rhonchi bilaterally, breath sounds may be vesicular with crackles rather than truly bronchial" },
 
-        <!-- Go to Page -->
-        <div class="goto-page" id="goto-page" style="display: none;">
-            <label for="pageInput">Go to page: </label>
-            <input type="number" id="pageInput" min="1" max="25" />
-            <button class="btn" id="goButton">Go</button>
+  { cat: "ix", label: "Chest X-ray",
+    lobar: "Homogeneous opacification confined to a lobe with air bronchograms; sharp fissure border",
+    broncho: "Patchy, mottled, poorly defined opacities, often bilateral and perihilar" },
+  { cat: "ix", label: "Full blood count",
+    lobar: "Marked neutrophilic leucocytosis",
+    broncho: "Leucocytosis often less marked; may be normal, especially if viral-associated" },
+  { cat: "ix", label: "Sputum/blood culture",
+    lobar: "Often yields a single dominant organism (e.g. pneumococcus)",
+    broncho: "May yield mixed or multiple organisms" },
+  { cat: "ix", label: "Inflammatory markers",
+    lobar: "CRP/ESR markedly raised",
+    broncho: "Raised, but pattern more variable depending on cause" },
+
+  { cat: "comp", label: "Local complications",
+    lobar: "Lung abscess, parapneumonic effusion, empyema, pleurisy",
+    broncho: "Bronchiectasis, lung abscess (less common than lobar), atelectasis" },
+  { cat: "comp", label: "Systemic complications",
+    lobar: "Bacteraemia/septicaemia, meningitis (esp. pneumococcal), pericarditis",
+    broncho: "Septicaemia, respiratory failure — more likely given host frailty" },
+  { cat: "comp", label: "Resolution pattern",
+    lobar: "Classically resolves completely if treated (congestion → red hepatisation → grey hepatisation → resolution)",
+    broncho: "May leave scarring/fibrosis; higher risk of incomplete resolution due to underlying debility" },
+  { cat: "comp", label: "Overall prognosis",
+    lobar: "Generally good in previously healthy patients",
+    broncho: "More guarded — reflects the vulnerable host (infants, elderly, debilitated)" },
+];
+
+const rowsEl = document.getElementById('rows');
+
+function render(filter) {
+  rowsEl.innerHTML = '';
+  data.filter(d => filter === 'all' || d.cat === filter).forEach((d, i) => {
+    const row = document.createElement('div');
+    row.className = 'row';
+    row.innerHTML = `
+      <div class="row-head">
+        <span class="label">${d.label}</span>
+        <span class="caret">▾</span>
+      </div>
+      <div class="row-body">
+        <div class="split">
+          <div class="col lobar-col">
+            <span class="col-tag">Lobar</span>${d.lobar}
+          </div>
+          <div class="col broncho-col">
+            <span class="col-tag">Bronchopneumonia</span>${d.broncho}
+          </div>
         </div>
+      </div>
+    `;
+    const head = row.querySelector('.row-head');
+    const body = row.querySelector('.row-body');
+    head.addEventListener('click', () => {
+      const isOpen = row.classList.contains('open');
+      // close all others for focus
+      document.querySelectorAll('.row.open').forEach(r => {
+        if (r !== row) {
+          r.classList.remove('open');
+          r.querySelector('.row-body').style.maxHeight = null;
+        }
+      });
+      if (isOpen) {
+        row.classList.remove('open');
+        body.style.maxHeight = null;
+      } else {
+        row.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+    rowsEl.appendChild(row);
+  });
+}
 
-        <!-- Result Table for Incorrect Answers -->
-        <div id="resultTable" style="display: none;">
-            <h2>Your Score: <span id="score"></span> / 50</h2>
-            <h3>Review Incorrect Answers:</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Question</th>
-                        <th>Your Answer</th>
-                        <th>Correct Answer</th>
-                    </tr>
-                </thead>
-                <tbody id="incorrectAnswersTable"></tbody>
-            </table>
-        </div>
-    </div>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.cat);
+  });
+});
 
-    <script>
-
-    </script>
-
-    <script src="TAPP.js"></script>
-     <script src="pass.js"></script>
+render('all');
+</script>
 </body>
 </html>
