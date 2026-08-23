@@ -3,510 +3,612 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paediatric Respiratory Conditions — Comparison Chart</title>
+<title>Paediatric HPC Rule-In / Rule-Out Charts</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js"></script>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap');
+
   :root{
-    --navy:#132a3a;
-    --navy-deep:#0c1c27;
-    --teal:#2f6f6b;
-    --teal-light:#e4f0ee;
-    --paper:#f7f5f0;
-    --ink:#1b2530;
-    --muted:#5b6b76;
-    --line:#d9dfd f;
-    --amber:#b5762c;
-    --card:#ffffff;
-    font-family: 'Iowan Old Style', 'Georgia', serif;
+    --navy:#0E2A47;
+    --navy-deep:#081A2E;
+    --teal:#0E8C86;
+    --teal-soft:#E4F4F2;
+    --gold:#C6A15B;
+    --gold-soft:#F6EEDC;
+    --red:#B3261E;
+    --red-soft:#FCE9E7;
+    --paper:#F7F4EC;
+    --card:#FFFFFF;
+    --ink:#1E2A33;
+    --ink-soft:#5B6B76;
+    --line:#E4DFD1;
   }
+
   *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
   body{
-    margin:0;
     background:var(--paper);
     color:var(--ink);
-    font-family: 'Charter', 'Georgia', 'Iowan Old Style', serif;
-    padding:0 0 60px 0;
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
   }
+
+  /* Header: styled like a case-file cover */
   header{
-    background: linear-gradient(135deg, var(--navy-deep), var(--navy));
-    color:#eef3f2;
-    padding:32px 28px 26px;
-    border-bottom:4px solid var(--amber);
-  }
-  header h1{
-    font-family: 'Iowan Old Style', Georgia, serif;
-    font-size:1.7rem;
-    margin:0 0 4px 0;
-    letter-spacing:0.01em;
-    font-weight:600;
-  }
-  header p{
-    margin:0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size:0.82rem;
-    color:#b9c9c6;
-    letter-spacing:0.03em;
-    text-transform:uppercase;
-  }
-  .controls{
-    max-width:1200px;
-    margin:-18px auto 0;
-    padding:0 28px;
+    background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color:#fff;
+    padding:22px 20px 20px;
     position:relative;
-    z-index:2;
-  }
-  .panel{
-    background:var(--card);
-    border:1px solid #e3e1d9;
-    border-radius:6px;
-    box-shadow:0 6px 18px rgba(19,42,58,0.08);
-    padding:16px 20px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-    align-items:center;
-  }
-  .panel .search{
-    flex:1 1 220px;
-    display:flex;
-    align-items:center;
-    border:1px solid #d3d0c6;
-    border-radius:4px;
-    padding:6px 10px;
-    background:#fbfaf7;
-  }
-  .panel .search input{
-    border:none;
-    outline:none;
-    background:transparent;
-    width:100%;
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    font-size:0.9rem;
-    color:var(--ink);
-  }
-  .panel .search svg{flex:0 0 auto; margin-right:6px; opacity:0.5;}
-  .chips{display:flex; flex-wrap:wrap; gap:8px;}
-  .chip{
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    font-size:0.78rem;
-    letter-spacing:0.02em;
-    padding:6px 12px;
-    border-radius:999px;
-    border:1px solid var(--teal);
-    color:var(--teal);
-    background:#fff;
-    cursor:pointer;
-    user-select:none;
-    transition:all .15s ease;
-    white-space:nowrap;
-  }
-  .chip.active{
-    background:var(--teal);
-    color:#fff;
-  }
-  .chip.danger{border-color:var(--amber); color:var(--amber);}
-  .chip.danger.active{background:var(--amber); color:#fff;}
-  .hint{
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    font-size:0.72rem;
-    color:var(--muted);
-    width:100%;
-    margin-top:-4px;
-  }
-
-  .table-wrap{
-    max-width:1200px;
-    margin:22px auto 0;
-    padding:0 28px;
-    overflow-x:auto;
-  }
-  table{
-    border-collapse:separate;
-    border-spacing:0;
-    width:100%;
-    min-width:640px;
-    background:var(--card);
-    border-radius:6px;
     overflow:hidden;
-    box-shadow:0 6px 18px rgba(19,42,58,0.06);
   }
-  thead th{
-    background:var(--navy);
-    color:#fff;
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    font-weight:600;
-    font-size:0.85rem;
-    letter-spacing:0.02em;
-    text-align:left;
-    padding:12px 14px;
-    position:sticky;
-    top:0;
+  header::after{
+    content:"";
+    position:absolute; right:-40px; top:-40px;
+    width:180px; height:180px; border-radius:50%;
+    background:radial-gradient(circle, rgba(198,161,91,0.18) 0%, transparent 70%);
   }
-  thead th:first-child{
-    background:var(--navy-deep);
-    min-width:150px;
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 6px;
   }
-  tbody th{
-    text-align:left;
-    background:var(--teal-light);
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    font-weight:600;
-    font-size:0.8rem;
-    color:var(--navy);
-    padding:10px 14px;
-    vertical-align:top;
-    border-bottom:1px solid #e3e1d9;
-    position:sticky;
-    left:0;
-  }
-  tbody td{
-    padding:10px 14px;
-    font-size:0.88rem;
-    line-height:1.42;
-    vertical-align:top;
-    border-bottom:1px solid #ece9e1;
-    border-left:1px solid #ece9e1;
-    cursor:pointer;
-    transition:background .12s ease;
-  }
-  tbody td:hover{background:#fbf7ee;}
-  tbody tr.section-head td, tbody tr.section-head th{
-    background:var(--navy);
-    color:#fff;
-    font-family:'Helvetica Neue', Arial, sans-serif;
+  h1{
+    font-family:'Lora', serif;
     font-weight:700;
-    font-size:0.78rem;
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    padding:8px 14px;
+    font-size:clamp(22px, 5vw, 30px);
+    margin:0 0 6px;
+    line-height:1.15;
   }
-  tbody tr.section-head td{cursor:default;}
-  tbody tr:hover th{background:#d9e8e4;}
-  mark{
-    background:#ffe6a8;
-    padding:0 2px;
-    border-radius:2px;
-  }
-  .danger-cell{
-    background:#fdf0e6 !important;
-    border-left:3px solid var(--amber) !important;
-  }
-
-  /* modal */
-  .overlay{
-    position:fixed; inset:0; background:rgba(12,28,39,0.55);
-    display:none; align-items:center; justify-content:center; padding:24px; z-index:50;
-  }
-  .overlay.show{display:flex;}
-  .modal{
-    background:var(--card);
-    max-width:520px;
-    width:100%;
-    border-radius:8px;
-    padding:26px 26px 22px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.3);
-    border-top:5px solid var(--teal);
-  }
-  .modal h3{
-    margin:0 0 2px 0;
-    font-size:1.15rem;
-    color:var(--navy);
-  }
-  .modal .sub{
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    font-size:0.75rem;
-    text-transform:uppercase;
-    letter-spacing:0.05em;
-    color:var(--muted);
-    margin-bottom:14px;
-  }
-  .modal p{
-    font-size:0.95rem;
-    line-height:1.55;
-    color:var(--ink);
+  .subtitle{
+    font-size:13.5px;
+    color:#C9D4DD;
+    max-width:640px;
+    line-height:1.5;
     margin:0;
   }
-  .modal .close{
-    display:block;
-    margin-top:18px;
-    margin-left:auto;
-    background:var(--navy);
-    color:#fff;
-    border:none;
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    font-size:0.82rem;
-    padding:8px 16px;
-    border-radius:4px;
+
+  /* Tab nav — patient-chart divider motif */
+  nav{
+    display:flex;
+    overflow-x:auto;
+    gap:6px;
+    padding:12px 14px;
+    background:var(--navy-deep);
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  nav::-webkit-scrollbar{height:5px;}
+  nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.2); border-radius:4px;}
+  .tab-btn{
+    flex:0 0 auto;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.03em;
+    color:#B9C6D0;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.1);
+    border-bottom:3px solid transparent;
+    padding:9px 14px 7px;
+    border-radius:8px 8px 3px 3px;
     cursor:pointer;
+    white-space:nowrap;
+    transition:all 0.15s ease;
   }
+  .tab-btn:hover{background:rgba(255,255,255,0.12); color:#fff;}
+  .tab-btn.active{
+    background:var(--paper);
+    color:var(--navy-deep);
+    border-color:var(--gold);
+    border-bottom:3px solid var(--gold);
+    font-weight:600;
+  }
+
+  main{padding:18px 14px 60px; max-width:980px; margin:0 auto;}
+
+  .panel{display:none;}
+  .panel.active{display:block; animation:fade 0.25s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);}}
+
+  .panel-head{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    margin-bottom:12px;
+    border-bottom:2px solid var(--line);
+    padding-bottom:10px;
+  }
+  .panel-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--gold);
+    background:var(--navy);
+    padding:3px 8px;
+    border-radius:5px;
+    flex:0 0 auto;
+  }
+  .panel-head h2{
+    font-family:'Lora', serif;
+    font-size:21px;
+    margin:0;
+    color:var(--navy-deep);
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:14px 10px;
+    box-shadow:0 1px 3px rgba(14,42,71,0.06);
+    overflow-x:auto;
+    margin-bottom:16px;
+  }
+
+  .callouts{display:grid; gap:10px;}
+  .callout{
+    border-radius:10px;
+    padding:11px 13px;
+    font-size:13.5px;
+    line-height:1.55;
+    border:1px solid var(--line);
+  }
+  .callout.redflag{background:var(--red-soft); border-color:#EAC3C0;}
+  .callout.redflag .tag{color:var(--red);}
+  .callout.rulein{background:var(--teal-soft); border-color:#BFE3DF;}
+  .callout.rulein .tag{color:var(--teal);}
+  .callout.pearl{background:var(--gold-soft); border-color:#E7D6AE;}
+  .callout.pearl .tag{color:#8A6A26;}
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    font-weight:600;
+    display:block;
+    margin-bottom:3px;
+  }
+
+  .legend{
+    display:flex; flex-wrap:wrap; gap:10px 18px;
+    font-size:12px; color:var(--ink-soft);
+    margin:2px 0 18px;
+    padding:9px 12px;
+    background:#FBFAF5;
+    border:1px dashed var(--line);
+    border-radius:8px;
+  }
+  .legend span{display:inline-flex; align-items:center; gap:6px;}
+  .dot{width:10px; height:10px; border-radius:3px; display:inline-block;}
+  .dot.gold{background:var(--gold);}
+  .dot.navy{background:var(--navy);}
+  .dot.teal{background:var(--teal);}
+  .dot.red{background:var(--red);}
+
   footer{
-    max-width:1200px;
-    margin:26px auto 0;
-    padding:0 28px;
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    font-size:0.75rem;
-    color:var(--muted);
+    text-align:center;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    padding:18px 14px 30px;
   }
-  @media (max-width: 720px){
-    header h1{font-size:1.3rem;}
-    .panel{padding:12px 14px;}
+
+  @media (min-width:720px){
+    .callouts{grid-template-columns:1fr 1fr;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Paediatric Respiratory Conditions — Comparison Chart</h1>
-  <p>Asthma · Acute Bronchitis · Bronchiolitis · Acute Epiglottitis · Pneumonia</p>
+  <p class="eyebrow">Bedside Reference · History of Presenting Complaint</p>
+  <h1>Paediatric Rule-In / Rule-Out Charts</h1>
+  <p class="subtitle">Ten common presenting complaints, mapped from history findings to differentials. Built for rapid bedside triage of the HPC — not a substitute for full clerking, examination, and local protocol.</p>
 </header>
 
-<div class="controls">
-  <div class="panel">
-    <div class="search">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      <input id="searchBox" type="text" placeholder="Search findings (e.g. 'wheeze', 'stridor', 'crackles')…">
-    </div>
-    <div class="chips" id="conditionChips"></div>
-    <div class="hint">Tap a condition chip to show/hide it as a column · click any cell for the full explanation · type to highlight matching findings</div>
-  </div>
-</div>
+<nav id="tabNav"></nav>
 
-<div class="table-wrap">
-  <table id="mainTable">
-    <thead>
-      <tr id="headerRow"></tr>
-    </thead>
-    <tbody id="tableBody"></tbody>
-  </table>
-</div>
+<main id="panels"></main>
 
-<footer>Reference chart for exam revision — cross-check against WHO/IMCI and your course guidelines before relying on this for clinical decisions.</footer>
-
-<div class="overlay" id="overlay">
-  <div class="modal">
-    <h3 id="modalTitle"></h3>
-    <div class="sub" id="modalSub"></div>
-    <p id="modalBody"></p>
-    <button class="close" onclick="closeModal()">Close</button>
-  </div>
-</div>
+<footer>Reference framework only — always correlate with examination, investigations, and current national/WHO guidelines.</footer>
 
 <script>
-const conditions = [
+mermaid.initialize({
+  startOnLoad:false,
+  theme:'base',
+  themeVariables:{
+    primaryColor:'#FFFFFF',
+    primaryTextColor:'#1E2A33',
+    primaryBorderColor:'#0E2A47',
+    lineColor:'#5B6B76',
+    fontFamily:'Inter, sans-serif',
+    fontSize:'13px',
+    edgeLabelBackground:'#F7F4EC'
+  },
+  flowchart:{ curve:'basis', htmlLabels:true, padding:10 }
+});
+
+const complaints = [
   {
-    id:"asthma", name:"Asthma", danger:false,
-    overview:{
-      age:{v:"Usually >2 years", d:"Asthma is uncommon before age 2, since airway hyperreactivity and the diagnosis itself are harder to establish in infants. It typically emerges and recurs from the pre-school/school years onward."},
-      cause:{v:"Chronic airway hyperreactivity; triggered by allergens, URTI, cold air, exercise", d:"Asthma is a chronic inflammatory condition of the airways with reversible bronchoconstriction. It isn't caused by a single infection — episodes are triggered by allergens, viral infections, cold air, exercise, or irritants in a child with an underlying hyperreactive airway."},
-      onset:{v:"Recurrent, episodic; often personal/family atopy history", d:"Unlike the other conditions here, asthma is not a single illness episode — it is a recurring pattern of wheezing episodes over months to years, often alongside eczema, allergic rhinitis, or a family history of atopy."},
-      fever:{v:"Usually absent or mild", d:"Fever is not a typical feature of asthma itself; if fever is prominent, consider a triggering infection or an alternative diagnosis."},
-      cough:{v:"Dry, often nocturnal, recurrent", d:"A dry, non-productive cough that characteristically worsens at night or with exercise is a classic asthma symptom, often preceding or accompanying wheeze."},
-      voice:{v:"Normal", d:"Voice and swallowing are unaffected in asthma, since the pathology is in the lower airways, not the larynx or pharynx."},
-      posture:{v:"No specific posture", d:"Children with asthma don't adopt a specific posture unless in severe/life-threatening exacerbation, where they may sit forward using accessory muscles."},
-      stridorWheeze:{v:"Expiratory wheeze", d:"The hallmark sound in asthma is a polyphonic expiratory wheeze from narrowed lower airways, heard throughout both lung fields."}
-    },
-    exam:{
-      inspection:{v:"Tachypnoea, prolonged expiratory phase, use of accessory muscles in moderate–severe attacks, chest hyperinflation (barrel chest in chronic poorly controlled disease)", d:"On inspection, look for the work of breathing — accessory muscle use and intercostal recession signal a more severe attack. Chronic under-treated asthma can cause a visibly hyperinflated, barrel-shaped chest over time."},
-      palpation:{v:"Reduced chest expansion bilaterally during an attack; trachea central", d:"Chest expansion is often symmetrically reduced during an acute exacerbation due to hyperinflation and air trapping, but the trachea remains central since this is a diffuse, bilateral process."},
-      percussion:{v:"Resonant, may be hyperresonant due to hyperinflation", d:"Hyperresonance reflects trapped air in the lungs distal to narrowed airways — a percussion finding that fits with the hyperinflation seen on inspection and X-ray."},
-      auscultation:{v:"Bilateral expiratory wheeze, prolonged expiration; reduced/silent breath sounds in life-threatening attack (ominous sign)", d:"Wheeze is typically bilateral and heard best on expiration. A 'silent chest' — where wheeze disappears — is a dangerous sign meaning the airways are too narrow for air to move audibly, not that the child is improving."}
-    },
-    investigations:{v:"Clinical diagnosis; peak expiratory flow rate (PEFR)/spirometry in children old enough to cooperate (usually >5–6 years); chest X-ray only if diagnosis unclear or to exclude another cause; may show reversibility with bronchodilator", d:"Asthma is largely a clinical diagnosis based on history and examination pattern. Objective lung function testing (PEFR, spirometry) supports the diagnosis in older, cooperative children, particularly by demonstrating reversible obstruction after a bronchodilator. Chest X-ray is not routinely needed unless there's diagnostic doubt or suspicion of a complication."},
-    treatment:{v:"Bronchodilators (salbutamol), inhaled/oral corticosteroids, leukotriene receptor antagonists", d:"Acute management centres on inhaled short-acting beta-agonists (salbutamol) with corticosteroids to reduce airway inflammation; severe attacks may need oxygen, nebulised bronchodilators, and IV therapy. Long-term control uses inhaled corticosteroids and, in some children, leukotriene receptor antagonists."}
+    id:"fever", label:"Fever",
+    chart:`
+graph TD
+    A["Fever<br/>(check duration, height, pattern, contacts)"] --> B{"Age &lt; 3 months?"}
+    B -->|Yes| RF1["RED FLAG<br/>Full sepsis work-up regardless of height"]
+    B -->|No| C{"Any localising signs?"}
+    C -->|"Ear pain / tugging"| D1["Otitis media"]
+    C -->|"Sore throat, exudate"| D2["Tonsillopharyngitis"]
+    C -->|"Dysuria / frequency / poor stream"| D3["Urinary tract infection"]
+    C -->|"Neck stiffness, bulging fontanelle, photophobia"| RF2["RED FLAG<br/>Meningitis / encephalitis"]
+    C -->|"Joint swelling, refusal to bear weight"| D4["Septic arthritis / osteomyelitis"]
+    C -->|"Rash + coryza + conjunctivitis"| D5["Measles"]
+    C -->|None found| E{"Malaria-endemic exposure?"}
+    E -->|Yes| F["Do RDT / blood film"]
+    F -->|Positive| D6["Malaria"]
+    F -->|Negative| G
+    E -->|"No / unlikely"| G{"Fever &ge;5 days?"}
+    G -->|"Yes + conjunctival injection, rash, oral changes, hand/foot oedema"| RF3["RED FLAG<br/>Kawasaki disease"]
+    G -->|"Yes, no cause found"| D7["Consider typhoid, TB, occult UTI — PUO work-up"]
+    G -->|"No (&lt;5 days)"| D8["Likely viral URTI — supportive, review if persists"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2,RF3 redflag;
+    class D1,D2,D3,D4,D5,D6,D7,D8 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Any infant &lt;3 months with fever — treat as possible sepsis irrespective of how well they look."},
+      {type:"redflag", tag:"Red flag", text:"Neck stiffness, bulging fontanelle, seizures, or reduced consciousness with fever — meningitis until excluded."},
+      {type:"rulein", tag:"Rule-in clue", text:"Fever &ge;5 days plus 4 of: conjunctival injection, oral/lip changes, rash, cervical node, hand/foot changes — think Kawasaki disease."},
+      {type:"pearl", tag:"Pearl", text:"In malaria-endemic areas, a negative RDT/film in a well child still doesn't exclude bacterial illness — reassess if fever persists."}
+    ]
   },
   {
-    id:"bronchitis", name:"Acute Bronchitis", danger:false,
-    overview:{
-      age:{v:"Any age, more common in older children", d:"Acute bronchitis can occur at any age but is diagnosed more confidently in older children who can describe symptoms and cooperate with examination."},
-      cause:{v:"Viral infection of the large airways (trachea and bronchi)", d:"Almost always viral, causing inflammation of the trachea and bronchi without involvement of the lung parenchyma itself — this distinguishes it from pneumonia."},
-      onset:{v:"Gradual, following an URTI", d:"Symptoms typically develop gradually over a day or two, following on from an upper respiratory tract infection (coryza, sore throat)."},
-      fever:{v:"Low-grade or absent", d:"Fever, if present, is usually mild — a high, toxic-looking fever should prompt reconsideration of pneumonia or another bacterial process."},
-      cough:{v:"Initially dry, becomes productive", d:"The cough typically starts dry/irritating and becomes more productive (loose, rattly) as the illness progresses over several days."},
-      voice:{v:"Normal", d:"Voice is unaffected since the larynx is not primarily involved."},
-      posture:{v:"No specific posture", d:"No characteristic posture is adopted, unlike epiglottitis."},
-      stridorWheeze:{v:"Usually no wheeze; may have rhonchi", d:"True wheeze is uncommon; low-pitched rhonchi (snoring-quality sounds from secretions in larger airways) may be heard instead."}
-    },
-    exam:{
-      inspection:{v:"Mild tachypnoea if any; child usually not in significant distress; may look unwell but not toxic", d:"Children with bronchitis are generally not in respiratory distress — this is a key point of difference from pneumonia and bronchiolitis, where increased work of breathing is expected."},
-      palpation:{v:"Chest expansion normal; trachea central", d:"Because the disease is confined to the airway lining rather than lung tissue, chest wall mechanics remain essentially normal."},
-      percussion:{v:"Normal (resonant)", d:"Percussion is normal since there is no consolidation, effusion, or significant air trapping."},
-      auscultation:{v:"Rhonchi and/or coarse crackles that may clear with coughing; no true consolidation signs", d:"Sounds are typically coarse and related to secretions in the larger airways, and often change or clear when the child coughs — unlike the fixed crackles of pneumonia."}
-    },
-    investigations:{v:"Clinical diagnosis; chest X-ray usually normal, mainly done to exclude pneumonia if there is diagnostic uncertainty", d:"No specific test confirms bronchitis; it's a diagnosis of exclusion once pneumonia and other lower respiratory tract disease have been ruled out clinically or, if needed, with a normal chest X-ray."},
-    treatment:{v:"Supportive — fluids, antipyretics; antibiotics not usually needed as it is viral", d:"Management is supportive: hydration, rest, antipyretics for fever/discomfort. Antibiotics are not indicated unless there is clear evidence of secondary bacterial infection."}
+    id:"cough", label:"Cough",
+    chart:`
+graph TD
+    A["Cough<br/>(duration, character, triggers)"] --> B{"Duration &lt; 2 weeks (acute)?"}
+    B -->|Yes| C{"Sudden onset + choking episode?"}
+    C -->|Yes| RF1["RED FLAG<br/>Foreign body aspiration"]
+    C -->|No| D{"Associated features"}
+    D -->|"Barking cough + stridor, worse at night"| D1["Croup (laryngotracheobronchitis)"]
+    D -->|"Wheeze, age &lt;2y, preceding coryza"| D2["Bronchiolitis"]
+    D -->|"Wheeze, age &gt;2y, recurrent, atopy"| D3["Asthma exacerbation"]
+    D -->|"Fever, coryza, sore throat only"| D4["Viral URTI"]
+    D -->|"Fast breathing, chest indrawing, crepitations"| RF2["RED FLAG<br/>Pneumonia — assess danger signs"]
+    B -->|"No (&ge;2-4 weeks, chronic)"| E{"Chronic features"}
+    E -->|"Contact with TB, weight loss, night sweats, failure to thrive"| RF3["RED FLAG<br/>Consider TB — investigate"]
+    E -->|"Paroxysmal + inspiratory whoop, post-tussive vomiting"| D5["Pertussis"]
+    E -->|"Worse with feeds/lying flat, regurgitation"| D6["GERD / aspiration"]
+    E -->|"Recurrent wheeze, diurnal variation, atopy history"| D3
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2,RF3 redflag;
+    class D1,D2,D3,D4,D5,D6 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Sudden-onset cough/choking, especially a toddler with a witnessed or suspected object in the mouth — foreign body aspiration."},
+      {type:"redflag", tag:"Red flag", text:"Grunting, chest indrawing, cyanosis, or inability to feed with cough/fever — severe pneumonia."},
+      {type:"rulein", tag:"Rule-in clue", text:"Barking cough with inspiratory stridor, worse at night — croup; assess severity by stridor at rest and indrawing."},
+      {type:"pearl", tag:"Pearl", text:"Any chronic cough &ge;2 weeks with contact history or constitutional symptoms needs active TB screening in Nigeria."}
+    ]
   },
   {
-    id:"bronchiolitis", name:"Bronchiolitis", danger:false,
-    overview:{
-      age:{v:"<2 years (peak 2–6 months)", d:"Bronchiolitis is a disease of infancy, with the bronchioles small enough in this age group that viral inflammation and mucus readily cause significant obstruction."},
-      cause:{v:"Viral infection, most commonly RSV, affecting the small airways (bronchioles)", d:"Respiratory syncytial virus (RSV) is the most common cause, causing inflammation, oedema, and mucus plugging specifically in the small bronchioles."},
-      onset:{v:"Gradual, preceded by coryza", d:"Illness typically begins with 1–3 days of coryza before cough, wheeze, and increased work of breathing develop as the infection spreads to the lower airways."},
-      fever:{v:"Low-grade", d:"Fever is usually mild; a very high fever should raise suspicion of a bacterial complication or alternative diagnosis."},
-      cough:{v:"Dry, then progresses with increased work of breathing", d:"Cough starts dry and worsens alongside increasing respiratory distress and feeding difficulty as the illness peaks (usually day 3–5)."},
-      voice:{v:"Normal", d:"Voice is not affected — the pathology is distal, in the small airways, not the larynx."},
-      posture:{v:"No specific posture", d:"No characteristic posture, unlike the tripod position of epiglottitis."},
-      stridorWheeze:{v:"Wheeze and/or fine crackles", d:"Both wheeze (from bronchiolar narrowing) and fine crackles (from mucus/collapse) can be heard, sometimes together, reflecting mixed airway obstruction and alveolar involvement."}
-    },
-    exam:{
-      inspection:{v:"Tachypnoea, nasal flaring, subcostal/intercostal recession, tracheal tug, hyperinflated chest; feeding difficulty due to breathlessness", d:"Infants show marked work of breathing signs because of their small, compliant chest walls. Feeding difficulty (breathlessness interrupting sucking) is a particularly important marker of severity in this age group."},
-      palpation:{v:"Chest expansion may be reduced bilaterally due to hyperinflation; trachea central", d:"As with asthma, bilateral hyperinflation from air trapping can subtly reduce measurable chest expansion, but there is no tracheal shift since both lungs are diffusely affected."},
-      percussion:{v:"Resonant, may be hyperresonant", d:"Hyperresonance reflects the same air-trapping/hyperinflation mechanism seen in asthma, common to small-airway obstruction."},
-      auscultation:{v:"Bilateral fine crackles ± wheeze; prolonged expiration", d:"Fine, high-pitched crackles throughout both lung fields are the classic finding, often with a wheeze component — reflecting both alveolar/bronchiolar collapse and airway narrowing."}
-    },
-    investigations:{v:"Clinical diagnosis; nasopharyngeal aspirate/swab for RSV antigen or PCR; chest X-ray only if diagnosis unclear or severe/atypical course; pulse oximetry to assess severity", d:"Diagnosis is clinical in a typical case. Viral testing (RSV) can confirm the cause but rarely changes management. Chest X-ray is reserved for atypical presentations or suspected complications, since it often shows nonspecific hyperinflation and patchy changes that can be mistaken for pneumonia."},
-    treatment:{v:"Supportive — oxygen, fluids/feeding support; bronchodilators generally not effective", d:"There is no specific antiviral treatment. Management is supportive: oxygen for hypoxia, nasogastric/IV fluids if feeding is inadequate, and monitoring for apnoea in young infants. Bronchodilators, corticosteroids, and antibiotics have not been shown to reliably help in straightforward bronchiolitis."}
+    id:"vomdiarr", label:"Vomiting / Diarrhoea",
+    chart:`
+graph TD
+    A["Vomiting and/or diarrhoea"] --> B{"Vomiting — bilious (green)?"}
+    B -->|Yes| RF1["RED FLAG<br/>Surgical: malrotation/volvulus, obstruction — urgent referral"]
+    B -->|No| C{"Projectile, non-bilious, age 2-8 weeks, hungry after?"}
+    C -->|Yes| D1["Pyloric stenosis — check for palpable olive, alkalotic hypochloraemia"]
+    C -->|No| E{"Diarrhoea present?"}
+    E -->|No| D2["Consider isolated GERD / overfeeding / infection elsewhere"]
+    E -->|Yes| F{"Duration of diarrhoea"}
+    F -->|"&lt;14 days (acute)"| G["Acute gastroenteritis (viral/bacterial)"]
+    G --> H{"Assess dehydration — WHO"}
+    H -->|"Lethargy, sunken eyes, skin pinch very slow, unable to drink"| RF2["RED FLAG<br/>Severe dehydration — IV fluids per protocol"]
+    H -->|"Restless/irritable, sunken eyes, drinks eagerly"| D3["Some dehydration — ORS"]
+    H -->|"No signs"| D4["No dehydration — home ORS + zinc"]
+    G --> I{"Blood in stool / high fever?"}
+    I -->|Yes| D5["Consider dysentery (Shigella) / invasive bacterial cause"]
+    F -->|"&ge;14 days (persistent/chronic)"| J{"Weight faltering / oedema?"}
+    J -->|Yes| RF3["RED FLAG<br/>Persistent diarrhoea with malnutrition"]
+    J -->|No| D6["Consider malabsorption, coeliac, cow's-milk protein allergy, giardiasis"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2,RF3 redflag;
+    class D1,D2,D3,D4,D5,D6 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Bilious (green) vomiting in any child is a surgical emergency until proven otherwise."},
+      {type:"redflag", tag:"Red flag", text:"Severe dehydration signs (lethargy, very slow skin pinch, unable to drink) — needs urgent IV rehydration."},
+      {type:"rulein", tag:"Rule-in clue", text:"Projectile non-bilious vomiting in a 2-8 week old, hungry immediately after — pyloric stenosis."},
+      {type:"pearl", tag:"Pearl", text:"Always classify dehydration using the WHO scale before deciding ORS vs IV fluids — don't skip this step."}
+    ]
   },
   {
-    id:"epiglottitis", name:"Acute Epiglottitis", danger:true,
-    overview:{
-      age:{v:"Classically 2–7 years, but any unimmunised child", d:"Historically most common in unvaccinated children aged 2–7 years; incidence has fallen sharply where Hib vaccination coverage is good, so it is now seen mainly in incompletely immunised children."},
-      cause:{v:"Haemophilus influenzae type b (bacterial), especially in unimmunised children", d:"A bacterial infection causing rapidly progressive inflammation and swelling of the epiglottis and surrounding supraglottic structures, most classically due to Hib."},
-      onset:{v:"Sudden and rapidly progressive (hours)", d:"Unlike the viral conditions in this table, epiglottitis evolves over hours, not days — a previously well child can progress to life-threatening airway obstruction within a few hours."},
-      fever:{v:"High-grade, toxic-looking child", d:"The child appears acutely unwell/toxic with a high fever — a striking difference from the milder-looking child with croup or early bronchiolitis."},
-      cough:{v:"Minimal — muffled voice/stridor dominates rather than cough", d:"A notable feature is the relative absence of a barking or prominent cough (unlike croup) — the clinical picture is dominated by drooling, muffled voice, and stridor instead."},
-      voice:{v:"Muffled ('hot potato') voice, drooling, refusal to swallow", d:"Swelling of the epiglottis and surrounding tissue distorts the voice and makes swallowing painful and difficult, causing pooling of saliva and drooling — a key red-flag combination."},
-      posture:{v:"Tripod position — sitting upright, leaning forward, chin up", d:"Children instinctively adopt this posture to maximise their airway diameter — attempting to change this posture (e.g. to examine or lay the child down) can precipitate complete obstruction and should be avoided."},
-      stridorWheeze:{v:"Inspiratory stridor (upper airway)", d:"Stridor here is inspiratory and harsh, reflecting obstruction at the level of the larynx/supraglottis — distinctly different from the expiratory wheeze of lower airway disease."}
-    },
-    exam:{
-      inspection:{v:"Toxic, anxious-looking child in tripod position, drooling, minimal spontaneous movement, inspiratory stridor, suprasternal recession", d:"Inspection alone is often sufficient to raise strong suspicion: a toxic, drooling child sitting rigidly upright with stridor is the classic picture. Deliberately AVOID further examination (throat inspection, tongue depressor) as this can trigger complete obstruction."},
-      palpation:{v:"Should be avoided/minimised — do not palpate the neck or attempt to examine the oropharynx", d:"Unlike the other conditions, palpation and oral examination are actively discouraged in suspected epiglottitis, since any agitation or manipulation can precipitate sudden complete airway obstruction."},
-      percussion:{v:"Not performed acutely — chest percussion is typically normal since the lungs themselves are unaffected", d:"The pathology is entirely in the upper airway; the lungs are normal, so chest percussion (if performed once safe) would be unremarkable."},
-      auscultation:{v:"Chest auscultation often normal; harsh inspiratory stridor audible without a stethoscope", d:"A key teaching point: chest examination is often entirely normal, because the obstruction is above the lungs. The stridor is usually audible from across the room, without needing a stethoscope."}
-    },
-    investigations:{v:"Clinical diagnosis — avoid distressing examination; lateral neck X-ray only if child stable ('thumb sign'/swollen epiglottis); definitive diagnosis by direct visualisation of the epiglottis under controlled conditions (theatre/ICU) by anaesthetist/ENT with airway secured; blood culture once airway is safe", d:"Investigations must never delay or endanger airway management. If the child is stable enough, a lateral neck X-ray may show the 'thumb sign.' The definitive diagnostic step — direct visualisation — is deliberately performed only in a controlled setting (operating theatre) where the airway can be secured immediately if it obstructs."},
-    treatment:{v:"Secure airway urgently (intubation in theatre by senior anaesthetist/ENT), IV antibiotics (ceftriaxone/cefotaxime) once airway secured, avoid agitating the child, PICU admission", d:"This is the one true paediatric airway emergency in the group. The overriding priority is a controlled, definitive airway secured by experienced anaesthetic/ENT staff in theatre — everything else (antibiotics, investigations, IV access) follows only once the airway is safe."}
+    id:"seizure", label:"Seizure",
+    chart:`
+graph TD
+    A["Seizure<br/>(get eyewitness account, duration, post-ictal state)"] --> B{"Neonate (&lt;28 days)?"}
+    B -->|Yes| RF1["RED FLAG<br/>Neonatal seizure — think HIE, sepsis/meningitis, metabolic (hypoglycaemia, hypocalcaemia), IVH"]
+    B -->|No| C{"Fever present?"}
+    C -->|Yes| D{"Age 6 months-6 years + brief, generalised, quick recovery?"}
+    D -->|Yes| D1["Simple febrile seizure"]
+    D -->|"No — focal, &gt;15 min, recurs in 24h, or slow recovery"| RF2["RED FLAG<br/>Complex febrile seizure / consider CNS infection"]
+    C -->|Yes| E{"Neck stiffness, bulging fontanelle, reduced consciousness?"}
+    E -->|Yes| RF3["RED FLAG<br/>Meningitis / encephalitis / cerebral malaria"]
+    C -->|No fever| F{"Check blood glucose and electrolytes"}
+    F -->|"Low glucose"| D2["Hypoglycaemic seizure"]
+    F -->|"Low calcium (esp. infant)"| D3["Hypocalcaemic seizure"]
+    F -->|Normal| G{"Recurrent, stereotyped episodes with known trigger pattern?"}
+    G -->|Yes| D4["Epilepsy — classify seizure type"]
+    G -->|No| D5["First unprovoked seizure — consider structural/toxic causes, further work-up"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2,RF3 redflag;
+    class D1,D2,D3,D4,D5 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Any neonatal seizure is abnormal — always investigate (glucose, calcium, sepsis screen, HIE history)."},
+      {type:"redflag", tag:"Red flag", text:"Focal features, duration &gt;15 min, recurrence within 24h, or slow recovery — complex febrile seizure, treat as CNS infection until excluded."},
+      {type:"rulein", tag:"Rule-in clue", text:"Brief, generalised seizure in a well-appearing 6mo-6y child with fever, quick full recovery — simple febrile seizure."},
+      {type:"pearl", tag:"Pearl", text:"Check bedside glucose in every convulsing child — hypoglycaemia is rapidly reversible and easily missed."}
+    ]
   },
   {
-    id:"pneumonia", name:"Pneumonia", danger:false,
-    overview:{
-      age:{v:"Any age, common under 5 years", d:"Pneumonia affects all ages but is a leading cause of morbidity/mortality in children under 5, particularly in resource-limited settings."},
-      cause:{v:"Bacterial (e.g. Streptococcus pneumoniae), viral, or mixed infection of the lung parenchyma", d:"Unlike bronchitis/bronchiolitis, pneumonia involves infection and inflammation of the actual lung tissue (alveoli), not just the airways — most commonly bacterial in cases requiring hospital care."},
-      onset:{v:"Variable — can be acute or follow a preceding URTI", d:"Onset can be abrupt (classic lobar pneumonia) or follow a preceding viral URTI that has progressed to secondary bacterial infection."},
-      fever:{v:"High-grade, often with rigors", d:"Fever tends to be higher and more sustained than in bronchitis or bronchiolitis, often with chills/rigors in bacterial disease."},
-      cough:{v:"Productive cough, may have chest pain on deep breathing", d:"Cough is usually productive; pleuritic chest pain (worse on deep breathing or coughing) suggests pleural involvement."},
-      voice:{v:"Normal", d:"Voice and swallowing are unaffected — the disease process is within the lung parenchyma, not the upper airway."},
-      posture:{v:"No specific posture, may lie on the affected side", d:"Some children instinctively lie on the affected side to splint the chest and reduce pain, but this is not a fixed or diagnostic sign like the epiglottitis tripod posture."},
-      stridorWheeze:{v:"Usually no wheeze; crepitations more typical", d:"Wheeze is not a typical finding unless there is a co-existing reactive airway component; crepitations over the area of consolidation are far more characteristic."}
-    },
-    exam:{
-      inspection:{v:"Tachypnoea (≥40/min age 1–5y), nasal flaring, grunting, lower chest wall (subcostal) indrawing, cyanosis if severe, reduced movement on affected side", d:"Tachypnoea and lower chest wall indrawing are the key WHO markers of severe pneumonia in children. Grunting reflects the child's attempt to generate positive end-expiratory pressure and keep alveoli open."},
-      palpation:{v:"Reduced chest expansion on the affected side; increased tactile vocal fremitus over consolidation (often hard to elicit in young children)", d:"Consolidated lung transmits vibration well, so vocal fremitus is increased over it — though this sign is difficult to elicit reliably in young or uncooperative children, so it's used more as a teaching point than a bedside essential."},
-      percussion:{v:"Dull over the area of consolidation; stony dull if a pleural effusion/empyema has developed", d:"Percussion helps localise the affected lobe and detect a complication — a stony dull note strongly suggests fluid has accumulated in the pleural space (effusion/empyema)."},
-      auscultation:{v:"Bronchial breathing over consolidation, fine/coarse crepitations, reduced/absent breath sounds over effusion, increased vocal resonance over consolidation", d:"Bronchial breathing (harsh, tubular, expiration as loud as inspiration) and localised crepitations over one area are the hallmark pneumonia findings — contrasted with the bilateral, diffuse crackles of bronchiolitis."}
-    },
-    investigations:{v:"Chest X-ray (lobar/patchy consolidation ± effusion), FBC (leucocytosis with neutrophilia suggests bacterial cause), blood culture before antibiotics if feasible, pulse oximetry, sputum/NP aspirate, malaria test in endemic areas", d:"Chest X-ray confirms the diagnosis and detects complications such as effusion. Blood culture (ideally before starting antibiotics) helps guide targeted therapy if the child doesn't respond to first-line treatment, and pulse oximetry is essential for grading severity and guiding oxygen therapy."},
-    treatment:{v:"Antibiotics (oral amoxicillin for non-severe; IV ampicillin/benzylpenicillin ± gentamicin or IV ceftriaxone for severe), oxygen, supportive care", d:"Antibiotic choice and route follow WHO/IMCI severity classification. Supportive care includes oxygen for hypoxia, maintaining hydration/nutrition, and monitoring closely for complications like effusion, empyema, or respiratory failure."}
+    id:"jaundice", label:"Jaundice",
+    chart:`
+graph TD
+    A["Jaundice<br/>(note age of onset, feeding, stool/urine colour)"] --> B{"Onset &lt;24 hours of life?"}
+    B -->|Yes| RF1["RED FLAG<br/>Pathological — think haemolysis: ABO/Rh incompatibility, G6PD deficiency, sepsis"]
+    B -->|No| C{"Onset day 2-14, term, well infant?"}
+    C -->|Yes| D{"Exclusively breastfed, poor intake/weight loss?"}
+    D -->|Yes| D1["Breastfeeding (lactation) jaundice — optimise feeding"]
+    D -->|No| D2["Physiological jaundice — monitor, phototherapy per bilirubin chart"]
+    C -->|No| E{"Persists &gt;14 days (prolonged)?"}
+    E -->|Yes| F{"Pale stool + dark urine (conjugated)?"}
+    F -->|Yes| RF2["RED FLAG<br/>Conjugated hyperbilirubinaemia — biliary atresia until excluded; urgent referral"]
+    F -->|No| G{"Well, thriving, breastfed, unconjugated?"}
+    G -->|Yes| D3["Breast milk jaundice"]
+    G -->|No| D4["Consider hypothyroidism, UTI, haemolysis — investigate"]
+    A --> H{"Any red flag: onset day 1, rapidly rising, deep jaundice to soles, poor feeding, lethargy, high-pitched cry?"}
+    H -->|Yes| RF3["RED FLAG<br/>Risk of kernicterus — check bilirubin urgently, treat per chart"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2,RF3 redflag;
+    class D1,D2,D3,D4 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Jaundice in the first 24 hours of life is always pathological — investigate for haemolysis and sepsis."},
+      {type:"redflag", tag:"Red flag", text:"Pale (acholic) stool and dark urine at any age — conjugated jaundice, think biliary atresia, needs urgent work-up before 6 weeks."},
+      {type:"rulein", tag:"Rule-in clue", text:"Jaundice extending to soles, poor feeding, lethargy, or high-pitched cry — check total/conjugated bilirubin urgently, risk of kernicterus."},
+      {type:"pearl", tag:"Pearl", text:"Always split total vs conjugated bilirubin before labelling any jaundice 'physiological.'"}
+    ]
+  },
+  {
+    id:"respdistress", label:"Respiratory Distress",
+    chart:`
+graph TD
+    A["Respiratory distress<br/>(RR, indrawing, grunting, cyanosis, feeding ability)"] --> B{"Stridor (inspiratory, upper airway)?"}
+    B -->|Yes| C{"Sudden onset + choking/foreign object history?"}
+    C -->|Yes| RF1["RED FLAG<br/>Foreign body airway obstruction"]
+    C -->|No| D{"Drooling, toxic, tripod position, no cough?"}
+    D -->|Yes| RF2["RED FLAG<br/>Epiglottitis — do not examine throat, urgent airway support"]
+    D -->|No| D1["Croup — barking cough, hoarse voice"]
+    B -->|No| E{"Wheeze (expiratory, lower airway)?"}
+    E -->|Yes| F{"Age &lt;2y, first episode, preceding coryza?"}
+    F -->|Yes| D2["Bronchiolitis"]
+    F -->|No| D3["Asthma exacerbation — assess severity (speech, RR, accessory muscles)"]
+    E -->|No| G{"Crepitations / bronchial breathing / focal signs?"}
+    G -->|Yes| RF3["RED FLAG<br/>Pneumonia — check WHO danger signs"]
+    G -->|No| H{"Murmur, failure to thrive, cyanosis unrelieved by O2?"}
+    H -->|Yes| RF4["RED FLAG<br/>Congenital heart disease / heart failure"]
+    H -->|No| D4["Consider metabolic acidosis (Kussmaul breathing), anaemia, anxiety-related tachypnoea"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2,RF3,RF4 redflag;
+    class D1,D2,D3,D4 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Drooling, toxic look, tripod positioning, muffled voice, no cough — epiglottitis; do not lay flat or examine the throat."},
+      {type:"redflag", tag:"Red flag", text:"Grunting, head bobbing, cyanosis, or inability to feed — danger signs needing immediate escalation."},
+      {type:"rulein", tag:"Rule-in clue", text:"Murmur plus poor weight gain and feeding difficulty from early infancy points to congenital heart disease."},
+      {type:"pearl", tag:"Pearl", text:"Grade severity by work of breathing (RR, indrawing, grunting, accessory muscle use), not oxygen saturation alone."}
+    ]
+  },
+  {
+    id:"pallor", label:"Pallor",
+    chart:`
+graph TD
+    A["Pallor<br/>(onset, diet, bleeding, jaundice, bone pain)"] --> B{"Acute onset?"}
+    B -->|Yes| C{"Jaundice or dark urine also present?"}
+    C -->|Yes| D1["Acute haemolysis — malaria, G6PD deficiency, sickle cell crisis"]
+    C -->|No| E{"History of trauma, melaena, haematemesis?"}
+    E -->|Yes| RF1["RED FLAG<br/>Acute blood loss — assess for shock, transfuse if needed"]
+    E -->|No| D2["Consider parvovirus-induced aplastic crisis in known haemoglobinopathy"]
+    B -->|No (gradual/chronic)| F{"Known sickle cell disease?"}
+    F -->|Yes| D3["Chronic hemolytic anaemia of SCD — screen for crisis triggers"]
+    F -->|No| G{"Poor dietary iron intake, pica, koilonychia?"}
+    G -->|Yes| D4["Iron deficiency anaemia — nutritional"]
+    G -->|No| H{"Bruising, bone pain, lymphadenopathy, hepatosplenomegaly, fever?"}
+    H -->|Yes| RF2["RED FLAG<br/>Consider leukaemia / marrow infiltration — urgent FBC and film"]
+    H -->|No| D5["Consider chronic disease anaemia, hookworm/parasitic, chronic renal disease"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2 redflag;
+    class D1,D2,D3,D4,D5 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Pallor with bruising, bone pain, lymphadenopathy, or hepatosplenomegaly — screen urgently for leukaemia."},
+      {type:"redflag", tag:"Red flag", text:"Pallor with signs of active bleeding or haemodynamic instability — manage as acute blood loss/shock first."},
+      {type:"rulein", tag:"Rule-in clue", text:"Pallor plus jaundice and dark urine — haemolytic process (malaria, G6PD deficiency, sickle crisis)."},
+      {type:"pearl", tag:"Pearl", text:"In a known sickle cell patient, ask specifically about recent viral illness — risk of aplastic crisis from parvovirus B19."}
+    ]
+  },
+  {
+    id:"oedema", label:"Oedema",
+    chart:`
+graph TD
+    A["Oedema<br/>(distribution, onset, urine colour/output, diet)"] --> B{"Generalised (face, abdomen, limbs)?"}
+    B -->|Yes| C{"Frothy urine / heavy proteinuria history?"}
+    C -->|Yes| D1["Nephrotic syndrome"]
+    C -->|No| E{"Hypertension, haematuria (smoky urine), reduced urine output?"}
+    E -->|Yes| RF1["RED FLAG<br/>Nephritic syndrome / acute glomerulonephritis — check renal function, BP urgently"]
+    E -->|No| F{"Poor growth, dermatosis, hair changes, inadequate protein intake?"}
+    F -->|Yes| RF2["RED FLAG<br/>Kwashiorkor / severe acute malnutrition — assess for complications"]
+    F -->|No| G{"Breathlessness, hepatomegaly, murmur, poor feeding?"}
+    G -->|Yes| D2["Heart failure — assess cardiac cause"]
+    G -->|No| D3["Consider liver disease / hypoalbuminaemia, protein-losing enteropathy"]
+    B -->|"No (localised)"| H{"Redness, warmth, tenderness?"}
+    H -->|Yes| D4["Cellulitis / local infection"]
+    H -->|No| D5["Consider insect bite reaction, allergic/angio-oedema, trauma"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2 redflag;
+    class D1,D2,D3,D4,D5 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Oedema with hypertension, smoky/cola urine, and oliguria — acute glomerulonephritis, check renal function and BP urgently."},
+      {type:"redflag", tag:"Red flag", text:"Bilateral pitting oedema with poor growth and skin/hair changes — kwashiorkor; assess for hypoglycaemia, infection, and shock."},
+      {type:"rulein", tag:"Rule-in clue", text:"Periorbital oedema, worse in the morning, with frothy urine — nephrotic syndrome; check urine protein."},
+      {type:"pearl", tag:"Pearl", text:"Always check blood pressure and urinalysis in any child presenting with oedema, even if it looks purely nutritional."}
+    ]
+  },
+  {
+    id:"rash", label:"Rash",
+    chart:`
+graph TD
+    A["Rash<br/>(distribution, evolution, fever, associated symptoms)"] --> B{"Non-blanching (petechial/purpuric)?"}
+    B -->|Yes| C{"Fever, ill-looking, rapidly spreading?"}
+    C -->|Yes| RF1["RED FLAG<br/>Meningococcaemia — treat as emergency, do not wait for confirmation"]
+    C -->|No| D{"Bruising/bleeding elsewhere, low platelets?"}
+    D -->|Yes| D1["Consider ITP, HSP (with joint pain/abdo pain/melaena), leukaemia"]
+    B -->|"No (blanching)"| E{"Fever present?"}
+    E -->|Yes| F{"Rash character"}
+    F -->|"Maculopapular, starts face→body, + coryza, conjunctivitis, Koplik spots"| D2["Measles"]
+    F -->|"Vesicular, different stages at once, itchy"| D3["Varicella (chickenpox)"]
+    F -->|"Sandpaper rash + strawberry tongue + sore throat"| D4["Scarlet fever"]
+    F -->|"Vesicles on hands, feet, mouth ulcers"| D5["Hand-foot-mouth disease"]
+    E -->|No| G{"Itchy, recurrent, flexural distribution, atopy history?"}
+    G -->|Yes| D6["Eczema / atopic dermatitis"]
+    G -->|No| D7["Consider contact dermatitis, urticaria, drug reaction"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1 redflag;
+    class D1,D2,D3,D4,D5,D6,D7 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Non-blanching petechial/purpuric rash with fever and an ill-looking child — treat as meningococcaemia immediately, don't wait for the glass-test to be definitive."},
+      {type:"rulein", tag:"Rule-in clue", text:"Fever, cough, coryza, conjunctivitis, then a rash spreading face-to-body — measles; check vaccination history."},
+      {type:"rulein", tag:"Rule-in clue", text:"Purpura over buttocks/extensor surfaces with joint pain and abdominal pain — Henoch-Schönlein purpura."},
+      {type:"pearl", tag:"Pearl", text:"Always do the glass (tumbler) test on any rash in a febrile child — non-blanching changes the whole plan."}
+    ]
+  },
+  {
+    id:"poorfeeding", label:"Poor Feeding",
+    chart:`
+graph TD
+    A["Poor feeding<br/>(onset, associated breathlessness, lethargy, weight trend)"] --> B{"Age &lt; 1 month?"}
+    B -->|Yes| RF1["RED FLAG<br/>Poor feeding in a neonate — treat as possible sepsis until excluded"]
+    B -->|No| C{"Breathless / tires during feeds / sweating with feeds?"}
+    C -->|Yes| D1["Consider heart failure / congenital heart disease"]
+    C -->|No| D{"Lethargy, reduced consciousness, high-pitched cry?"}
+    D -->|Yes| RF2["RED FLAG<br/>CNS cause / severe illness — assess urgently (sepsis, meningitis, metabolic)"]
+    D -->|No| E{"Anatomical issue — cleft palate, tongue-tie, oral thrush?"}
+    E -->|Yes| D2["Mechanical/anatomical feeding difficulty — refer accordingly"]
+    E -->|No| F{"Vomiting/regurgitation with feeds, arching, irritability?"}
+    F -->|Yes| D3["Gastro-oesophageal reflux"]
+    F -->|No| G{"Developmental delay, abnormal tone (floppy/spastic)?"}
+    G -->|Yes| D4["Consider cerebral palsy / neuromuscular cause"]
+    G -->|No| D5["Consider psychosocial factors — poor technique, maternal stress, inadequate milk supply"]
+
+    classDef redflag fill:#FCE9E7,stroke:#B3261E,stroke-width:1.5px,color:#7A1712;
+    classDef rulein fill:#E4F4F2,stroke:#0E8C86,stroke-width:1.5px,color:#0B5D59;
+    classDef start fill:#0E2A47,stroke:#0E2A47,color:#fff;
+    class RF1,RF2 redflag;
+    class D1,D2,D3,D4,D5 rulein;
+    class A start;
+`,
+    callouts:[
+      {type:"redflag", tag:"Red flag", text:"Poor feeding in the first month of life is a danger sign — treat as possible neonatal sepsis until excluded."},
+      {type:"redflag", tag:"Red flag", text:"Lethargy, high-pitched cry, or reduced consciousness with poor feeding — urgent assessment for CNS/metabolic/septic cause."},
+      {type:"rulein", tag:"Rule-in clue", text:"Breathlessness, sweating, and fatigue specifically during feeds — suspect congenital heart disease."},
+      {type:"pearl", tag:"Pearl", text:"Always plot and trend weight — a single feeding assessment can look reassuring while growth faltering is missed."}
+    ]
   }
 ];
 
-const rowDefs = [
-  {section:"Overview"},
-  {key:"age", label:"Typical age"},
-  {key:"cause", label:"Cause"},
-  {key:"onset", label:"Onset"},
-  {key:"fever", label:"Fever"},
-  {key:"cough", label:"Cough"},
-  {key:"voice", label:"Voice / swallowing"},
-  {key:"posture", label:"Posture"},
-  {key:"stridorWheeze", label:"Stridor vs wheeze"},
-  {section:"Respiratory Examination Findings"},
-  {key:"inspection", label:"Inspection", group:"exam"},
-  {key:"palpation", label:"Palpation", group:"exam"},
-  {key:"percussion", label:"Percussion", group:"exam"},
-  {key:"auscultation", label:"Auscultation", group:"exam"},
-  {section:"Investigation & Treatment"},
-  {key:"investigations", label:"Key investigations", top:true},
-  {key:"treatment", label:"Treatment", top:true}
-];
+// build nav + panels
+const navEl = document.getElementById('tabNav');
+const panelsEl = document.getElementById('panels');
 
-let activeIds = conditions.map(c=>c.id);
+complaints.forEach((c, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'tab-btn' + (i===0 ? ' active' : '');
+  btn.textContent = c.label;
+  btn.dataset.target = c.id;
+  btn.addEventListener('click', () => switchTab(c.id));
+  navEl.appendChild(btn);
 
-function getField(cond, def){
-  if(def.group==="exam") return cond.exam[def.key];
-  if(def.top) return cond[def.key];
-  return cond.overview[def.key];
-}
+  const panel = document.createElement('section');
+  panel.className = 'panel' + (i===0 ? ' active' : '');
+  panel.id = 'panel-' + c.id;
 
-function renderChips(){
-  const wrap = document.getElementById('conditionChips');
-  wrap.innerHTML = '';
-  conditions.forEach(c=>{
-    const chip = document.createElement('div');
-    chip.className = 'chip' + (c.danger?' danger':'') + (activeIds.includes(c.id)?' active':'');
-    chip.textContent = c.name;
-    chip.onclick = ()=>{
-      if(activeIds.includes(c.id)){
-        if(activeIds.length>1) activeIds = activeIds.filter(id=>id!==c.id);
-      } else {
-        activeIds.push(c.id);
-      }
-      renderChips();
-      renderTable();
-    };
-    wrap.appendChild(chip);
+  const numStr = String(i+1).padStart(2,'0');
+  let html = `
+    <div class="panel-head">
+      <span class="panel-num">CHART ${numStr}</span>
+      <h2>${c.label}</h2>
+    </div>
+    <div class="legend">
+      <span><span class="dot navy"></span>Start / history</span>
+      <span><span class="dot teal"></span>Working diagnosis</span>
+      <span><span class="dot red"></span>Red flag — act now</span>
+    </div>
+    <div class="card"><pre class="mermaid">${c.chart}</pre></div>
+    <div class="callouts">
+  `;
+  c.callouts.forEach(co => {
+    html += `<div class="callout ${co.type}"><span class="tag">${co.tag}</span>${co.text}</div>`;
   });
-}
-
-function highlight(text, term){
-  if(!term) return text;
-  const idx = text.toLowerCase().indexOf(term.toLowerCase());
-  if(idx===-1) return text;
-  return text.slice(0,idx) + '<mark>' + text.slice(idx, idx+term.length) + '</mark>' + text.slice(idx+term.length);
-}
-
-function renderTable(){
-  const term = document.getElementById('searchBox').value.trim();
-  const shown = conditions.filter(c=>activeIds.includes(c.id));
-
-  const headerRow = document.getElementById('headerRow');
-  headerRow.innerHTML = '<th>Feature</th>' + shown.map(c=>`<th>${c.name}${c.danger?' ⚠':''}</th>`).join('');
-
-  const body = document.getElementById('tableBody');
-  body.innerHTML = '';
-
-  rowDefs.forEach(def=>{
-    if(def.section){
-      const tr = document.createElement('tr');
-      tr.className = 'section-head';
-      tr.innerHTML = `<td colspan="${shown.length+1}">${def.section}</td>`;
-      body.appendChild(tr);
-      return;
-    }
-    const tr = document.createElement('tr');
-    const th = document.createElement('th');
-    th.textContent = def.label;
-    tr.appendChild(th);
-
-    shown.forEach(c=>{
-      const field = getField(c, def);
-      const td = document.createElement('td');
-      const matches = term && field.v.toLowerCase().includes(term.toLowerCase());
-      if(matches) td.style.background = '#fff7e0';
-      if(c.danger) td.classList.add('danger-cell');
-      td.innerHTML = highlight(field.v, term);
-      td.onclick = ()=> openModal(c.name, def.label, field.d);
-      tr.appendChild(td);
-    });
-    body.appendChild(tr);
-  });
-}
-
-function openModal(condName, label, detail){
-  document.getElementById('modalTitle').textContent = condName;
-  document.getElementById('modalSub').textContent = label;
-  document.getElementById('modalBody').textContent = detail;
-  document.getElementById('overlay').classList.add('show');
-}
-function closeModal(){
-  document.getElementById('overlay').classList.remove('show');
-}
-document.getElementById('overlay').addEventListener('click', (e)=>{
-  if(e.target.id==='overlay') closeModal();
+  html += `</div>`;
+  panel.innerHTML = html;
+  panelsEl.appendChild(panel);
 });
-document.getElementById('searchBox').addEventListener('input', renderTable);
 
-renderChips();
-renderTable();
+function switchTab(id){
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.target === id));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + id));
+}
+
+mermaid.run({querySelector: '.mermaid'});
 </script>
 </body>
 </html>
